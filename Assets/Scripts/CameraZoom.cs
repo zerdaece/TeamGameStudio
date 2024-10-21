@@ -12,12 +12,14 @@ public class CameraZoom : MonoBehaviour
     public float velocity = 0.0f  ;
 
     public float speed = 10f;
+
+    public float minX= -30f, maxX = 30f, minY = -30f, maxY = 30f;
     
     // Start is called before the first frame update
     void Start()
     {
         maincamera = GetComponent<Camera>();
-        zoomTarget = maincamera.orthographicSize;
+        zoomTarget = maincamera.fieldOfView;
     }
 
     // Update is called once per frame
@@ -25,13 +27,23 @@ public class CameraZoom : MonoBehaviour
     {
         zoomTarget -=  Input.GetAxisRaw("Mouse ScrollWheel") * multiplier;
         zoomTarget = Mathf.Clamp(zoomTarget, minZoom, maxZoom);
-        maincamera.orthographicSize = Mathf.SmoothDamp(maincamera.orthographicSize, zoomTarget, ref velocity, smoothTime);
+        maincamera.fieldOfView = Mathf.SmoothDamp(maincamera.fieldOfView, zoomTarget, ref velocity, smoothTime);
 
         if (Input.GetMouseButton(0))
         {
             float moveX =Input.GetAxis("Mouse X");
             Vector3 movement = new Vector3(moveX, 0, 0);
-            transform.position += movement * speed * Time.deltaTime;
+            transform.position += movement*(-1) * speed * Time.deltaTime;
+
+            float moveY = Input.GetAxis("Mouse Y");
+            Vector3 movement2 = new Vector3(0, moveY, 0);
+            transform.position += movement2 * (-1) * speed * Time.deltaTime;
+
+
+            Vector3 clampPosition=transform.position;
+            clampPosition.x = Mathf.Clamp(transform.position.x, minX, maxX);
+            clampPosition.y = Mathf.Clamp(transform.position.y, minY, maxY);
+            transform.position = clampPosition;
         }
     }
 }
