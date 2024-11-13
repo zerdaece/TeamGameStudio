@@ -32,10 +32,10 @@ public class Room : MonoBehaviour
 
     void UpdateResources()
     {
-        resources.goins += roomTemplate.goins * resources.satisfaction;
-        resources.energy += roomTemplate.energy * resources.satisfaction;
-        resources.alcohol += roomTemplate.alcohol * resources.satisfaction;
-        resources.coal += roomTemplate.coal * resources.satisfaction;
+        resources.goins += roomTemplate.goins;
+        resources.energy += roomTemplate.energy;
+        resources.alcohol += roomTemplate.alcohol;
+        resources.coal += roomTemplate.coal;
         resources.dopamin += roomTemplate.dopamin * resources.satisfaction;
 
         // Kaynakların minimum ve maksimum sınırlarını belirleyebiliriz
