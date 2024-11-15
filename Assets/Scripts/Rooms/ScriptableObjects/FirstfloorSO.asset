@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
-  m_Name: Speakeasy
+  m_Name: FirstfloorSO
   m_EditorClassIdentifier: 
   id: 0
-  roomName: 
-  goins: 0
-  energy: 0
-  alcohol: 0
-  coal: 0
+  roomName: Speakeasy
+  goins: 15
+  energy: 1
+  alcohol: -5
+  coal: -5
   dopamin: 0
