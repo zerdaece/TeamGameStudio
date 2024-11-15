@@ -16,6 +16,6 @@ public class UnlockingRooms : MonoBehaviour
             resources.goins -= need;
             isLocked = false;
         }
-        isLocked = false;
+       
     }
 }
