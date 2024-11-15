@@ -18,6 +18,6 @@ public class UnlockingRooms : MonoBehaviour
             isLocked = false;
             //Destroy(lockGameObject);// test edilcek
         }
-        isLocked = false;
+       
     }
 }
