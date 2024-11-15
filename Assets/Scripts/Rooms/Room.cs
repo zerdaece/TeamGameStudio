@@ -13,6 +13,10 @@ public class Room : MonoBehaviour
     public float updateInterval = 5f;
 
     private float timer;
+    private int newcustomerCount;
+    private int customerCount;
+    private int maxcustomerCount = 10;
+
 
     void Start()
     {
@@ -25,6 +29,7 @@ public class Room : MonoBehaviour
 
         if (timer >= updateInterval)
         {
+            GetCustomer();
             UpdateResources();
             timer = 0f;
         }
@@ -44,5 +49,29 @@ public class Room : MonoBehaviour
         resources.alcohol = Mathf.Clamp(resources.alcohol, 0, 100000);
         resources.coal = Mathf.Clamp(resources.coal, 0, 100000);
         resources.dopamin = Mathf.Clamp(resources.dopamin, 0, 100000);
+    }
+
+    void GetCustomer()
+    {
+
+        int dice = Random.Range(1, 7);
+        if(newcustomerCount + customerCount < maxcustomerCount)
+        {
+            customerCount += newcustomerCount;
+            newcustomerCount = resources.satisfaction * dice;
+            //instantiatecustomer(roomcoordinate, customerCount);
+        }
+        
+        
+
+    }
+    void instantiatecustomer(/*/roomcoordinate, newcustomerCount/*/)
+    {
+        int dice = Random.Range(1, 7);
+        for (int i = 0; i < customerCount; i++)
+        {
+            //Instantiate(customer, roomcoordinate, Quaternion.identity);
+            //wait(dice);
+        }
     }
 }
