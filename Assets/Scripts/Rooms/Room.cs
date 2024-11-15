@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     public float updateInterval = 5f;
 
     private float timer;
-    private int newcustomerCount;
+        private int newcustomerCount;
     private int customerCount;
     private int maxcustomerCount = 10;
 
@@ -50,14 +50,15 @@ public class Room : MonoBehaviour
         resources.dopamin = Mathf.Clamp(resources.dopamin, 0, 100000);
     }
 
-    void GetCustomer()
+     void GetCustomer()
     {
 
         int dice = Random.Range(1, 7);
-        if (newcustomerCount + customerCount < maxcustomerCount)
+        if(newcustomerCount + customerCount < maxcustomerCount)
         {
-            customerCount += newcustomerCount;
+            
             newcustomerCount = resources.satisfaction * dice;
+            customerCount += newcustomerCount;
             //instantiatecustomer(roomcoordinate, customerCount);
         }
 
