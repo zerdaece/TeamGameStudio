@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClickableObject : MonoBehaviour
 {
-    public string roomType= "Generator"; // Spawn edilecek oda türü
+    public string roomType; // Spawn edilecek oda türü
     public Vector3 spawnOffset; // Odanın spawn pozisyonu için offset
     private BuildingRoom buildingRoom;
 
@@ -18,7 +18,7 @@ public class ClickableObject : MonoBehaviour
         }
     }
 
-     void OnMouseDown()
+     /*/void OnMouseDown()
     {
         if (buildingRoom != null)
         {
@@ -27,16 +27,18 @@ public class ClickableObject : MonoBehaviour
             // BuildingRoom scriptinin SpawnRoom fonksiyonunu çağır
             buildingRoom.SpawnRoom(roomType, spawnPosition);
         }
-    }
+    }/*/
      void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
+            Debug.Log("Mouse tıklandı");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit))
             {
+                Debug.Log("Raycast çalıştı");
                 // Check if the object hit has the ObjectClickHandler component
                  ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
                  if(clickableObject != null)
