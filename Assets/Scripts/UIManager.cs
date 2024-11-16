@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     string _alcohol => resources.alcohol + "";
     string _energy => resources.energy + "";
 
+
+
     void Update()
     {
 // Escape tuşuna basıldığında pause menu aç/kapa
@@ -72,7 +74,7 @@ public class UIManager : MonoBehaviour
 //Start Menu Tuşları
     public void OnStartPress()
     {
-        SceneManager.LoadScene(changeScene);
+        SceneManager.LoadScene("SampleScene");
     }
     public void OnSettingsPress()
     {
