@@ -11,7 +11,7 @@ public class BuildingRoom : MonoBehaviour
     public GameObject distillerRoomPrefab;
     public GameObject accommodationPrefab;
 
-    private Dictionary<string, GameObject> roomPrefabs;
+    public Dictionary<string, GameObject> roomPrefabs;
 
     private void Start()
     {

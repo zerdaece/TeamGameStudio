@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class UnlockingFloors : MonoBehaviour
 {
-    // public Resources resources;
+    public BuildingRoom buildingRoom;
+     //public Resources resources;
 
     public GameObject lockGameObject;//test için
     public GameObject newRooms;
@@ -36,10 +37,11 @@ public class UnlockingFloors : MonoBehaviour
        // if (resources.goins >= need)
        if (Input.GetKeyDown(KeyCode.Space))//test için
         {
-           //resources.goins -= need;
-           
-            Destroy(gameObject);
+//           resources.goins -= need;
             
+            Destroy(gameObject);
+            Debug.Log("Yeni Odalar Acildi");
+           
         }
 
     }

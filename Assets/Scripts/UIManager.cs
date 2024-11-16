@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public string changeScene;
     void Update()
     {
         // Escape tuşuna basıldığında pause menu aç
@@ -18,7 +19,7 @@ public class UIManager : MonoBehaviour
     //Start Menu Tuşları
     public void OnStartPress()
     {
-        SceneManager.LoadScene("UIScene");
+        SceneManager.LoadScene(changeScene);
     }
     public void OnSettingsPress()
     {
