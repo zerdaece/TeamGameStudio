@@ -753,6 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  changeScene: SampleScene
 --- !u!4 &861121201
 Transform:
   m_ObjectHideFlags: 0
