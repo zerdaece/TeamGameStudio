@@ -2,10 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public Resources resources;
+// Resource texts
+    public TextMeshProUGUI[] MoneyText;
+    public TextMeshProUGUI[] DopamineText;
+    public TextMeshProUGUI[] CoalText;
+    public TextMeshProUGUI[] AlcoholText;
+    public TextMeshProUGUI[] EnergyText;
+    string _money => resources.goins + "";
+    string _dopamine => resources.dopamin + "";
+    string _coal => resources.coal + "";
+    string _alcohol => resources.alcohol + "";
+    string _energy => resources.energy + "";
     void Update()
     {
 // Escape tuşuna basıldığında pause menu aç/kapa
@@ -15,7 +28,7 @@ public class UIManager : MonoBehaviour
             PauseGameplay();
         }
 
-//1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
+// 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
             PauseGameplay();
@@ -31,6 +44,27 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             FastForward4x();
+        }
+// Resource ların UI da görünmesi
+        for(int i = 0; i < MoneyText.Length; i++)
+        {
+            MoneyText[i].text = _money;
+        }
+        for(int i = 0; i < DopamineText.Length; i++)
+        {
+            DopamineText[i].text = _dopamine;
+        }
+        for(int i = 0; i < CoalText.Length; i++)
+        {
+            CoalText[i].text = _coal;
+        }
+        for(int i = 0; i < AlcoholText.Length; i++)
+        {
+            AlcoholText[i].text = _alcohol;
+        }
+        for(int i = 0; i < EnergyText.Length; i++)
+        {
+            EnergyText[i].text = _energy;
         }
     }
 
@@ -101,4 +135,6 @@ public class UIManager : MonoBehaviour
             Time.timeScale =1f; 
         }
     }
+
+    
 }
