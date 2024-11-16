@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-        public GameObject pauseMenu;
+    public GameObject pauseMenu;
     void Update()
     {
-// Escape tuşuna basıldığında pause menu aç
+// Escape tuşuna basıldığında pause menu aç/kapa
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(true);
-            Time.timeScale = 0f;
+            PauseGameplay();
         }
 
-//1, 2, 3, 4 tuşlarına basıldığında oyun hızını değiştirme
-        if (Input.GetKeyDown(KeyCode.Space))
+//1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
             PauseGameplay();
         }

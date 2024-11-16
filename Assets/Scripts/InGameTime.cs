@@ -5,6 +5,7 @@ public class InGameTime : MonoBehaviour
 {
     public TextMeshProUGUI[] UITimeText;
     public TextMeshProUGUI[] UIDateText;
+    public TextMeshProUGUI[] BorchText;
     public TimeFormat timeFormat = TimeFormat.Hour_24;
     public DateFormat dateFormat = DateFormat.DD_MM_YYYY;
 //Oyun içi bir dakika reelde bir saniyeye eşit
@@ -12,6 +13,7 @@ public class InGameTime : MonoBehaviour
 
     private string _time;
     private string _date;
+    private string _borch;
     private bool isAm = false;
 //Saat 
     int hr;
@@ -20,11 +22,14 @@ public class InGameTime : MonoBehaviour
     int day;
     int month;
     int year;
-
+//Max, min
     int maxHr = 24;
     int maxMin = 60;
     int maxDay = 30;
-    int maxMonth =12;
+    int maxMonth = 12;
+//Borch
+    int daysUntilBorch;
+    public int newBorchDay = 7;
 
     float timer = 0;
 
@@ -48,6 +53,7 @@ public class InGameTime : MonoBehaviour
         day   = 1;
         month = 1;
         year  = 1984;
+        daysUntilBorch = 7; _borch = daysUntilBorch + "";
 
         if(hr < 12)
         isAm = true;
@@ -66,6 +72,8 @@ public class InGameTime : MonoBehaviour
                 {
                     hr = 0;
                     day++;
+                    daysUntilBorch--;
+                    _borch = daysUntilBorch + "";
                     if(day >= maxDay)
                     {
                         day = 1;
@@ -86,6 +94,12 @@ public class InGameTime : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
+        }
+
+        if (daysUntilBorch <= 0)
+        {
+            daysUntilBorch = newBorchDay;
+            _borch = daysUntilBorch + "";
         }
     }
 
@@ -185,6 +199,11 @@ public class InGameTime : MonoBehaviour
         for(int i = 0; i < UIDateText.Length; i++)
         {
             UIDateText[i].text = _date;
+        }
+
+        for(int i = 0; i < BorchText.Length; i++)
+        {
+            BorchText[i].text = _borch;
         }
     }
 }
