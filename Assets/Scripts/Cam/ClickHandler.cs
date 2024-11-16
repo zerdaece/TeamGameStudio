@@ -23,7 +23,11 @@ public class ClickHandler : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-               
+               if(hit.collider.name == "Lock")
+                {
+                     UnlockingFloors unlockingFloors = hit.collider.GetComponent<UnlockingFloors>();
+                     unlockingFloors.unlock();
+                }
                 // Check if the object hit has the ObjectClickHandler component
                  ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
                  if(clickableObject !=null)
