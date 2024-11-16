@@ -16,6 +16,6 @@ MonoBehaviour:
   roomName: Speakeasy
   goins: 15
   energy: 1
-  alcohol: -5
-  coal: -5
+  alcohol: 5
+  coal: 5
   dopamin: 0
