@@ -30,8 +30,7 @@ public class BuildingRoom : MonoBehaviour
     }
     public void SpawnRoom(string roomType, Vector3 spawnPosition)
     {
-        Debug.Log($"Spawn Position: {spawnPosition}");
-        Debug.Log($"Room Type: {roomType}");
+
         if (roomPrefabs.ContainsKey(roomType))
         {
             Instantiate(roomPrefabs[roomType], spawnPosition, Quaternion.identity);
