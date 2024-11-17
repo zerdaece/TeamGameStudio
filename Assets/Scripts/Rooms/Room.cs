@@ -24,7 +24,7 @@ public class Room : MonoBehaviour
 
     void Update()
     {
-        timer += Time.fixedDeltaTime;
+        timer += Time.deltaTime;
 
         if (timer >= updateInterval)
         {

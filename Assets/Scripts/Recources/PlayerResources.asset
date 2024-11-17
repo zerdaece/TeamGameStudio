@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ae16a58e6bb424ea8e2e2091fc4d69, type: 3}
   m_Name: PlayerResources
   m_EditorClassIdentifier: 
-  goins: 0
-  energy: 0
-  alcohol: 0
-  coal: 0
   dopamin: 0
   satisfaction: 0
+  TotalBorch: 10000

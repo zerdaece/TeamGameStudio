@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   roomName: Generator
-  goins: 5
-  energy: 0
+  goins: 0
+  energy: 3
   alcohol: 0
-  coal: 0
+  coal: -5
   dopamin: 0

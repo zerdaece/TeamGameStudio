@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class InGameTime : MonoBehaviour
 {
+    public Resources resources;
+
     public TextMeshProUGUI[] UITimeText;
     public TextMeshProUGUI[] UIDateText;
     public TextMeshProUGUI[] BorchText;
@@ -30,6 +32,7 @@ public class InGameTime : MonoBehaviour
 //Borch
     int daysUntilBorch;
     public int newBorchDay = 7;
+    public int borchAmount;
 
     float timer = 0;
 
@@ -98,6 +101,12 @@ public class InGameTime : MonoBehaviour
 
         if (daysUntilBorch <= 0)
         {
+            if (resources.goins >= borchAmount)
+            {
+                resources.goins -= borchAmount;
+                resources.TotalBorch -= borchAmount;
+            }
+            
             daysUntilBorch = newBorchDay;
             _borch = daysUntilBorch + "";
         }

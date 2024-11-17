@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: FirstfloorSO
   m_EditorClassIdentifier: 
   id: 0
-  roomName: Speakeasy
+  roomName: FirstFloor
   goins: 15
-  energy: 1
-  alcohol: 5
-  coal: 5
+  energy: -1
+  alcohol: -2
+  coal: 0
   dopamin: 0
