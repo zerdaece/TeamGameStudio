@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     public Resources resources;
+
 // Resource texts
     public TextMeshProUGUI[] MoneyText;
     public TextMeshProUGUI[] DopamineText;
@@ -19,8 +20,6 @@ public class UIManager : MonoBehaviour
     string _coal => resources.coal + "";
     string _alcohol => resources.alcohol + "";
     string _energy => resources.energy + "";
-
-
 
     void Update()
     {
@@ -48,6 +47,7 @@ public class UIManager : MonoBehaviour
         {
             FastForward4x();
         }
+
 // Resource ların UI da görünmesi
         for(int i = 0; i < MoneyText.Length; i++)
         {
@@ -69,9 +69,11 @@ public class UIManager : MonoBehaviour
         {
             EnergyText[i].text = _energy;
         }
-    }
 
-//Start Menu Tuşları
+    }
+//-------------------------------------------------------------------------------------------------
+
+// Start Menu Tuşları
     public void OnStartPress()
     {
         SceneManager.LoadScene("SampleScene");
@@ -85,7 +87,7 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-//Pause Menu Tuşları
+// Pause Menu Tuşları
     public void OnResumePress()
     {
         pauseMenu.SetActive(false);
@@ -100,7 +102,7 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-//Gameplay menüden oyun hızını değiştirme
+// Gameplay menüden oyun hızını değiştirme
     public void PauseGameplay()
     {
         Time.timeScale = 0f;
@@ -139,5 +141,4 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    
 }
