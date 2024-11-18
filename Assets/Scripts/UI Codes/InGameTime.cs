@@ -54,7 +54,7 @@ public class InGameTime : MonoBehaviour
         day   = 1;
         month = 1;
         year  = 1984;
-        daysUntilBorch = 1; _borch = daysUntilBorch + "";
+        daysUntilBorch = 7; _borch = daysUntilBorch + "";
 
         if(hr < 12)
         isAm = true;
@@ -100,7 +100,6 @@ public class InGameTime : MonoBehaviour
         if (daysUntilBorch <= 0)
         {
             resources.goins -= BorchAmount;
-            resources.TotalBorch -= BorchAmount;
             daysUntilBorch = newBorchDay;
             _borch = daysUntilBorch + "";
         }
@@ -207,6 +206,7 @@ public class InGameTime : MonoBehaviour
         for(int i = 0; i < BorchText.Length; i++)
         {
             BorchText[i].text = _borch;
+
         }
     }
 }

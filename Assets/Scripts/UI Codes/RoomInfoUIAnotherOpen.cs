@@ -8,6 +8,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public GameObject roomInfoUIOpen;
     public GameObject roomInfoUIClose;
     public RoomTemplate room;
+    public ClickHandler clickHandler;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -38,7 +39,8 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     {
 
         if (roomInfoUIOpen.activeSelf)
-        {
+        { clickHandler.isOpenUI = !clickHandler.isOpenUI; 
+        Debug.Log(clickHandler.isOpenUI);
             anim.SetTrigger("Open");
             roomInfoUIOpen.SetActive(false);
             roomInfoUIClose.SetActive(true);
