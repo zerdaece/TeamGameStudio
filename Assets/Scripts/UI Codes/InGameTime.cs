@@ -1,8 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InGameTime : MonoBehaviour
 {
+    public Button winLoseButton;
+    public GameObject winPopUpUI;
+    public GameObject losePopUpUI;
+    
+    public GameObject popUpUI;
     public TextMeshProUGUI[] UITimeText;
     public TextMeshProUGUI[] UIDateText;
     public TextMeshProUGUI[] BorchText;
@@ -58,6 +64,7 @@ public class InGameTime : MonoBehaviour
 
         if(hr < 12)
         isAm = true;
+        popUpUI.SetActive(false);
     }
 
     void Update()
@@ -98,11 +105,43 @@ public class InGameTime : MonoBehaviour
         }
 
         if (daysUntilBorch <= 0)
-        {
-            resources.goins -= BorchAmount;
-            daysUntilBorch = newBorchDay;
-            _borch = daysUntilBorch + "";
+        {   
+            popUpUI.SetActive(true);
+            Time.timeScale=0;
         }
+    }
+   
+    public void BorchDusme()
+    {
+           
+            if(resources.goins < BorchAmount)
+            {
+                Debug.Log("Kaybettin");
+                losePopUpUI.SetActive(true);
+            }
+            else if(resources.goins >= 0)
+            {
+                resources.goins -= BorchAmount;
+                daysUntilBorch = newBorchDay;
+                _borch = daysUntilBorch + "";
+                popUpUI.SetActive(false);
+                
+                if(resources.TotalBorch <= BorchAmount)
+                {
+                    Debug.Log("Kazandın Canım");
+                    Time.timeScale = 0;
+                    winPopUpUI.SetActive(true);
+
+                } 
+                else
+                {
+                    resources.TotalBorch -= BorchAmount;
+                    Time.timeScale = 1;
+                    
+                }
+            }
+            /*daysUntilBorch = newBorchDay;
+            _borch = daysUntilBorch + "";*/
     }
 
     void SetTimeDateString()
