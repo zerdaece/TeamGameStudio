@@ -6217,7 +6217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roominfoui: {fileID: 819455333}
-  roominfouiObject: {fileID: 819455328}
   buildingRoom: {fileID: 963194231}
 --- !u!114 &963194231
 MonoBehaviour:
@@ -8969,10 +8968,10 @@ MonoBehaviour:
   - {fileID: 571698822}
   timeFormat: 0
   dateFormat: 0
-  resources: {fileID: 0}
-  secPerMin: 0.5
+  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
+  secPerMin: 0.1
   newBorchDay: 7
-  BorchAmount: 0
+  BorchAmount: 1000
 --- !u!4 &1553241455
 Transform:
   m_ObjectHideFlags: 0

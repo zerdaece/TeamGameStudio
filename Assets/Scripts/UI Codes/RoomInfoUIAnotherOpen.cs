@@ -8,7 +8,6 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public GameObject roomInfoUIOpen;
     public GameObject roomInfoUIClose;
     public RoomTemplate room;
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
