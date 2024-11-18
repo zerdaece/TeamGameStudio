@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class UnlockingFloors : MonoBehaviour
 {
-    public BuildingRoom buildingRoom;
     public Resources resources;
 
-    public GameObject lockGameObject;//test için
-    public GameObject newRooms;
-    // Start is called before the first frame update
+    public GameObject lockGameObject;
+
     [SerializeField] private int need;
 
     void Update()
