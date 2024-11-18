@@ -12,37 +12,36 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public GameObject RoomName;
 
     public ClickHandler clickHandler;
+    public GameObject closebutton;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (room != null)
-            {
-
-            }
             OpenRoomUI();
 
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            AnotherOpen();
+            CloseRoomUI();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            AnotherOpen();
+            CloseRoomUI();
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            AnotherOpen();
+            CloseRoomUI();
         }
     }
 
     public void OpenRoomUI()
     {
 
-        if (roomInfoUIOpen.activeSelf)
+        if (roomInfoUIOpen.activeSelf && room != null)
         {
+            closebutton.SetActive(true);
             clickHandler.changeboolean();
             Debug.Log(clickHandler.isOpenUI);
             print(room.roomType);
@@ -65,9 +64,21 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     {
         if (roomInfoUIClose.activeSelf)
         {
+            
             anim.SetTrigger("Close");
             roomInfoUIClose.SetActive(false);
             roomInfoUIOpen.SetActive(true);
         }
     }
+    public void CloseRoomUI()
+    {
+        if(closebutton.activeSelf)
+        {
+            closebutton.SetActive(false);
+            clickHandler.changeboolean();
+            anim.SetTrigger("Close");
+            roomInfoUIClose.SetActive(false);
+            roomInfoUIOpen.SetActive(true);
+        }
+}
 }

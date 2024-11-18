@@ -21,13 +21,13 @@ public class UIAnim : MonoBehaviour
 
     public void GeneralInfoUIOpen()
     {
-        clickHandler.isOpenUI = true;
+        clickHandler.changeboolean();
         generalInfoUIOpen.SetActive(false);
         generalInfoUIClose.SetActive(true);
     }
     public void GeneralInfoUIClose()
     {
-        clickHandler.isOpenUI = false;
+        clickHandler.changeboolean();
         generalInfoUIOpen.SetActive(true);
         generalInfoUIClose.SetActive(false);
     }
@@ -37,38 +37,38 @@ public class UIAnim : MonoBehaviour
         Debug.Log("Room Info UI Open");
         roomInfoUIOpen.SetActive(false);
         roomInfoUIClose.SetActive(true);
-        clickHandler.isOpenUI = true;
+        clickHandler.changeboolean();
     }
     public void RoomInfoUIClose()
     {
         roomInfoUIOpen.SetActive(true);
         roomInfoUIClose.SetActive(false);
-        clickHandler.isOpenUI = false;
+        clickHandler.changeboolean();
     }
 
     public void ShopInfoUIOpen()
     {
         shopUIOpen.SetActive(false);
         shopUIClose.SetActive(true);
-        clickHandler.isOpenUI = true;
+        clickHandler.changeboolean();
     }
     public void ShopInfoUIClose()
     {
         shopUIOpen.SetActive(true);
         shopUIClose.SetActive(false);
-        clickHandler.isOpenUI = false;
+        clickHandler.changeboolean();
     }
 
     public void ResearchUIOpen()
     {
         researchUIOpen.SetActive(false);
         researchUIClose.SetActive(true);
-        clickHandler.isOpenUI = true;
+        clickHandler.changeboolean();
     }
     public void ResearchUIClose()
     {
         researchUIOpen.SetActive(true);
         researchUIClose.SetActive(false);
-        clickHandler.isOpenUI = false;
+        clickHandler.changeboolean();
     }
 }
