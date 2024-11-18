@@ -6732,11 +6732,11 @@ MonoBehaviour:
   GeneratorButton: {fileID: 249846627}
   FarmButton: {fileID: 496124543}
   SpeakeasyButton: {fileID: 159928764}
-  speakeasyPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
+  speakeasyPrefab: {fileID: 3923894308637939717, guid: a0b114182ff068c46940b0d139b74801, type: 3}
   generatorRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
   distillerRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
   accommodationPrefab: {fileID: 919132149155446097, guid: 975c9b8e34fe1664da0bb0dee90d0e87, type: 3}
-  farmPrefab: {fileID: 919132149155446097, guid: 6de8a6db9155a8843adb94213745ddab, type: 3}
+  farmPrefab: {fileID: 91496187463815350, guid: 8e4a40b4d8a601b4787d172da7f4dc43, type: 3}
 --- !u!1001 &974246989
 PrefabInstance:
   m_ObjectHideFlags: 0
