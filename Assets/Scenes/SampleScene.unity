@@ -5335,6 +5335,7 @@ MonoBehaviour:
   anim: {fileID: 819455332}
   roomInfoUIOpen: {fileID: 277008551}
   roomInfoUIClose: {fileID: 2064620290}
+  room: {fileID: 0}
 --- !u!1001 &820466340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6215,6 +6216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2590fee678bf844e92befe8cbc89836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roominfoui: {fileID: 819455333}
+  roominfouiObject: {fileID: 819455328}
   buildingRoom: {fileID: 963194231}
 --- !u!114 &963194231
 MonoBehaviour:
@@ -6231,7 +6234,8 @@ MonoBehaviour:
   speakeasyPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
   generatorRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
   distillerRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
-  accommodationPrefab: {fileID: 7960014859147060847, guid: 6614077334b5a104d93911ca0bf63bbd, type: 3}
+  accommodationPrefab: {fileID: 919132149155446097, guid: 975c9b8e34fe1664da0bb0dee90d0e87, type: 3}
+  EmptyRoomPrefab: {fileID: 919132149155446097, guid: a9ad9802995b5da49a43b9028bcdec72, type: 3}
 --- !u!1001 &974246989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8965,8 +8969,10 @@ MonoBehaviour:
   - {fileID: 571698822}
   timeFormat: 0
   dateFormat: 0
+  resources: {fileID: 0}
   secPerMin: 0.5
   newBorchDay: 7
+  BorchAmount: 0
 --- !u!4 &1553241455
 Transform:
   m_ObjectHideFlags: 0
@@ -12484,6 +12490,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1592942676}
     m_Modifications:
+    - target: {fileID: 1215949343246615953, guid: bb7dc20212d4dc2449a13c9404448e62, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
     - target: {fileID: 4347339249168187163, guid: bb7dc20212d4dc2449a13c9404448e62, type: 3}
       propertyPath: m_Size.z
       value: 4.0329256

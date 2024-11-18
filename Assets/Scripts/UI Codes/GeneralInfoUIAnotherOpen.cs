@@ -12,16 +12,7 @@ public class ResearchUIAnotherOpen : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (generalInfoUIOpen.activeSelf)
-            {
-                anim.SetTrigger("Open");
-                generalInfoUIOpen.SetActive(false);
-                generalInfoUIClose.SetActive(true);
-            }
-            else
-            {
-                AnotherOpen();
-            }
+            OpenRoomUI();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -37,7 +28,15 @@ public class ResearchUIAnotherOpen : MonoBehaviour
             AnotherOpen();
         }
     }
-
+    public void OpenRoomUI()
+    {
+        if (generalInfoUIOpen.activeSelf)
+        {
+            anim.SetTrigger("Open");
+            generalInfoUIOpen.SetActive(false);
+            generalInfoUIClose.SetActive(true);
+        }
+    }
     void Start()
     {
         anim = GetComponent<Animator>();

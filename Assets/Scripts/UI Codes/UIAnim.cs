@@ -30,6 +30,7 @@ public class UIAnim : MonoBehaviour
 
     public void RoomInfoUIOpen()
     {
+        Debug.Log("Room Info UI Open");
         roomInfoUIOpen.SetActive(false);
         roomInfoUIClose.SetActive(true);
     }

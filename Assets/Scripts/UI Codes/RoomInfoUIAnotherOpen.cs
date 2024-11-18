@@ -9,24 +9,16 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public GameObject roomInfoUIClose;
     public RoomTemplate room;
 
-    void Update() 
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(room != null)
+            if (room != null)
             {
-                
+
             }
-            if (roomInfoUIOpen.activeSelf)
-            {
-                anim.SetTrigger("Open");
-                roomInfoUIOpen.SetActive(false);
-                roomInfoUIClose.SetActive(true);
-            }
-            else
-            {
-                AnotherOpen();
-            }
+            OpenRoomUI();
+
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -43,6 +35,20 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         }
     }
 
+    public void OpenRoomUI()
+    {
+
+        if (roomInfoUIOpen.activeSelf)
+        {
+            anim.SetTrigger("Open");
+            roomInfoUIOpen.SetActive(false);
+            roomInfoUIClose.SetActive(true);
+        }
+        else
+        {
+            AnotherOpen();
+        }
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
