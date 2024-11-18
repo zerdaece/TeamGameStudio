@@ -29,7 +29,7 @@ public class CameraZoom : MonoBehaviour
         zoomTarget = Mathf.Clamp(zoomTarget, minZoom, maxZoom);
         maincamera.fieldOfView = Mathf.SmoothDamp(maincamera.fieldOfView, zoomTarget, ref velocity, smoothTime);
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(2))
         {
             float moveX =Input.GetAxis("Mouse X");
             Vector3 movement = new Vector3(moveX, 0, 0);
