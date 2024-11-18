@@ -11,4 +11,5 @@ public class Resources : ScriptableObject
     public int coal;
     public int dopamin;
     public int satisfaction;
+    public int TotalBorch;
 }
