@@ -7,9 +7,16 @@ public class ShopUIAnotherOpen : MonoBehaviour
     public Animator anim;
     public GameObject shopInfoUIOpen;
     public GameObject shopInfoUIClose;
+    public Resources resources;
+
+    public int CoalPrice;
+    public int CoalAmount;
+    public int AlcoholPrice;
+    public int AlcoholAmount;
 
     void Update() 
-    {
+    {   
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (shopInfoUIOpen.activeSelf)
@@ -49,6 +56,22 @@ public class ShopUIAnotherOpen : MonoBehaviour
             anim.SetTrigger("Close");
             shopInfoUIClose.SetActive(false);
             shopInfoUIOpen.SetActive(true);
+        }
+    }
+    public void BuyCoal()
+    {
+        if (resources.goins >= CoalPrice)
+        {
+            resources.goins -= CoalPrice;
+            resources.coal += CoalAmount;
+        }
+    }
+    public void BuyAlcohol()
+    {
+        if (resources.goins >= AlcoholPrice)
+        {
+            resources.goins -= AlcoholPrice;
+            resources.alcohol += AlcoholAmount;
         }
     }
 }
