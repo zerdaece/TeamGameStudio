@@ -48,12 +48,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8355579101202053003, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8246912899171996075, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6954071062223143363, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
       propertyPath: m_Name
       value: SpeakEasy
       objectReference: {fileID: 0}
+    - target: {fileID: 4073680261343121730, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3051141660323326882}
   m_SourcePrefab: {fileID: 100100000, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+--- !u!1 &3923894308637939717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d28ffdf678cf2d844a913195dc62d17a, type: 3}
+  m_PrefabInstance: {fileID: 4230305860704249172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3051141660323326882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923894308637939717}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.726237, y: 2.3273191, z: 3.810587}
+  m_Center: {x: 0.09741807, y: 0.06697512, z: -1.4052942}
