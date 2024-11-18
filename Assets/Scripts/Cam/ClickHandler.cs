@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ClickHandler : MonoBehaviour
 {
-
+    public RoomInfoUIAnotherOpen roominfoui;
+    public GameObject roominfouiObject;
     [SerializeField]private BuildingRoom buildingRoom;
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,16 @@ public class ClickHandler : MonoBehaviour
                 }
                 // Check if the object hit has the ObjectClickHandler component
                  ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
-                 if(clickableObject !=null)
+                 if(clickableObject.room.roomType !=null)
                  {
-                    Debug.Log(gameObject.name + " tıklandı");
+
+                    Debug.Log(hit.collider.gameObject.name + " tıklandı");
+
+                    roominfoui.room = clickableObject.room;
+                    roominfouiObject.SetActive(true);
                     Vector3 spawnPosition = clickableObject.gameObject.transform.position ;
                     Destroy(clickableObject.gameObject);
-                    buildingRoom.SpawnRoom(clickableObject.roomType, spawnPosition);
+                    buildingRoom.SpawnRoom(clickableObject.room.roomType, spawnPosition);
                  } 
                  else
                  {

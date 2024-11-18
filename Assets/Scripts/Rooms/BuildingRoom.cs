@@ -9,6 +9,7 @@ public class BuildingRoom : MonoBehaviour
     public GameObject generatorRoomPrefab;
     public GameObject distillerRoomPrefab;
     public GameObject accommodationPrefab;
+    public GameObject EmptyRoomPrefab;
 
     public Dictionary<string, GameObject> roomPrefabs;
 
@@ -19,7 +20,8 @@ public class BuildingRoom : MonoBehaviour
         { "Speakeasy", speakeasyPrefab },
         { "Generator", generatorRoomPrefab },
         { "Distiller", distillerRoomPrefab },
-        { "Accommodation", accommodationPrefab }
+        { "Accommodation", accommodationPrefab },
+        {"Empty", EmptyRoomPrefab}
     };
 
         foreach (var entry in roomPrefabs)
