@@ -21,19 +21,37 @@ public class UIManager : MonoBehaviour
     string _alcohol => resources.alcohol + "";
     string _energy => resources.energy + "";
 
+    bool isPaused = false;
+    int gameSpeed;
+
     void Update()
     {
 // Escape tuşuna basıldığında pause menu aç/kapa
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseMenu.SetActive(true);
-            PauseGameplay();
+            if (isPaused == true)
+            {
+                OnResumePress();
+            }
+            else
+            {
+                pauseMenu.SetActive(true);
+                PauseGameplay();
+            }
         }
 
 // 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
-            PauseGameplay();
+            if (isPaused == true)
+            {
+                Time.timeScale = 1f;
+                isPaused = false;
+            }
+            else
+            {
+                PauseGameplay();
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -92,6 +110,7 @@ public class UIManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        isPaused = false;
     }
     public void OnQuitMainMenuPress()
     {
@@ -106,12 +125,14 @@ public class UIManager : MonoBehaviour
     public void PauseGameplay()
     {
         Time.timeScale = 0f;
+        isPaused = true;
     }
     public void FastForward1x()
     {
         if(Time.timeScale != 1f)
         {
             Time.timeScale = 1f;
+            isPaused = false;
         }
         else
         {
@@ -123,6 +144,7 @@ public class UIManager : MonoBehaviour
         if(Time.timeScale == 1f)
         {
             Time.timeScale = 2f;
+            isPaused = false;
         }
         else
         {
@@ -134,6 +156,7 @@ public class UIManager : MonoBehaviour
         if(Time.timeScale == 1f || Time.timeScale == 2f)
         {
             Time.timeScale = 4f;
+            isPaused = false;
         }
         else
         {

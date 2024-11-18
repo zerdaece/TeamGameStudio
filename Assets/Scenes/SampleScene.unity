@@ -11057,10 +11057,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310ed012209be6b4bbc98bf6c2ab1216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakeasyPrefab: {fileID: 0}
-  generatorRoomPrefab: {fileID: 0}
-  distillerRoomPrefab: {fileID: 7960014859147060847, guid: 6614077334b5a104d93911ca0bf63bbd, type: 3}
-  accommodationPrefab: {fileID: 7960014859147060847, guid: 6614077334b5a104d93911ca0bf63bbd, type: 3}
+  speakeasyPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
+  generatorRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
+  distillerRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
+  accommodationPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
 --- !u!1 &965774686
 GameObject:
   m_ObjectHideFlags: 0
