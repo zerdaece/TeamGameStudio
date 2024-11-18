@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ClickHandler : MonoBehaviour
 {
-
+    public Transform spawnPoint;
+    public RoomInfoUIAnotherOpen roominfoui;
+    public Boolean isOpenUI = false;
     [SerializeField]private BuildingRoom buildingRoom;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +18,7 @@ public class ClickHandler : MonoBehaviour
     // Update is called once per frame
      void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button
+        if (Input.GetMouseButtonDown(0)&& !isOpenUI ) // Left mouse button
         {
            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -32,10 +35,13 @@ public class ClickHandler : MonoBehaviour
                  ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
                  if(clickableObject !=null)
                  {
-                    Debug.Log(gameObject.name + " tıklandı");
+                    spawnPoint= hit.collider.gameObject.transform  ;
+                    Debug.Log(hit.collider.gameObject.name + " tıklandı");
+
+                    roominfoui.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
+                    roominfoui.OpenRoomUI();
                     Vector3 spawnPosition = clickableObject.gameObject.transform.position ;
-                    Destroy(clickableObject.gameObject);
-                    buildingRoom.SpawnRoom(clickableObject.roomType, spawnPosition);
+
                  } 
                  else
                  {

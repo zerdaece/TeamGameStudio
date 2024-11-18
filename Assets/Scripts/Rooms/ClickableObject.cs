@@ -6,6 +6,8 @@ public class ClickableObject : MonoBehaviour
 {
     public string roomType; // Spawn edilecek oda türü
     public Vector3 spawnOffset; // Odanın spawn pozisyonu için offset
+    private BuildingRoom buildingRoom;
+
 
 
 }

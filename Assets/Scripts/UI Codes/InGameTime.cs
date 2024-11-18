@@ -8,6 +8,7 @@ public class InGameTime : MonoBehaviour
     public TextMeshProUGUI[] BorchText;
     public TimeFormat timeFormat = TimeFormat.Hour_24;
     public DateFormat dateFormat = DateFormat.DD_MM_YYYY;
+    public Resources resources;
 //Oyun içi bir dakika reelde bir saniyeye eşit
     public float secPerMin = 1;
 
@@ -30,7 +31,7 @@ public class InGameTime : MonoBehaviour
 //Borch
     int daysUntilBorch;
     public int newBorchDay = 7;
-
+    public int BorchAmount;
     float timer = 0;
 
     public enum TimeFormat
@@ -98,6 +99,7 @@ public class InGameTime : MonoBehaviour
 
         if (daysUntilBorch <= 0)
         {
+            resources.goins -= BorchAmount;
             daysUntilBorch = newBorchDay;
             _borch = daysUntilBorch + "";
         }
@@ -204,6 +206,7 @@ public class InGameTime : MonoBehaviour
         for(int i = 0; i < BorchText.Length; i++)
         {
             BorchText[i].text = _borch;
+
         }
     }
 }

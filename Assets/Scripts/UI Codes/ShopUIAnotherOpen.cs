@@ -13,14 +13,14 @@ public class ShopUIAnotherOpen : MonoBehaviour
     public int CoalAmount;
     public int AlcoholPrice;
     public int AlcoholAmount;
-
+public ClickHandler clickHandler;
     void Update() 
     {   
         
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (shopInfoUIOpen.activeSelf)
-            {
+            {clickHandler.isOpenUI=true;
                 anim.SetTrigger("Open");
                 shopInfoUIOpen.SetActive(false);
                 shopInfoUIClose.SetActive(true);

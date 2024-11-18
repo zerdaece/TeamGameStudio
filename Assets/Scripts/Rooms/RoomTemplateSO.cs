@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomTemplate : ScriptableObject
 {
     public int id;
-    public string roomName;
+    public string roomType;
     [Header("Resources")]
     public int goins;
     public int energy;

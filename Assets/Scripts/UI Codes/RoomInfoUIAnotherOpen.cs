@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RoomInfoUIAnotherOpen : MonoBehaviour
@@ -7,21 +8,20 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public Animator anim;
     public GameObject roomInfoUIOpen;
     public GameObject roomInfoUIClose;
+    public RoomTemplate room;
+    public GameObject RoomName;
 
-    void Update() 
+    public ClickHandler clickHandler;
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (roomInfoUIOpen.activeSelf)
+            if (room != null)
             {
-                anim.SetTrigger("Open");
-                roomInfoUIOpen.SetActive(false);
-                roomInfoUIClose.SetActive(true);
+
             }
-            else
-            {
-                AnotherOpen();
-            }
+            OpenRoomUI();
+
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -38,6 +38,23 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         }
     }
 
+    public void OpenRoomUI()
+    {
+
+        if (roomInfoUIOpen.activeSelf)
+        { clickHandler.isOpenUI = !clickHandler.isOpenUI; 
+        Debug.Log(clickHandler.isOpenUI);
+            print(room.roomType);
+            RoomName.GetComponent<TextMeshProUGUI>().text = room.roomType;
+            anim.SetTrigger("Open");
+            roomInfoUIOpen.SetActive(false);
+            roomInfoUIClose.SetActive(true);
+        }
+        else
+        {
+            AnotherOpen();
+        }
+    }
     void Start()
     {
         anim = GetComponent<Animator>();

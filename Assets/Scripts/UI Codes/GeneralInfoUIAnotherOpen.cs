@@ -7,21 +7,17 @@ public class ResearchUIAnotherOpen : MonoBehaviour
     public Animator anim;
     public GameObject generalInfoUIOpen;
     public GameObject generalInfoUIClose;
-
+public ClickHandler clickHandler;
     void Update() 
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (generalInfoUIOpen.activeSelf)
-            {
-                anim.SetTrigger("Open");
-                generalInfoUIOpen.SetActive(false);
-                generalInfoUIClose.SetActive(true);
-            }
-            else
-            {
-                AnotherOpen();
-            }
+                   if (generalInfoUIOpen.activeSelf)
+        {clickHandler.isOpenUI = true;
+            anim.SetTrigger("Open");
+            generalInfoUIOpen.SetActive(false);
+            generalInfoUIClose.SetActive(true);
+        }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
