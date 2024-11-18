@@ -33,7 +33,8 @@ public class ClickHandler : MonoBehaviour
                  if(clickableObject !=null)
                  {
                     Debug.Log(gameObject.name + " tıklandı");
-                    Vector3 spawnPosition = clickableObject.gameObject.transform.position + clickableObject.spawnOffset;
+                    Vector3 spawnPosition = clickableObject.gameObject.transform.position ;
+                    Destroy(clickableObject.gameObject);
                     buildingRoom.SpawnRoom(clickableObject.roomType, spawnPosition);
                  } 
                  else

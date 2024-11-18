@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class BuildingRoom : MonoBehaviour
 {
-
     public GameObject speakeasyPrefab;
     public GameObject generatorRoomPrefab;
     public GameObject distillerRoomPrefab;
