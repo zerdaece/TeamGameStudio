@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
   m_Name: GeneratorRoom
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
   roomType: Generator
-  goins: 5
-  energy: 0
+  goins: 0
+  energy: 6
   alcohol: 0
-  coal: 0
+  coal: -3
   dopamin: 0
