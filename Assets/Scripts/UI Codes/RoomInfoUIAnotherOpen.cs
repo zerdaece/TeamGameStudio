@@ -7,11 +7,16 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public Animator anim;
     public GameObject roomInfoUIOpen;
     public GameObject roomInfoUIClose;
+    public RoomTemplate room;
 
     void Update() 
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if(room != null)
+            {
+                
+            }
             if (roomInfoUIOpen.activeSelf)
             {
                 anim.SetTrigger("Open");
