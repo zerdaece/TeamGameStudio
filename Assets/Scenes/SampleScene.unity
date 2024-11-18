@@ -5738,11 +5738,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1404825987}
+  m_Father: {fileID: 1731245829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -478, y: 155}
+  m_AnchoredPosition: {x: 2, y: 155}
   m_SizeDelta: {x: -288, y: -956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784389736
@@ -7626,7 +7626,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1109430100}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1731245833}
+        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
+        m_MethodName: BuyCoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1109430100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8474,11 +8486,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1404825987}
+  m_Father: {fileID: 1731245829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -478, y: -100}
+  m_AnchoredPosition: {x: 2, y: -100}
   m_SizeDelta: {x: -288, y: -956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1306158536
@@ -9203,8 +9215,6 @@ RectTransform:
   - {fileID: 528037281}
   - {fileID: 819455329}
   - {fileID: 1731245829}
-  - {fileID: 784389735}
-  - {fileID: 1306158535}
   - {fileID: 1331085892}
   m_Father: {fileID: 934315748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10408,7 +10418,7 @@ GameObject:
   - component: {fileID: 1609012171}
   - component: {fileID: 1609012170}
   m_Layer: 5
-  m_Name: BuyCoalButton (1)
+  m_Name: BuyAlcoholButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10477,7 +10487,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1609012171}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1731245833}
+        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
+        m_MethodName: BuyAlcohol
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1609012171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10827,6 +10849,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1767927182}
+  - {fileID: 784389735}
+  - {fileID: 1306158535}
   - {fileID: 1109430098}
   - {fileID: 1609012169}
   m_Father: {fileID: 1404825987}
@@ -10910,11 +10934,11 @@ MonoBehaviour:
   anim: {fileID: 1731245832}
   shopInfoUIOpen: {fileID: 688281032}
   shopInfoUIClose: {fileID: 1951176478}
-  resources: {fileID: 0}
-  CoalPrice: 0
-  CoalAmount: 0
-  AlcoholPrice: 0
-  AlcoholAmount: 0
+  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
+  CoalPrice: 100
+  CoalAmount: 250
+  AlcoholPrice: 100
+  AlcoholAmount: 100
   clickHandler: {fileID: 963194230}
 --- !u!1 &1733242418
 GameObject:
