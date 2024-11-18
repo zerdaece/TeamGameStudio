@@ -46,6 +46,7 @@ public class BuildingRoom : MonoBehaviour
         {
             Instantiate(roomPrefabs[roomType], spawnPosition, Quaternion.identity);
             Debug.Log($"Instantiated {roomType} at {spawnPosition}");
+            Destroy(gameObject.GetComponent<ClickHandler>().roomObject);
         }
         else
         {

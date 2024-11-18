@@ -8,6 +8,7 @@ public class ClickHandler : MonoBehaviour
     public Transform spawnPoint;
     public RoomInfoUIAnotherOpen roominfoui;
     public Boolean isOpenUI = false;
+    public GameObject roomObject;
     [SerializeField]private BuildingRoom buildingRoom;
     // Start is called before the first frame update
     void Start()
@@ -40,10 +41,10 @@ public class ClickHandler : MonoBehaviour
                  {
                     spawnPoint= hit.collider.gameObject.transform  ;
                     Debug.Log(hit.collider.gameObject.name + " tıklandı");
-
+                    roomObject = hit.collider.gameObject;
                     roominfoui.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
                     roominfoui.OpenRoomUI();
-                    Vector3 spawnPosition = clickableObject.gameObject.transform.position ;
+                    
 
                  } 
                  else
