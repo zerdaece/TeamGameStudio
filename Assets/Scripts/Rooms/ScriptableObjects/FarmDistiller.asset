@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
-  m_Name: FirstfloorSO
+  m_Name: FarmDistiller
   m_EditorClassIdentifier: 
-  id: 1
-  roomType: Entrance
-  goins: 15
+  id: 4
+  roomType: FArmDistiller
+  goins: 0
   energy: -2
-  alcohol: -3
+  alcohol: 8
   coal: 0
   dopamin: 0
