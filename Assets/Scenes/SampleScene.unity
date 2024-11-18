@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 190}
+  m_AnchoredPosition: {x: -110, y: -195}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159928764
@@ -2163,6 +2163,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 719148436889759454, guid: b3349f20599b20c4fabfd41ca4d9d48e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1461063913}
+    - targetCorrespondingSourceObject: {fileID: 719148436889759454, guid: b3349f20599b20c4fabfd41ca4d9d48e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1461063916}
   m_SourcePrefab: {fileID: 100100000, guid: b3349f20599b20c4fabfd41ca4d9d48e, type: 3}
 --- !u!1001 &337608764
 PrefabInstance:
@@ -2499,6 +2502,81 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a0e85ff30aa4c46b65ee5d251b6e3e, type: 3}
+--- !u!1 &357855345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357855346}
+  - component: {fileID: 357855348}
+  - component: {fileID: 357855347}
+  m_Layer: 5
+  m_Name: MoneyIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &357855346
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357855345}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2137714783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -74, y: -0.5999756}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &357855347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357855345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f3bd9b684dcf26442a0b98ded280c124, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &357855348
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357855345}
+  m_CullTransparentMesh: 1
 --- !u!1 &370786445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,7 +2938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ae328f8a1b132f40b16743568cc9f4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2a9feecb40a5f24d8379b7d51213ce1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3803,7 +3881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99, y: 298}
+  m_AnchoredPosition: {x: 105, y: -195}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496124543
@@ -4533,7 +4611,7 @@ GameObject:
   - component: {fileID: 662770164}
   - component: {fileID: 662770163}
   m_Layer: 5
-  m_Name: InfoV2
+  m_Name: RoomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5716,6 +5794,7 @@ MonoBehaviour:
   roomInfoUIOpen: {fileID: 277008551}
   roomInfoUIClose: {fileID: 2064620290}
   room: {fileID: 0}
+  RoomName: {fileID: 662770161}
 --- !u!1001 &820466340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7839,7 +7918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b37b2182e9db8d4b94d12579fa10038, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e6497b3f56e53c41981d50b2f96abf4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8901,6 +8980,20 @@ MonoBehaviour:
   roomTemplate: {fileID: 11400000, guid: a5488128ab7a7404da7cada140db7bea, type: 2}
   resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
   updateInterval: 5
+--- !u!114 &1461063916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461063911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4b2aed0549efc48bc1d905e3cede95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: Entrance
+  spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1492935458
 GameObject:
   m_ObjectHideFlags: 0
@@ -9094,7 +9187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d5879f128fe0bc46b85f08d29d570e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9c8e3828a5cac2468ac0dc42506e4cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12951,12 +13044,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 357855346}
   - {fileID: 1492935459}
   m_Father: {fileID: 465848869}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 938.8, y: -25}
+  m_AnchoredPosition: {x: 938.8, y: -24.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137714784
@@ -13009,6 +13103,10 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
+    - target: {fileID: 1215949343246615953, guid: bb7dc20212d4dc2449a13c9404448e62, type: 3}
+      propertyPath: roomType
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4347339249168187163, guid: bb7dc20212d4dc2449a13c9404448e62, type: 3}
       propertyPath: m_Size.z
       value: 4.0329256
