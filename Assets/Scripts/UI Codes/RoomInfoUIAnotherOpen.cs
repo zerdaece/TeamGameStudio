@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RoomInfoUIAnotherOpen : MonoBehaviour
@@ -8,6 +9,8 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public GameObject roomInfoUIOpen;
     public GameObject roomInfoUIClose;
     public RoomTemplate room;
+    public GameObject RoomName;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -39,6 +42,8 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
 
         if (roomInfoUIOpen.activeSelf)
         {
+            print(room.roomType);
+            RoomName.GetComponent<TextMeshProUGUI>().text = room.roomType;
             anim.SetTrigger("Open");
             roomInfoUIOpen.SetActive(false);
             roomInfoUIClose.SetActive(true);

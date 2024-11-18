@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GeneratorRoom
   m_EditorClassIdentifier: 
   id: 1
-  roomName: Generator
+  roomType: Generator
   goins: 5
   energy: 0
   alcohol: 0
