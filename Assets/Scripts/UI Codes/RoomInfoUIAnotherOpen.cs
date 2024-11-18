@@ -42,8 +42,9 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     {
 
         if (roomInfoUIOpen.activeSelf)
-        { clickHandler.isOpenUI = !clickHandler.isOpenUI; 
-        Debug.Log(clickHandler.isOpenUI);
+        {
+            clickHandler.changeboolean();
+            Debug.Log(clickHandler.isOpenUI);
             print(room.roomType);
             RoomName.GetComponent<TextMeshProUGUI>().text = room.roomType;
             anim.SetTrigger("Open");
@@ -52,6 +53,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         }
         else
         {
+            clickHandler.changeboolean();
             AnotherOpen();
         }
     }

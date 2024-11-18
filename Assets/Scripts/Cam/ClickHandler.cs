@@ -14,7 +14,10 @@ public class ClickHandler : MonoBehaviour
     {
         
     }
-
+    public void changeboolean()
+    {
+        isOpenUI = !isOpenUI;
+    }
     // Update is called once per frame
      void Update()
     {
