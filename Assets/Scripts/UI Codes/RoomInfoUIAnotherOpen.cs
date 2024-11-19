@@ -14,6 +14,15 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     public ClickHandler clickHandler;
     public GameObject closebutton;
 
+    public Resources resources;
+    [SerializeField] private GameObject GeneratorButton;
+    [SerializeField] private GameObject SpeakEasyButton;
+    [SerializeField] private GameObject FarmButton;
+    public BuildingRoom buildingRoom;
+    [SerializeField] int GeneratorPrice;
+    [SerializeField] int SpeakEasyPrice;
+    [SerializeField] int FarmPrice;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -45,6 +54,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
             clickHandler.changeboolean();
             Debug.Log(clickHandler.isOpenUI);
             print(room.roomType);
+
             RoomName.GetComponent<TextMeshProUGUI>().text = room.roomType;
             anim.SetTrigger("Open");
             roomInfoUIOpen.SetActive(false);
@@ -64,7 +74,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     {
         if (roomInfoUIClose.activeSelf)
         {
-            
+
             anim.SetTrigger("Close");
             roomInfoUIClose.SetActive(false);
             roomInfoUIOpen.SetActive(true);
@@ -72,7 +82,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     }
     public void CloseRoomUI()
     {
-        if(closebutton.activeSelf)
+        if (closebutton.activeSelf)
         {
             closebutton.SetActive(false);
             clickHandler.changeboolean();
@@ -80,5 +90,32 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
             roomInfoUIClose.SetActive(false);
             roomInfoUIOpen.SetActive(true);
         }
-}
+    }
+    public void GeneratorButtonClicked()
+    {
+        if (resources.goins >= GeneratorPrice)
+        {
+            resources.goins -= GeneratorPrice;
+            buildingRoom.SpawnRoom("Generator", clickHandler.spawnPoint.position);
+        }
+
+    }
+    public void SpeakEasyButtonClicked()
+    {
+        if (resources.goins >= SpeakEasyPrice)
+        {
+            resources.goins -= SpeakEasyPrice;
+            buildingRoom.SpawnRoom("SpeakEasy", clickHandler.spawnPoint.position);
+        }
+
+
+    }
+    public void FarmButtonClicked()
+    {
+        if (resources.goins >= FarmPrice)
+        {
+            resources.goins -= FarmPrice;
+            buildingRoom.SpawnRoom("Farm", clickHandler.spawnPoint.position);
+        }
+    }
 }
