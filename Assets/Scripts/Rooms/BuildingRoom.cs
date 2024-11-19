@@ -29,10 +29,6 @@ public class BuildingRoom : MonoBehaviour
         {"Farm", farmPrefab }
       
        };
-        GeneratorButton.onClick.AddListener(() => SpawnRoom("Generator", gameObject.GetComponent<ClickHandler>().spawnPoint.position));
-        FarmButton.onClick.AddListener(() => SpawnRoom("Farm", gameObject.GetComponent<ClickHandler>().spawnPoint.position)); 
-        SpeakeasyButton.onClick.AddListener(() => SpawnRoom("Speakeasy", gameObject.GetComponent<ClickHandler>().spawnPoint.position));
-
         foreach (var entry in roomPrefabs)
         {
             Debug.Log($"Room Type: {entry.Key}, Prefab: {entry.Value}");
