@@ -69,6 +69,9 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        GeneratorButton.GetComponentInChildren<TextMeshProUGUI>().text = "Generator Room Price: " + GeneratorPrice;
+        SpeakEasyButton.GetComponentInChildren<TextMeshProUGUI>().text = "Speakeasy Room Price: " + SpeakEasyPrice;
+        FarmButton.GetComponentInChildren<TextMeshProUGUI>().text = "Farm Room Price: " + FarmPrice;
     }
     public void AnotherOpen()
     {
@@ -95,8 +98,10 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     {
         if (resources.goins >= GeneratorPrice)
         {
+            
             resources.goins -= GeneratorPrice;
             buildingRoom.SpawnRoom("Generator", clickHandler.spawnPoint.position);
+            CloseRoomUI();
         }
 
     }
@@ -106,6 +111,8 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         {
             resources.goins -= SpeakEasyPrice;
             buildingRoom.SpawnRoom("SpeakEasy", clickHandler.spawnPoint.position);
+            CloseRoomUI();
+
         }
 
 
@@ -116,6 +123,8 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         {
             resources.goins -= FarmPrice;
             buildingRoom.SpawnRoom("Farm", clickHandler.spawnPoint.position);
+            CloseRoomUI();
+
         }
     }
 }

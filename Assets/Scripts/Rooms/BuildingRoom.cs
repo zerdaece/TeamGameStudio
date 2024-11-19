@@ -22,7 +22,7 @@ public class BuildingRoom : MonoBehaviour
     {
         roomPrefabs = new Dictionary<string, GameObject>
        {
-        { "Speakeasy", speakeasyPrefab },
+        { "SpeakEasy", speakeasyPrefab },
         { "Generator", generatorRoomPrefab },
        // { "Distiller", distillerRoomPrefab },
         //{ "Accommodation", accommodationPrefab },

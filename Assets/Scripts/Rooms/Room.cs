@@ -7,6 +7,7 @@ public class Room : MonoBehaviour
     public RoomTemplate roomTemplate;
 
     public Resources resources;
+    public GameObject Customer;
 
     private int roomid;
 

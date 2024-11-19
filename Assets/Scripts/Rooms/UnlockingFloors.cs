@@ -18,7 +18,7 @@ public class UnlockingFloors : MonoBehaviour
     void OnMouseOver()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.grey;
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !clickHandler.isOpenUI)
         {
             clickHandler.changeboolean();
             unlockFloorPopUp.SetActive(true);
