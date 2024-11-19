@@ -1302,7 +1302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &207895015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4120,10 +4120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ec27bf48a015d45b4c4d5e6b7f7ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingRoom: {fileID: 0}
   resources: {fileID: 0}
   lockGameObject: {fileID: 491184080}
-  newRooms: {fileID: 4378852953261542141, guid: c03e440daf066f24297b76f08f6bbd0b, type: 3}
   need: 0
 --- !u!65 &491184082
 BoxCollider:
@@ -7613,7 +7611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1052364821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8631,10 +8629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ec27bf48a015d45b4c4d5e6b7f7ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingRoom: {fileID: 0}
   resources: {fileID: 0}
   lockGameObject: {fileID: 1171569938}
-  newRooms: {fileID: 2086992011922134711, guid: 425e10bb9a27dd2469864477fcfa84ad, type: 3}
   need: 0
 --- !u!1 &1259176640
 GameObject:
@@ -10907,7 +10903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1583353539
 RectTransform:
   m_ObjectHideFlags: 0
