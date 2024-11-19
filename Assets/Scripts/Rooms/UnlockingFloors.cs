@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+
 //using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,19 +11,18 @@ public class UnlockingFloors : MonoBehaviour
     public Resources resources;
 
     public GameObject lockGameObject;
-
+    public ClickHandler clickHandler;
     [SerializeField] private int need;
+    public GameObject unlockFloorPopUp;
 
-    void Update()
-    {
-    }
     void OnMouseOver()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.grey;
         if (Input.GetMouseButton(0))
         {
-            //ui açacak
-
+            clickHandler.changeboolean();
+            unlockFloorPopUp.SetActive(true);
+            unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Coins";
         }
     }
     void OnMouseExit()
@@ -32,14 +33,15 @@ public class UnlockingFloors : MonoBehaviour
     public void unlock()
     {
 
-            if (resources.goins >= need)
-            {
-                resources.goins -= need;
+        if (resources.goins >= need)
+        {
+            clickHandler.changeboolean();
+            resources.goins -= need;
 
-                Destroy(gameObject);
-                Debug.Log("Yeni Odalar Acildi");
+            Destroy(gameObject);
+            Debug.Log("Yeni Odalar Acildi");
 
-            }
+        }
 
     }
 

@@ -7,9 +7,9 @@ public class ClickHandler : MonoBehaviour
 {
     public Transform spawnPoint;
     public RoomInfoUIAnotherOpen roominfoui;
-    public Boolean isOpenUI = false;
+    public bool isOpenUI = false;
     public GameObject roomObject;
-    public GameObject unlockFloorPopUp;
+
     [SerializeField] private BuildingRoom buildingRoom;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,10 @@ public class ClickHandler : MonoBehaviour
     public void changeboolean()
     {
         isOpenUI = !isOpenUI;
+    }
+    public void CloseUI()
+    {
+        isOpenUI = false;
     }
     // Update is called once per frame
     void Update()
@@ -31,13 +35,7 @@ public class ClickHandler : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.name == "Lock")
-                {
-                    changeboolean();
-                    unlockFloorPopUp.SetActive(true);
-                    UnlockingFloors unlockingFloors = hit.collider.GetComponent<UnlockingFloors>();
-                    unlockingFloors.unlock();
-                }
+
                 // Check if the object hit has the ObjectClickHandler component
                 ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
                 if (clickableObject != null)
