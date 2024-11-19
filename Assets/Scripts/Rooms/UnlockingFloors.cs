@@ -5,23 +5,27 @@ using TMPro;
 //using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnlockingFloors : MonoBehaviour
 {
     public Resources resources;
 
-    public GameObject lockGameObject;
     public ClickHandler clickHandler;
     [SerializeField] private int need;
     public GameObject unlockFloorPopUp;
+    public GameObject unlockButton;
 
     void OnMouseOver()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.grey;
         if (Input.GetMouseButton(0) && !clickHandler.isOpenUI)
         {
+            
             clickHandler.changeboolean();
             unlockFloorPopUp.SetActive(true);
+            unlockButton = GameObject.Find("UnlockButton");
+            unlockButton.GetComponent<Button>().onClick.AddListener(() => unlock());
             unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Coins";
         }
     }
@@ -37,7 +41,6 @@ public class UnlockingFloors : MonoBehaviour
         {
             clickHandler.changeboolean();
             resources.goins -= need;
-
             Destroy(gameObject);
             Debug.Log("Yeni Odalar Acildi");
 
