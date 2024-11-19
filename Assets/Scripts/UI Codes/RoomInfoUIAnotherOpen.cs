@@ -67,6 +67,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     }
     void Start()
     {
+        room = null;
         anim = GetComponent<Animator>();
         GeneratorButton.GetComponentInChildren<TextMeshProUGUI>().text = "Generator Room Price: " + GeneratorPrice;
         SpeakEasyButton.GetComponentInChildren<TextMeshProUGUI>().text = "Speakeasy Room Price: " + SpeakEasyPrice;

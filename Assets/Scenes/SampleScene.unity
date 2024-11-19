@@ -1946,28 +1946,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 819455332}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: RoomInfoUIOpen
+      - m_Target: {fileID: 819455333}
+        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
+        m_MethodName: OpenRoomUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Open
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 528037285}
@@ -1982,9 +1970,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: da5aa316a39ca3743b69ed1378e79c0b, type: 3}
+      - m_Target: {fileID: 1933220513126824623}
         m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: AnotherOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12575,7 +12563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -12588,7 +12576,7 @@ PrefabInstance:
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1171569944}
+      objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -12603,7 +12591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: unlock
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -12623,7 +12611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5302884965455204461, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -14654,6 +14642,7 @@ MonoBehaviour:
   shopUIClose: {fileID: 1951176478}
   researchUIOpen: {fileID: 72836386}
   researchUIClose: {fileID: 1816370619}
+  RoomInfoUIScript: {fileID: 819455333}
 --- !u!4 &1957807595
 Transform:
   m_ObjectHideFlags: 0

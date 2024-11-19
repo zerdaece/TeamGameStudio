@@ -15,32 +15,35 @@ public class UIAnim : MonoBehaviour
     public GameObject shopUIClose;
     public GameObject researchUIOpen;
     public GameObject researchUIClose;
-    
+    public RoomInfoUIAnotherOpen RoomInfoUIScript;
 
 // Soldaki tuşların UI panellerini açması/kapaması
 
     public void GeneralInfoUIOpen()
     {
-  
+        clickHandler.OpenUI();
         generalInfoUIOpen.SetActive(false);
         generalInfoUIClose.SetActive(true);
     }
     public void GeneralInfoUIClose()
     {
-  
+        clickHandler.CloseUI();
         generalInfoUIOpen.SetActive(true);
         generalInfoUIClose.SetActive(false);
     }
 
     public void RoomInfoUIOpen()
     {
+        if(RoomInfoUIScript.room != null)
+        {
+        clickHandler.OpenUI();
         Debug.Log("Room Info UI Open");
-        roomInfoUIOpen.SetActive(false);
-        roomInfoUIClose.SetActive(true);
-  
+        RoomInfoUIScript.OpenRoomUI();
+        }
     }
     public void RoomInfoUIClose()
     {
+        clickHandler.CloseUI();
         roomInfoUIOpen.SetActive(true);
         roomInfoUIClose.SetActive(false);
   
@@ -48,12 +51,15 @@ public class UIAnim : MonoBehaviour
 
     public void ShopInfoUIOpen()
     {
+        clickHandler.OpenUI();
+
         shopUIOpen.SetActive(false);
         shopUIClose.SetActive(true);
   
     }
     public void ShopInfoUIClose()
     {
+        clickHandler.CloseUI();
         shopUIOpen.SetActive(true);
         shopUIClose.SetActive(false);
   
@@ -61,12 +67,15 @@ public class UIAnim : MonoBehaviour
 
     public void ResearchUIOpen()
     {
+        clickHandler.OpenUI();
+
         researchUIOpen.SetActive(false);
         researchUIClose.SetActive(true);
   
     }
     public void ResearchUIClose()
     {
+        clickHandler.CloseUI();
         researchUIOpen.SetActive(true);
         researchUIClose.SetActive(false);
   

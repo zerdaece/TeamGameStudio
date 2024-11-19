@@ -32,9 +32,9 @@ public class ResearchUIAnotherOpen : MonoBehaviour
         differenceCoal = resources.coal - lastCoal;
         differenceDopamin = resources.dopamin - lastDopamin;
         resourceText.GetComponent<TextMeshProUGUI>().text = "Goins: " + resources.goins + " (+" + differenceGoins + ")" + "\n" +
-            "Energy: " + resources.energy + " (+" + differenceEnergy + ")" + "\n" +
-            "Alcohol: " + resources.alcohol + " (+" + differenceAlcohol + ")" + "\n" +
-            "Coal: " + resources.coal + " (+" + differenceCoal + ")" + "\n" +
+            "Energy: " + resources.energy + " (" + differenceEnergy + ")" + "\n" +
+            "Alcohol: " + resources.alcohol + " (" + differenceAlcohol + ")" + "\n" +
+            "Coal: " + resources.coal + " (" + differenceCoal + ")" + "\n" +
             "Dopamin: " + resources.dopamin + " (+" + differenceDopamin + ")";
         lastGoins = resources.goins;
         lastEnergy = resources.energy;
@@ -43,7 +43,7 @@ public class ResearchUIAnotherOpen : MonoBehaviour
         lastDopamin = resources.dopamin;
     }
 
-
+    
     void Update()
     {
 
