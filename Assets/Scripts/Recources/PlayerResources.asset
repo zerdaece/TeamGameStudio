@@ -17,5 +17,5 @@ MonoBehaviour:
   alcohol: 500
   coal: 200
   dopamin: 0
-  satisfaction: 0
+  satisfaction: 1
   TotalBorch: 3000
