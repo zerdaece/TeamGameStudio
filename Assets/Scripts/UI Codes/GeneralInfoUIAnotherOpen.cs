@@ -58,14 +58,14 @@ public class ResearchUIAnotherOpen : MonoBehaviour
         {
             if (generalInfoUIOpen.activeSelf)
             {
-                clickHandler.changeboolean();
+                clickHandler.OpenUI();
                 anim.SetTrigger("Open");
                 generalInfoUIOpen.SetActive(false);
                 generalInfoUIClose.SetActive(true);
             }
             else
             {
-                clickHandler.changeboolean();
+                clickHandler.CloseUI();
                 AnotherOpen();
             }
         }

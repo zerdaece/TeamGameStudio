@@ -20,14 +20,14 @@ public ClickHandler clickHandler;
         if (Input.GetKeyDown(KeyCode.R))
         {
             if (shopInfoUIOpen.activeSelf)
-            {clickHandler.changeboolean();
+            {clickHandler.OpenUI();
                 anim.SetTrigger("Open");
                 shopInfoUIOpen.SetActive(false);
                 shopInfoUIClose.SetActive(true);
             }
             else
             {
-                clickHandler.changeboolean();
+                clickHandler.CloseUI();
                 AnotherOpen();
             }
         }

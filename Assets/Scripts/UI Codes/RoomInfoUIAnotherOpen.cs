@@ -33,15 +33,15 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            CloseRoomUI();
+            AnotherOpen();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            CloseRoomUI();
+            AnotherOpen();
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            CloseRoomUI();
+            AnotherOpen();
         }
     }
 
@@ -51,7 +51,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         if (roomInfoUIOpen.activeSelf && room != null)
         {
             closebutton.SetActive(true);
-            clickHandler.changeboolean();
+            clickHandler.OpenUI();
             Debug.Log(clickHandler.isOpenUI);
             print(room.roomType);
 
@@ -62,8 +62,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         }
         else
         {
-            clickHandler.changeboolean();
-            AnotherOpen();
+            CloseRoomUI();
         }
     }
     void Start()
@@ -77,7 +76,6 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
     {
         if (roomInfoUIClose.activeSelf)
         {
-
             anim.SetTrigger("Close");
             roomInfoUIClose.SetActive(false);
             roomInfoUIOpen.SetActive(true);
@@ -88,7 +86,7 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
         if (closebutton.activeSelf)
         {
             closebutton.SetActive(false);
-            clickHandler.changeboolean();
+            clickHandler.CloseUI();
             anim.SetTrigger("Close");
             roomInfoUIClose.SetActive(false);
             roomInfoUIOpen.SetActive(true);

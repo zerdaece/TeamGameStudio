@@ -60,7 +60,7 @@ public class InGameTime : MonoBehaviour
         day   = 1;
         month = 1;
         year  = 1984;
-        daysUntilBorch = 7; _borch = daysUntilBorch + "";
+        daysUntilBorch = 3; _borch = daysUntilBorch + "";
 
         if(hr < 12)
         isAm = true;

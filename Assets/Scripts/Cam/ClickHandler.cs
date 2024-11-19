@@ -12,13 +12,9 @@ public class ClickHandler : MonoBehaviour
 
     [SerializeField] private BuildingRoom buildingRoom;
     // Start is called before the first frame update
-    void Start()
+    public void OpenUI()
     {
-
-    }
-    public void changeboolean()
-    {
-        isOpenUI = !isOpenUI;
+        isOpenUI = true;
     }
     public void CloseUI()
     {
@@ -56,5 +52,5 @@ public class ClickHandler : MonoBehaviour
             }
         }
     }
-    
+
 }

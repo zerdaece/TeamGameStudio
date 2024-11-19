@@ -14,14 +14,14 @@ public class ResearchAnotherOpen : MonoBehaviour
         {
             if (researchInfoUIOpen.activeSelf)
             {
-                clickHandler.changeboolean();
+                clickHandler.OpenUI();
                 anim.SetTrigger("Open");
                 researchInfoUIOpen.SetActive(false);
                 researchInfoUIClose.SetActive(true);
             }
             else
             {
-                clickHandler.changeboolean();
+                clickHandler.CloseUI();
                 AnotherOpen();
             }
         }

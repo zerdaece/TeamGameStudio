@@ -22,7 +22,7 @@ public class UnlockingFloors : MonoBehaviour
         if (Input.GetMouseButton(0) && !clickHandler.isOpenUI)
         {
             
-            clickHandler.changeboolean();
+            clickHandler.OpenUI();
             unlockFloorPopUp.SetActive(true);
             unlockButton = GameObject.Find("UnlockButton");
             unlockButton.GetComponent<Button>().onClick.AddListener(() => unlock());
@@ -39,7 +39,8 @@ public class UnlockingFloors : MonoBehaviour
 
         if (resources.goins >= need)
         {
-            clickHandler.changeboolean();
+            unlockFloorPopUp.SetActive(false);
+            clickHandler.CloseUI();
             resources.goins -= need;
             Destroy(gameObject);
             Debug.Log("Yeni Odalar Acildi");
