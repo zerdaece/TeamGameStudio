@@ -26,7 +26,7 @@ public class UnlockingFloors : MonoBehaviour
             unlockFloorPopUp.SetActive(true);
             unlockButton = GameObject.Find("UnlockButton");
             unlockButton.GetComponent<Button>().onClick.AddListener(() => unlock());
-            unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Coins";
+            unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Goins";
         }
     }
     void OnMouseExit()
