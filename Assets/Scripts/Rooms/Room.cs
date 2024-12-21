@@ -25,6 +25,7 @@ public class Room : MonoBehaviour
 
     void Update()
     {
+        //global bir timer kullanılabilir ancak buna ihtiyaç yok şu an
         timer += Time.fixedDeltaTime * Time.timeScale;
 
         if (timer >= updateInterval)

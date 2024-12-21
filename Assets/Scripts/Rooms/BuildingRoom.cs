@@ -9,12 +9,13 @@ public class BuildingRoom : MonoBehaviour
 {
     public Button GeneratorButton;
     public Button FarmButton;
-    public Button SpeakeasyButton;  
+    public Button SpeakeasyButton;
     public GameObject speakeasyPrefab;
     public GameObject generatorRoomPrefab;
     public GameObject distillerRoomPrefab;
     public GameObject accommodationPrefab;
     public GameObject farmPrefab;
+    public Resources resources;
 
     public Dictionary<string, GameObject> roomPrefabs;
 
@@ -27,7 +28,7 @@ public class BuildingRoom : MonoBehaviour
        // { "Distiller", distillerRoomPrefab },
         //{ "Accommodation", accommodationPrefab },
         {"Farm", farmPrefab }
-      
+
        };
         foreach (var entry in roomPrefabs)
         {
@@ -36,11 +37,14 @@ public class BuildingRoom : MonoBehaviour
     }
     public void SpawnRoom(string roomType, Vector3 spawnPosition)
     {
-        
-        
+
+
         if (roomPrefabs.ContainsKey(roomType))
         {
             Instantiate(roomPrefabs[roomType], spawnPosition, Quaternion.identity);
+            int roomCount = (int)resources.GetType().GetProperty($"{roomType}RoomCount").GetValue(resources);
+            resources.GetType().GetProperty($"{roomType}RoomCount").SetValue(resources, roomCount + 1);
+
             Debug.Log($"Instantiated {roomType} at {spawnPosition}");
             Destroy(gameObject.GetComponent<ClickHandler>().roomObject);
         }
@@ -49,6 +53,6 @@ public class BuildingRoom : MonoBehaviour
             Debug.LogWarning($"Invalid room type: {roomType}");
         }
     }
-    
+
 }
 

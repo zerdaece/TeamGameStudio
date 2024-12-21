@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Quest", menuName = "Quests/Quest")]
+public class Quest : ScriptableObject
+{
+    public string questName;
+    public string description;
+    public int rewardGoins;
+    public int rewardEnergy;
+    public int rewardAlcohol;
+    public int rewardCoal;
+    public int rewardDopamin;
+    public string questType;
+    public Resources resources;
+    public int wantedRoomCount;
+    public RoomTemplate wantedRoomtype;
+    //public Dictionary<NPC, int> changeinnpcrelations; dictionarye inspectorda değer giremiyoruz.
+    public List<NPCRelationChange> changeinnpcrelations;
+
+    public Relations relations;
+    public void CheckQuest()
+    {
+        switch (questType.ToLower())
+        {
+            case "roomcount":
+                string propertyName = wantedRoomtype.roomType + "RoomCount";
+                int currentRoomCount = (int)resources.GetType().GetProperty(propertyName).GetValue(resources);
+                if (currentRoomCount >= wantedRoomCount)
+                {
+                    foreach (var npc in changeinnpcrelations)
+                    {
+                        relations.ModifyRelation(npc.npc.npcName, npc.relationChange);
+                    }
+
+                    Debug.Log("Quest Completed");
+                    resources.goins += rewardGoins;
+                    resources.energy += rewardEnergy;
+                    resources.alcohol += rewardAlcohol;
+                    resources.coal += rewardCoal;
+                    resources.dopamin += rewardDopamin;
+                }
+                break;
+
+            
+        }
+
+    }
+}
+[System.Serializable]
+    public class NPCRelationChange
+{
+    public NPC npc;
+    public int relationChange;
+}
