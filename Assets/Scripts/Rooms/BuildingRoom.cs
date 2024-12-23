@@ -21,9 +21,10 @@ public class BuildingRoom : MonoBehaviour
 
     private void Start()
     {
+        // BU KISIMDAKİ PREFABLARIN İSİMLERİNİN DOĞRU OLMASINA DİKKAT ETMEK LAZIM -bağırmama gerek yoktu ama- -göktuğ-
         roomPrefabs = new Dictionary<string, GameObject>
        {
-        { "SpeakEasy", speakeasyPrefab },
+        { "Speakeasy", speakeasyPrefab },
         { "Generator", generatorRoomPrefab },
        // { "Distiller", distillerRoomPrefab },
         //{ "Accommodation", accommodationPrefab },
@@ -42,8 +43,8 @@ public class BuildingRoom : MonoBehaviour
         if (roomPrefabs.ContainsKey(roomType))
         {
             Instantiate(roomPrefabs[roomType], spawnPosition, Quaternion.identity);
-            int roomCount = (int)resources.GetType().GetProperty($"{roomType}RoomCount").GetValue(resources);
-            resources.GetType().GetProperty($"{roomType}RoomCount").SetValue(resources, roomCount + 1);
+            int roomCount = (int)resources.GetType().GetField($"{roomType}RoomCount").GetValue(resources);
+            resources.GetType().GetField($"{roomType}RoomCount").SetValue(resources, roomCount + 1);
 
             Debug.Log($"Instantiated {roomType} at {spawnPosition}");
             Destroy(gameObject.GetComponent<ClickHandler>().roomObject);

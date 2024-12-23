@@ -16,9 +16,12 @@ public class Quest : ScriptableObject
     public string questType;
     public Resources resources;
     public int wantedRoomCount;
+    public static event System.Action OnQuestCompleted;
     public RoomTemplate wantedRoomtype;
     //public Dictionary<NPC, int> changeinnpcrelations; dictionarye inspectorda değer giremiyoruz.
     public List<NPCRelationChange> changeinnpcrelations;
+
+    public List<roomsthatgetsupgraded> roomsthatgetsupgraded;
 
     public Relations relations;
     public void CheckQuest()
@@ -41,13 +44,25 @@ public class Quest : ScriptableObject
                     resources.alcohol += rewardAlcohol;
                     resources.coal += rewardCoal;
                     resources.dopamin += rewardDopamin;
+                    OnQuestCompleted?.Invoke();
+                    foreach (var room in roomsthatgetsupgraded)
+                    {
+                        room.roomType.RoomUpdates.Add(room.upgradedRoomType);
+                    } 
                 }
                 break;
-
+            
             
         }
 
     }
+}
+
+[System.Serializable]
+public class roomsthatgetsupgraded
+{
+    public RoomTemplate roomType;
+    public RoomTemplate upgradedRoomType;
 }
 [System.Serializable]
     public class NPCRelationChange

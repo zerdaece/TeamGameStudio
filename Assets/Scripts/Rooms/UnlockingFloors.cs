@@ -27,6 +27,7 @@ public class UnlockingFloors : MonoBehaviour
             unlockFloorPopUp.SetActive(true);
             unlockButton = GameObject.Find("UnlockButton");
             resources.TotalRoomCount += 3;
+            print(resources.TotalRoomCount);
             unlockButton.GetComponent<Button>().onClick.AddListener(() => unlock());
             unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Goins";
         }

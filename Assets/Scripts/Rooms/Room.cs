@@ -18,6 +18,7 @@ public class Room : MonoBehaviour
     private int customerCount;
     private int maxcustomerCount = 10;
 
+
     void Start()
     {
         roomid = roomTemplate.id;
@@ -66,6 +67,7 @@ public class Room : MonoBehaviour
         resources.coal = Mathf.Clamp(resources.coal, 0, 100000);
         resources.dopamin = Mathf.Clamp(resources.dopamin, 0, 100000);
     }
+        
 
     void GetCustomer()
     {

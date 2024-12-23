@@ -20,7 +20,8 @@ MonoBehaviour:
   rewardCoal: 0
   rewardDopamin: 0
   questType: 
-  resources: {fileID: 0}
-  currentRooms: []
+  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
   wantedRoomCount: 0
   wantedRoomtype: {fileID: 0}
+  changeinnpcrelations: []
+  relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}

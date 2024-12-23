@@ -19,20 +19,5 @@ public class Resources : ScriptableObject
     public int DistillerRoomCount;
     public int TotalRoomCount;
 
-    void Start()
-    {
-        goins = 0;
-        energy = 0;
-        alcohol = 0;
-        coal = 0;
-        dopamin = 0;
-        satisfaction = 0;
-        TotalBorch = 0;
-        GeneratorRoomCount = 0;
-        FarmRoomCount = 0;
-        SpeakeasyRoomCount = 0;
-        AccommodationRoomCount = 0;
-        DistillerRoomCount = 0;
-        TotalRoomCount = 1;
-        }
+
 }
