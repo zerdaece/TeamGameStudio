@@ -24,6 +24,7 @@ public class Quest : ScriptableObject
     public List<roomsthatgetsupgraded> roomsthatgetsupgraded;
 
     public Relations relations;
+    
     public void CheckQuest()
     {
         switch (questType.ToLower())
@@ -50,6 +51,7 @@ public class Quest : ScriptableObject
                         room.roomType.RoomUpdates.Add(room.upgradedRoomType);
                     } 
                 }
+                
                 break;
             
             
