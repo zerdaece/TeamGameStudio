@@ -89,8 +89,8 @@ public class RoomInfoUIAnotherOpen : MonoBehaviour
             closebutton.SetActive(false);
             clickHandler.CloseUI();
             anim.SetTrigger("Close");
-            roomInfoUIClose.SetActive(false);
-            roomInfoUIOpen.SetActive(true);
+            roomInfoUIClose.SetActive(true);
+            roomInfoUIOpen.SetActive(false);
         }
     }
     public void GeneratorButtonClicked()

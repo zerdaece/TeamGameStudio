@@ -46,7 +46,8 @@ public class UIAnim : MonoBehaviour
         clickHandler.CloseUI();
         roomInfoUIOpen.SetActive(true);
         roomInfoUIClose.SetActive(false);
-  
+        Debug.Log("Room Info UI Close");
+
     }
 
     public void ShopInfoUIOpen()
@@ -68,7 +69,6 @@ public class UIAnim : MonoBehaviour
     public void ResearchUIOpen()
     {
         clickHandler.OpenUI();
-
         researchUIOpen.SetActive(false);
         researchUIClose.SetActive(true);
   

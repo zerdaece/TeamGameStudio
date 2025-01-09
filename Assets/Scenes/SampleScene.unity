@@ -1994,6 +1994,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 819455332}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &277008554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8250,12 +8262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22dbc090eb24e8048940f74ca2c9acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 15
+  zoomMultiplier: 6
   minZoom: 35
   maxZoom: 90
   smoothTime: 0.3
-  velocity: 0
-  speed: 10
+  panSpeed: 10
   minX: -5.5
   maxX: 5.5
   minY: 1
@@ -10961,6 +10972,7 @@ GameObject:
   - component: {fileID: 1404825987}
   - component: {fileID: 1404825989}
   - component: {fileID: 1404825988}
+  - component: {fileID: 1404825990}
   m_Layer: 5
   m_Name: MainUIPanels
   m_TagString: Untagged
@@ -11029,6 +11041,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404825986}
   m_CullTransparentMesh: 1
+--- !u!114 &1404825990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404825986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3275bcda839bb14e98fa6f82c692a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GeneralInfoButton: {fileID: 754968350}
+  RoomInfobutton: {fileID: 277008553}
+  ShopButton: {fileID: 688281034}
+  ResearchButton: {fileID: 72836388}
+  GeneralInfo: {fileID: 1694620633}
+  RoomInfo: {fileID: 1421579992}
+  ShopInfo: {fileID: 1289192245}
+  Research: {fileID: 1557649358}
 --- !u!1 &1411301972
 GameObject:
   m_ObjectHideFlags: 0
@@ -11881,7 +11913,6 @@ GameObject:
   - component: {fileID: 1557649359}
   - component: {fileID: 1557649361}
   - component: {fileID: 1557649360}
-  - component: {fileID: 1557649362}
   m_Layer: 5
   m_Name: Research
   m_TagString: Untagged
@@ -11948,18 +11979,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557649358}
   m_CullTransparentMesh: 1
---- !u!114 &1557649362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557649358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128f2e381bf66ec47bae8eec7da737b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1558522430
 GameObject:
   m_ObjectHideFlags: 0
