@@ -8297,6 +8297,7 @@ MonoBehaviour:
   distillerRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
   accommodationPrefab: {fileID: 919132149155446097, guid: 975c9b8e34fe1664da0bb0dee90d0e87, type: 3}
   farmPrefab: {fileID: 91496187463815350, guid: 8e4a40b4d8a601b4787d172da7f4dc43, type: 3}
+  resources: {fileID: 0}
 --- !u!1 &965122031
 GameObject:
   m_ObjectHideFlags: 0
@@ -8581,7 +8582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2x
+  m_text: 4x
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 70d07c94ff6cc834fad19144c4fea22e, type: 2}
   m_sharedMaterial: {fileID: 8092793185236779314, guid: 70d07c94ff6cc834fad19144c4fea22e, type: 2}
@@ -9008,6 +9009,7 @@ GameObject:
   - component: {fileID: 1066841763}
   - component: {fileID: 1066841762}
   - component: {fileID: 1066841761}
+  - component: {fileID: 1066841764}
   m_Layer: 5
   m_Name: Time/Date
   m_TagString: Untagged
@@ -9100,6 +9102,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066841759}
   m_CullTransparentMesh: 1
+--- !u!114 &1066841764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066841759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df599feba73ece43916c3eb381c42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winLoseButton: {fileID: 1859973334}
+  winPopUpUI: {fileID: 207895014}
+  losePopUpUI: {fileID: 1583353538}
+  popUpUI: {fileID: 1052364820}
+  UITimeText:
+  - {fileID: 316795588}
+  UIDateText:
+  - {fileID: 163672871}
+  BorchText:
+  - {fileID: 571698822}
+  timeFormat: 0
+  dateFormat: 0
+  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
+  secPerMin: 0.1
+  newBorchDay: 3
+  BorchAmount: 1000
 --- !u!1 &1076099439
 GameObject:
   m_ObjectHideFlags: 0
@@ -10214,7 +10244,7 @@ GameObject:
   - component: {fileID: 1299971749}
   - component: {fileID: 1299971748}
   m_Layer: 5
-  m_Name: 3x
+  m_Name: 8x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10352,7 +10382,7 @@ GameObject:
   - component: {fileID: 1323656033}
   - component: {fileID: 1323656032}
   m_Layer: 5
-  m_Name: 2x
+  m_Name: 4x
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10424,7 +10454,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939315674}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: FastForward2x
+        m_MethodName: FastForward4x
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11539,42 +11569,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553241455}
-  - component: {fileID: 1553241454}
   m_Layer: 0
   m_Name: InGameTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1553241454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553241453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df599feba73ece43916c3eb381c42f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winLoseButton: {fileID: 1859973334}
-  winPopUpUI: {fileID: 207895014}
-  losePopUpUI: {fileID: 1583353538}
-  popUpUI: {fileID: 1052364820}
-  UITimeText:
-  - {fileID: 316795588}
-  UIDateText:
-  - {fileID: 163672871}
-  BorchText:
-  - {fileID: 571698822}
-  timeFormat: 0
-  dateFormat: 0
-  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
-  secPerMin: 0.1
-  newBorchDay: 3
-  BorchAmount: 1000
+  m_IsActive: 0
 --- !u!4 &1553241455
 Transform:
   m_ObjectHideFlags: 0
@@ -14065,7 +14066,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1553241454}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameTime, Assembly-CSharp
         m_MethodName: BorchDusme
         m_Mode: 1
@@ -14391,7 +14392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '4x
+  m_text: '8x
 
 '
   m_isRightToLeft: 0

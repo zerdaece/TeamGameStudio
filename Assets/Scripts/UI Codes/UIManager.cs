@@ -53,18 +53,18 @@ public class UIManager : MonoBehaviour
                 PauseGameplay();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+       /* if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             FastForward1x();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            FastForward2x();
+            FastForward4x();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            FastForward4x();
-        }
+            FastForward8x();
+        }*/
 
 // Resource ların UI da görünmesi
         for(int i = 0; i < MoneyText.Length; i++)
@@ -139,23 +139,23 @@ public class UIManager : MonoBehaviour
             Time.timeScale =1f; 
         }
     }
-    public void FastForward2x()
-    {
-        if(Time.timeScale == 1f)
-        {
-            Time.timeScale = 2f;
-            isPaused = false;
-        }
-        else
-        {
-            Time.timeScale =1f; 
-        }
-    }
     public void FastForward4x()
     {
-        if(Time.timeScale == 1f || Time.timeScale == 2f)
+        if(Time.timeScale == 1f || Time.timeScale== 8f)
         {
             Time.timeScale = 4f;
+            isPaused = false;
+        }
+        /*else gerek yok bence kola bey de baksın
+        {
+            Time.timeScale =1f; 
+        }*/
+    }
+    public void FastForward8x()
+    {
+        if(Time.timeScale == 1f || Time.timeScale == 4f)
+        {
+            Time.timeScale = 8f;
             isPaused = false;
         }
         else
