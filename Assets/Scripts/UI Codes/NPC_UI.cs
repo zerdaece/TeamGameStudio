@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class NPC_UI : MonoBehaviour
 {
     public GameObject PanelforNpc;
-    public bool isOpen ;
+    public bool isOpenPanelforNpc ;
+    public GameObject NpcDetailsPanel;
+    public bool isNpcDetailsPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +22,30 @@ public class NPC_UI : MonoBehaviour
     }
     public void ToggleOpen_Npc_Panels()
     {
-     if ( !isOpen )
+     if ( !isOpenPanelforNpc )
         {
             PanelforNpc.SetActive( true );
-            isOpen = true;
+            isOpenPanelforNpc = true;
         }
-        else if ( isOpen )
+        else if ( isOpenPanelforNpc )
         {
             PanelforNpc.SetActive( false );
-            isOpen = false;
+           isOpenPanelforNpc = false;
+        }
+    }
+     public void ToggleNpcDetails()
+    {
+        if (!isNpcDetailsPanel)
+        {
+            NpcDetailsPanel.SetActive(true);
+            isNpcDetailsPanel = true;
+            
+            
+        }
+        else if (isNpcDetailsPanel)
+        {
+            NpcDetailsPanel.SetActive(false);
+           isNpcDetailsPanel= false;
         }
     }
 }
