@@ -5,10 +5,11 @@ using UnityEngine;
 public class RoomTemplate : ScriptableObject
 {
     public int id;
-    public string Name;
+    public string ame;
     public GameObject roomPrefab;
     public Sprite icon;
     public string Description;
+    public int price;
     [Header("Resources")]
     public int goins;
     public int energy;

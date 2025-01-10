@@ -22,7 +22,7 @@ public class BuildingRoom : MonoBehaviour
     private void Start()
     {
         // BU KISIMDAKİ PREFABLARIN İSİMLERİNİN DOĞRU OLMASINA DİKKAT ETMEK LAZIM -bağırmama gerek yoktu ama- -göktuğ-
-        roomPrefabs = new Dictionary<string, GameObject>
+      /*/  roomPrefabs = new Dictionary<string, GameObject>
        {
         { "Speakeasy", speakeasyPrefab },
         { "Generator", generatorRoomPrefab },
@@ -35,6 +35,7 @@ public class BuildingRoom : MonoBehaviour
         {
             Debug.Log($"Room Type: {entry.Key}, Prefab: {entry.Value}");
         }
+        /*/
     }
     public void SpawnRoom(RoomTemplate roomType, Vector3 spawnPosition)
     {
@@ -60,6 +61,7 @@ public class BuildingRoom : MonoBehaviour
             int roomCount = (int)field.GetValue(resources);
             field.SetValue(resources, roomCount + 1);
         }
+        Instantiate(roomType.roomPrefab, spawnPosition, Quaternion.identity);
     }
 
 }

@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour
     public bool isShopUIOpen;
     
     public ClickHandler clickHandler;
+    public GameObject upgradelist;
+    public GameObject upgradelistitem;
     public RoomTemplate room;
     public TextMeshProUGUI roomName;
     bool isPaused = false;
@@ -193,7 +195,14 @@ public class UIManager : MonoBehaviour
             ResearchInfoUIAnimator.SetTrigger("Close");
             ShopUIAnimator.SetTrigger("Close");
             roomName.text = room.Name;
-            
+            foreach(RoomTemplate upgraderoom in room.RoomUpdates)
+            {
+                GameObject item = Instantiate(upgradelistitem, upgradelist.transform);
+                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgraderoom.Name;
+                item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgraderoom.Description;
+                item.transform.Find("Button").transform.Find("Buy").GetComponent<TextMeshProUGUI>().text = upgraderoom.price.ToString();
+
+            }
     }
         public void ResearchInfoUIOpen()
     {
