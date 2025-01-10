@@ -4,8 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RoomTemplate", menuName = "Rooms/RoomTemplate")]
 public class RoomTemplate : ScriptableObject
 {
-    public int id;
-    public string ame;
+    public string id;
+    public string Name;
     public GameObject roomPrefab;
     public Sprite icon;
     public string Description;
