@@ -17,7 +17,7 @@ public class RoomTemplate : ScriptableObject
     public int coal;
     public int dopamin;
     public List<RoomTemplate> RoomUpdates;
-    
+    public float satisfaction;
 
 
     }

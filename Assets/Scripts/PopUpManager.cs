@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -36,5 +37,10 @@ public class PopUp : MonoBehaviour
         // Activate the popup GameObject
         popup.SetActive(true);
     }
+public static void ClosePopUp()
+{
+    GameObject popup = GameObject.Find("Popup(Clone)");
+    Destroy(popup);
+}
 }
 

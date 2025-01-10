@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -52,7 +54,7 @@ public class Room : MonoBehaviour
             resources.energy += roomTemplate.energy;
             resources.alcohol += roomTemplate.alcohol;
             resources.coal += roomTemplate.coal;
-            resources.dopamin += roomTemplate.dopamin * resources.satisfaction;
+            resources.dopamin += roomTemplate.dopamin * Mathf.RoundToInt(resources.satisfaction);
         }
         else
         {
@@ -72,11 +74,11 @@ public class Room : MonoBehaviour
     void GetCustomer()
     {
 
-        int dice = Random.Range(1, 7);
+        int dice = UnityEngine.Random.Range(1, 7);
         if (newcustomerCount + customerCount < maxcustomerCount)
         {
 
-            newcustomerCount = resources.satisfaction * dice;
+            newcustomerCount = Mathf.RoundToInt(resources.satisfaction * dice);
             customerCount += newcustomerCount;
             //instantiatecustomer(roomcoordinate, customerCount);
         }
@@ -86,7 +88,7 @@ public class Room : MonoBehaviour
     }
     void instantiatecustomer(/*/roomcoordinate, newcustomerCount/*/)
     {
-        int dice = Random.Range(1, 7);
+        int dice = UnityEngine.Random.Range(1, 7);
         for (int i = 0; i < customerCount; i++)
         {
             //Instantiate(customer, roomcoordinate, Quaternion.identity);

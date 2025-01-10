@@ -233,10 +233,10 @@ public class UIManager : MonoBehaviour
             {
                 // Deduct the price from the player's resources
                 resources.goins -= upgraderoom.price;
-
+                resources.satisfaction += upgraderoom.satisfaction;
                 // Spawn the upgraderoom prefab
                  Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
-                PopUp.ShowPopup("Room has been built", "OK", "Cancel", () => Debug.Log("OK"), () => Debug.Log("Cancel"));
+                PopUp.ShowPopup($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
                 Debug.Log($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}");
                 ToggleRoomUI();
             }

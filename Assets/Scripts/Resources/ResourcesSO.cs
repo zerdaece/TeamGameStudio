@@ -10,7 +10,7 @@ public class Resources : ScriptableObject
     public int alcohol;
     public int coal;
     public int dopamin;
-    public int satisfaction;
+    public float satisfaction;
     public int TotalBorch;
     public int GeneratorRoomCount;
     public int FarmRoomCount;
