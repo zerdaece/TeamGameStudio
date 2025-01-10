@@ -431,45 +431,9 @@ MonoBehaviour:
           m_StringArgument: Open
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: ResearchUIOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 528037285}
-        m_TargetAssemblyTypeName: ResearchUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 819455333}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1933220513126824623}
-        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ResearchInfoUIOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -743,7 +707,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 819455333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
         m_MethodName: SpeakEasyButtonClicked
         m_Mode: 1
@@ -1808,7 +1772,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 819455333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
         m_MethodName: GeneratorButtonClicked
         m_Mode: 1
@@ -1946,54 +1910,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 819455333}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: OpenRoomUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 528037285}
-        m_TargetAssemblyTypeName: ResearchUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1933220513126824623}
-        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1331085896}
-        m_TargetAssemblyTypeName: ResearchAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 819455332}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -2004,6 +1920,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: RoomInfoUIOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &277008554
@@ -3954,7 +3882,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 819455333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
         m_MethodName: CloseRoomUI
         m_Mode: 1
@@ -4856,7 +4784,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 819455333}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
         m_MethodName: FarmButtonClicked
         m_Mode: 1
@@ -5472,7 +5400,6 @@ GameObject:
   - component: {fileID: 528037283}
   - component: {fileID: 528037282}
   - component: {fileID: 528037284}
-  - component: {fileID: 528037285}
   m_Layer: 5
   m_Name: GeneralInfoUI
   m_TagString: Untagged
@@ -5560,26 +5487,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &528037285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528037280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 634287593e8eb3a4a82ef9d1ad052d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 528037284}
-  generalInfoUIOpen: {fileID: 754968348}
-  generalInfoUIClose: {fileID: 1555289295}
-  clickHandler: {fileID: 963194230}
-  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
-  timer: 0
-  updateInterval: 5
-  resourceText: {fileID: 417932895}
 --- !u!1 &543563425
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,57 +6068,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4222209177958069755}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: ShopInfoUIOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 528037285}
-        m_TargetAssemblyTypeName: ResearchUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 819455333}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1331085896}
-        m_TargetAssemblyTypeName: ResearchAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ShopUIOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6907,57 +6766,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 528037284}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: GeneralInfoUIOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 819455333}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1933220513126824623}
-        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1331085896}
-        m_TargetAssemblyTypeName: ResearchAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GeneralInfoOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7170,7 +6981,6 @@ GameObject:
   - component: {fileID: 819455331}
   - component: {fileID: 819455330}
   - component: {fileID: 819455332}
-  - component: {fileID: 819455333}
   m_Layer: 5
   m_Name: RoomInfoUI
   m_TagString: Untagged
@@ -7264,33 +7074,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &819455333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819455328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2dc87972100b34ba212be9e058ef86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 819455332}
-  roomInfoUIOpen: {fileID: 277008551}
-  roomInfoUIClose: {fileID: 2064620290}
-  room: {fileID: 0}
-  RoomName: {fileID: 662770161}
-  clickHandler: {fileID: 963194230}
-  closebutton: {fileID: 441970285}
-  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
-  GeneratorButton: {fileID: 249846625}
-  SpeakEasyButton: {fileID: 159928762}
-  FarmButton: {fileID: 496124541}
-  buildingRoom: {fileID: 963194231}
-  GeneratorPrice: 300
-  SpeakEasyPrice: 150
-  FarmPrice: 1000
 --- !u!1001 &820466340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7933,6 +7716,18 @@ MonoBehaviour:
   - {fileID: 179566696}
   EnergyText:
   - {fileID: 411022639}
+  RoomInfoUIAnimator: {fileID: 819455332}
+  GeneralInfoUIAnimator: {fileID: 528037284}
+  ResearchInfoUIAnimator: {fileID: 1331085895}
+  ShopUIAnimator: {fileID: 4222209177958069755}
+  isRoomInfoUIOpen: 0
+  isGeneralInfoUIOpen: 0
+  isResearchInfoUIOpen: 0
+  isShopUIOpen: 0
+  anim: {fileID: 0}
+  clickHandler: {fileID: 0}
+  room: {fileID: 0}
+  roomName: {fileID: 0}
 --- !u!4 &939315675
 Transform:
   m_ObjectHideFlags: 0
@@ -8284,7 +8079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
-  roominfoui: {fileID: 819455333}
+  UImanager: {fileID: 0}
   isOpenUI: 0
   roomObject: {fileID: 0}
   buildingRoom: {fileID: 963194231}
@@ -11852,9 +11647,9 @@ MonoBehaviour:
           m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: GeneralInfoUIClose
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: CloseAllPanels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13818,9 +13613,9 @@ MonoBehaviour:
           m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: ResearchUIClose
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: CloseAllPanels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14304,9 +14099,9 @@ MonoBehaviour:
           m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: ShopInfoUIClose
+      - m_Target: {fileID: 939315674}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: CloseAllPanels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14640,7 +14435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1957807594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14653,16 +14448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b539629969cb949866ae60e56be7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickHandler: {fileID: 963194230}
-  generalInfoUIOpen: {fileID: 754968348}
-  generalInfoUIClose: {fileID: 1555289295}
-  roomInfoUIOpen: {fileID: 277008551}
-  roomInfoUIClose: {fileID: 2064620290}
-  shopUIOpen: {fileID: 688281032}
-  shopUIClose: {fileID: 1951176478}
-  researchUIOpen: {fileID: 72836386}
-  researchUIClose: {fileID: 1816370619}
-  RoomInfoUIScript: {fileID: 819455333}
 --- !u!4 &1957807595
 Transform:
   m_ObjectHideFlags: 0
@@ -16020,7 +15805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1933220513126824623}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
         m_MethodName: BuyCoal
         m_Mode: 1
@@ -16274,27 +16059,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028480529085730776}
   m_CullTransparentMesh: 1
---- !u!114 &1933220513126824623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3022855405021852961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da5aa316a39ca3743b69ed1378e79c0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 4222209177958069755}
-  shopInfoUIOpen: {fileID: 688281032}
-  shopInfoUIClose: {fileID: 1951176478}
-  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
-  CoalPrice: 100
-  CoalAmount: 250
-  AlcoholPrice: 100
-  AlcoholAmount: 100
-  clickHandler: {fileID: 963194230}
 --- !u!114 &2224740572371302891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16415,7 +16179,6 @@ GameObject:
   - component: {fileID: 4021944828593003974}
   - component: {fileID: 405205751304371370}
   - component: {fileID: 4222209177958069755}
-  - component: {fileID: 1933220513126824623}
   m_Layer: 5
   m_Name: ShopUI
   m_TagString: Untagged
@@ -16660,7 +16423,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1933220513126824623}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
         m_MethodName: BuyAlcohol
         m_Mode: 1

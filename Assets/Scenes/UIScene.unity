@@ -3592,6 +3592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df599feba73ece43916c3eb381c42f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winLoseButton: {fileID: 0}
+  winPopUpUI: {fileID: 0}
+  losePopUpUI: {fileID: 0}
+  popUpUI: {fileID: 0}
   UITimeText:
   - {fileID: 462832512}
   UIDateText:
@@ -3600,8 +3604,10 @@ MonoBehaviour:
   - {fileID: 1464715491}
   timeFormat: 0
   dateFormat: 0
+  resources: {fileID: 0}
   secPerMin: 0.0001
   newBorchDay: 7
+  BorchAmount: 0
 --- !u!1 &1101507284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,63 +5814,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928866687}
   m_CullTransparentMesh: 1
---- !u!1001 &1931052853
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072852514253656169, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7596448113609476819, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
-      propertyPath: m_Name
-      value: SteamPubCentered
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fd204720a40f9546a1146e0c6342043, type: 3}
 --- !u!1 &1939876507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,4 +6260,3 @@ SceneRoots:
   - {fileID: 1062837866}
   - {fileID: 449439870}
   - {fileID: 408282802}
-  - {fileID: 1931052853}
