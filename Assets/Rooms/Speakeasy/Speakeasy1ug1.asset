@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
-  m_Name: FirstfloorSO
+  m_Name: Speakeasy1ug1
   m_EditorClassIdentifier: 
-  id: 1
+  id: 0
   Name: 
   roomPrefab: {fileID: 0}
   icon: {fileID: 0}
   Description: 
-  goins: 14
+  goins: 10
   energy: -2
-  alcohol: -3
+  alcohol: -2
   coal: 0
   dopamin: 0
-  RoomUpdates: []
+  RoomUpdates:
+  - {fileID: 11400000, guid: 980ebbf07f1487944896faf128505468, type: 2}

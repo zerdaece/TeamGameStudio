@@ -6,7 +6,7 @@ using UnityEngine;
 public class ClickHandler : MonoBehaviour
 {
     public Transform spawnPoint;
-    public RoomInfoUIAnotherOpen roominfoui;
+    public UIManager UImanager;
     public bool isOpenUI = false;
     public GameObject roomObject;
 
@@ -39,9 +39,8 @@ public class ClickHandler : MonoBehaviour
                     spawnPoint = hit.collider.gameObject.transform;
                     Debug.Log(hit.collider.gameObject.name + " tıklandı");
                     roomObject = hit.collider.gameObject;
-                    roominfoui.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
-                    roominfoui.OpenRoomUI();
-
+                    UImanager.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
+                    UImanager.RoomInfoUIOpen();
 
                 }
                 else

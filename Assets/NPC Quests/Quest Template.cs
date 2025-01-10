@@ -24,13 +24,19 @@ public class Quest : ScriptableObject
     public List<roomsthatgetsupgraded> roomsthatgetsupgraded;
 
     public Relations relations;
-    
+
     public void CheckQuest()
     {
         switch (questType.ToLower())
         {
             case "roomcount":
-                string propertyName = wantedRoomtype.roomType + "RoomCount";
+                string propertyName = wantedRoomtype.Name + "RoomCount";
+                if (!resources.DynamicRoomCounts.ContainsKey(propertyName))
+                {
+                    {
+                        resources.DynamicRoomCounts[propertyName] = 0; // Varsayılan olarak 0 başlat
+                    }
+                }
                 int currentRoomCount = (int)resources.GetType().GetProperty(propertyName).GetValue(resources);
                 if (currentRoomCount >= wantedRoomCount)
                 {
@@ -49,12 +55,13 @@ public class Quest : ScriptableObject
                     foreach (var room in roomsthatgetsupgraded)
                     {
                         room.roomType.RoomUpdates.Add(room.upgradedRoomType);
-                    } 
+                    }
                 }
-                
+
                 break;
-            
-            
+
+
+
         }
 
     }
@@ -67,7 +74,7 @@ public class roomsthatgetsupgraded
     public RoomTemplate upgradedRoomType;
 }
 [System.Serializable]
-    public class NPCRelationChange
+public class NPCRelationChange
 {
     public NPC npc;
     public int relationChange;

@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
-  m_Name: GeneratorRoom
+  m_Name: Speakeasy1ua1
   m_EditorClassIdentifier: 
-  id: 2
-  roomType: Generator
-  goins: 0
-  energy: 6
-  alcohol: 0
-  coal: -3
+  id: 0
+  Name: 
+  roomPrefab: {fileID: 0}
+  icon: {fileID: 0}
+  Description: 
+  goins: 7
+  energy: -2
+  alcohol: -2
+  coal: 0
   dopamin: 0
+  RoomUpdates:
+  - {fileID: 11400000, guid: 980ebbf07f1487944896faf128505468, type: 2}

@@ -36,22 +36,29 @@ public class BuildingRoom : MonoBehaviour
             Debug.Log($"Room Type: {entry.Key}, Prefab: {entry.Value}");
         }
     }
-    public void SpawnRoom(string roomType, Vector3 spawnPosition)
+    public void SpawnRoom(RoomTemplate roomType, Vector3 spawnPosition)
     {
 
+        // Dinamik olarak oda sayısını kontrol et ve artır
+        string fieldName = $"{roomType.Name}RoomCount";
+        var resourceType = resources.GetType();
+        var field = resourceType.GetField(fieldName);
 
-        if (roomPrefabs.ContainsKey(roomType))
+        if (field == null)
         {
-            Instantiate(roomPrefabs[roomType], spawnPosition, Quaternion.identity);
-            int roomCount = (int)resources.GetType().GetField($"{roomType}RoomCount").GetValue(resources);
-            resources.GetType().GetField($"{roomType}RoomCount").SetValue(resources, roomCount + 1);
+            // Eğer böyle bir alan yoksa, dinamik olarak eklemek için Dictionary kullan
+            if (!resources.DynamicRoomCounts.ContainsKey(fieldName))
+            {
+                resources.DynamicRoomCounts[fieldName] = 0; // Varsayılan olarak 0 başlat
+            }
 
-            Debug.Log($"Instantiated {roomType} at {spawnPosition}");
-            Destroy(gameObject.GetComponent<ClickHandler>().roomObject);
+            resources.DynamicRoomCounts[fieldName]++;
         }
         else
         {
-            Debug.LogWarning($"Invalid room type: {roomType}");
+            // Eğer böyle bir alan varsa, değeri artır
+            int roomCount = (int)field.GetValue(resources);
+            field.SetValue(resources, roomCount + 1);
         }
     }
 

@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
-  m_Name: FirstfloorSO
+  m_Name: GeneratorRoom
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
   Name: 
   roomPrefab: {fileID: 0}
   icon: {fileID: 0}
   Description: 
-  goins: 14
-  energy: -2
-  alcohol: -3
-  coal: 0
+  goins: 0
+  energy: 6
+  alcohol: 0
+  coal: -3
   dopamin: 0
-  RoomUpdates: []
+  RoomUpdates:
+  - {fileID: 11400000, guid: 25094b118e2927248aab821d68bd4b45, type: 2}
+  - {fileID: 11400000, guid: 66e37ea197c00d84d8735aeff2960c6e, type: 2}
+  - {fileID: 11400000, guid: 2d9c57e2a0a439b43a4d181364c68140, type: 2}

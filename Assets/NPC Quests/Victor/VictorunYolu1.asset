@@ -29,4 +29,6 @@ MonoBehaviour:
   roomsthatgetsupgraded:
   - roomType: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
     upgradedRoomType: {fileID: 11400000, guid: 96d1acabe0c4e894498b07f43ec0872b, type: 2}
+  - roomType: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
+    upgradedRoomType: {fileID: 11400000, guid: 96d1acabe0c4e894498b07f43ec0872b, type: 2}
   relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}

@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenu;
     public Resources resources;
 
-// Resource texts
+    // Resource texts
     public TextMeshProUGUI[] MoneyText;
     public TextMeshProUGUI[] DopamineText;
     public TextMeshProUGUI[] CoalText;
@@ -20,13 +20,26 @@ public class UIManager : MonoBehaviour
     string _coal => resources.coal + "";
     string _alcohol => resources.alcohol + "";
     string _energy => resources.energy + "";
-
+    [Header("PanelAnimators")]
+    public Animator RoomInfoUIAnimator;
+    public Animator GeneralInfoUIAnimator;
+    public Animator ResearchInfoUIAnimator;
+    public Animator ShopUIAnimator;
+    [Header("PanelBooleans")]
+    public bool isRoomInfoUIOpen;
+    public bool isGeneralInfoUIOpen;
+    public bool isResearchInfoUIOpen;
+    public bool isShopUIOpen;
+    
+    public ClickHandler clickHandler;
+    public RoomTemplate room;
+    public TextMeshProUGUI roomName;
     bool isPaused = false;
     int gameSpeed;
 
     void Update()
     {
-// Escape tuşuna basıldığında pause menu aç/kapa
+        // Escape tuşuna basıldığında pause menu aç/kapa
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused == true)
@@ -40,7 +53,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-// 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
+        // 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
         {
             if (isPaused == true)
@@ -53,45 +66,45 @@ public class UIManager : MonoBehaviour
                 PauseGameplay();
             }
         }
-       /* if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            FastForward1x();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            FastForward4x();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            FastForward8x();
-        }*/
+        /* if (Input.GetKeyDown(KeyCode.Alpha1))
+         {
+             FastForward1x();
+         }
+         if (Input.GetKeyDown(KeyCode.Alpha2))
+         {
+             FastForward4x();
+         }
+         if (Input.GetKeyDown(KeyCode.Alpha3))
+         {
+             FastForward8x();
+         }*/
 
-// Resource ların UI da görünmesi
-        for(int i = 0; i < MoneyText.Length; i++)
+        // Resource ların UI da görünmesi
+        for (int i = 0; i < MoneyText.Length; i++)
         {
             MoneyText[i].text = _money;
         }
-        for(int i = 0; i < DopamineText.Length; i++)
+        for (int i = 0; i < DopamineText.Length; i++)
         {
             DopamineText[i].text = _dopamine;
         }
-        for(int i = 0; i < CoalText.Length; i++)
+        for (int i = 0; i < CoalText.Length; i++)
         {
             CoalText[i].text = _coal;
         }
-        for(int i = 0; i < AlcoholText.Length; i++)
+        for (int i = 0; i < AlcoholText.Length; i++)
         {
             AlcoholText[i].text = _alcohol;
         }
-        for(int i = 0; i < EnergyText.Length; i++)
+        for (int i = 0; i < EnergyText.Length; i++)
         {
             EnergyText[i].text = _energy;
         }
 
     }
-//-------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------
 
-// Start Menu Tuşları
+    // Start Menu Tuşları
     public void OnStartPress()
     {
         SceneManager.LoadScene("SampleScene");
@@ -105,7 +118,7 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-// Pause Menu Tuşları
+    // Pause Menu Tuşları
     public void OnResumePress()
     {
         pauseMenu.SetActive(false);
@@ -121,7 +134,7 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-// Gameplay menüden oyun hızını değiştirme
+    // Gameplay menüden oyun hızını değiştirme
     public void PauseGameplay()
     {
         Time.timeScale = 0f;
@@ -129,19 +142,19 @@ public class UIManager : MonoBehaviour
     }
     public void FastForward1x()
     {
-        if(Time.timeScale != 1f)
+        if (Time.timeScale != 1f)
         {
             Time.timeScale = 1f;
             isPaused = false;
         }
         else
         {
-            Time.timeScale =1f; 
+            Time.timeScale = 1f;
         }
     }
     public void FastForward4x()
     {
-        if(Time.timeScale == 1f || Time.timeScale== 8f)
+        if (Time.timeScale == 1f || Time.timeScale == 8f)
         {
             Time.timeScale = 4f;
             isPaused = false;
@@ -153,15 +166,52 @@ public class UIManager : MonoBehaviour
     }
     public void FastForward8x()
     {
-        if(Time.timeScale == 1f || Time.timeScale == 4f)
+        if (Time.timeScale == 1f || Time.timeScale == 4f)
         {
             Time.timeScale = 8f;
             isPaused = false;
         }
         else
         {
-            Time.timeScale =1f; 
+            Time.timeScale = 1f;
         }
+    }
+    public void GeneralInfoOpen()
+    {
+
+            GeneralInfoUIAnimator.SetTrigger("Open");
+            RoomInfoUIAnimator.SetTrigger("Close");
+            ResearchInfoUIAnimator.SetTrigger("Close");
+            ShopUIAnimator.SetTrigger("Close");
+
+    }
+        public void RoomInfoUIOpen()
+    {
+
+            GeneralInfoUIAnimator.SetTrigger("Close");
+            RoomInfoUIAnimator.SetTrigger("Open");
+            ResearchInfoUIAnimator.SetTrigger("Close");
+            ShopUIAnimator.SetTrigger("Close");
+            roomName.text = room.Name;
+            
+    }
+        public void ResearchInfoUIOpen()
+    {
+
+            GeneralInfoUIAnimator.SetTrigger("Close");
+            RoomInfoUIAnimator.SetTrigger("Close");
+            ResearchInfoUIAnimator.SetTrigger("Open");
+            ShopUIAnimator.SetTrigger("Close");
+
+    }
+        public void ShopUIOpen()
+    {
+
+            GeneralInfoUIAnimator.SetTrigger("Close");
+            RoomInfoUIAnimator.SetTrigger("Close");
+            ResearchInfoUIAnimator.SetTrigger("Close");
+            ShopUIAnimator.SetTrigger("Open");
+
     }
 
 }

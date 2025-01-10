@@ -5,7 +5,9 @@ using UnityEngine;
 public class RoomTemplate : ScriptableObject
 {
     public int id;
-    public string roomType;
+    public string Name;
+    public GameObject roomPrefab;
+    public Sprite icon;
     public string Description;
     [Header("Resources")]
     public int goins;

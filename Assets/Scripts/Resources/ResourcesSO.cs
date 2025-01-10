@@ -19,5 +19,6 @@ public class Resources : ScriptableObject
     public int DistillerRoomCount;
     public int TotalRoomCount;
 
+    public Dictionary<string, int> DynamicRoomCounts = new Dictionary<string, int>();
 
 }
