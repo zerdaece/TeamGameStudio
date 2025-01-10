@@ -9,7 +9,7 @@ public class Room : MonoBehaviour
     public Resources resources;
     public GameObject Customer;
 
-    private int roomid;
+    private string roomid;
 
     public float updateInterval = 5f;
 
