@@ -24,6 +24,7 @@ public class Quest : ScriptableObject
     public List<roomsthatgetsupgraded> roomsthatgetsupgraded;
 
     public Relations relations;
+    public bool isCompleted = false;
 
     public void CheckQuest()
     {
@@ -40,6 +41,7 @@ public class Quest : ScriptableObject
                 int currentRoomCount = (int)resources.GetType().GetProperty(propertyName).GetValue(resources);
                 if (currentRoomCount >= wantedRoomCount)
                 {
+                    isCompleted = true;
                     foreach (var npc in changeinnpcrelations)
                     {
                         relations.ModifyRelation(npc.npc.npcName, npc.relationChange);

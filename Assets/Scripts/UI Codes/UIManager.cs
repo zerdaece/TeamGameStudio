@@ -236,7 +236,7 @@ public class UIManager : MonoBehaviour
 
                 // Spawn the upgraderoom prefab
                  Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
-
+                PopUp.ShowPopup("Room has been built", "OK", "Cancel", () => Debug.Log("OK"), () => Debug.Log("Cancel"));
                 Debug.Log($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}");
                 ToggleRoomUI();
             }

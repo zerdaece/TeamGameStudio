@@ -15,20 +15,17 @@ public class UnlockingFloors : MonoBehaviour
     [SerializeField] private int need;
     public GameObject unlockFloorPopUp;
     public GameObject unlockButton;
-
-    private void Start()
-    {
-        unlockButton.GetComponent<Button>().onClick.AddListener(() => unlock());
-    }
+    
     void Unlockfloor()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.grey;
-        clickHandler.OpenUI();
-        unlockFloorPopUp.SetActive(true);
-        unlockButton = GameObject.Find("UnlockButton");
-        resources.TotalRoomCount += 3;
-        print(resources.TotalRoomCount);
-        unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Goins";
+            clickHandler.OpenUI();
+            unlockFloorPopUp.SetActive(true);
+            
+            resources.TotalRoomCount += 3;
+            print(resources.TotalRoomCount);
+            
+            unlockFloorPopUp.GetComponentInChildren<TextMeshProUGUI>().text = "Unlock Floor for " + need + " Goins";
     }
     void OnMouseExit()
     {

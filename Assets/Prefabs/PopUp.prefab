@@ -9,29 +9,49 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917644362721147574}
+  - component: {fileID: 8525526890405279683}
   m_Layer: 0
-  m_Name: UnlockFloorPopUp
+  m_Name: PopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &917644362721147574
-Transform:
+--- !u!224 &917644362721147574
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844292095370688954}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -686.2793, y: -94.27411, z: 51.141777}
+  m_LocalPosition: {x: 0, y: 0, z: 51.141777}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5812989171590202867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -686.2793, y: -94.27411}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8525526890405279683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844292095370688954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416522373ede3e642bf8e60bd22acf45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: {fileID: 6668523439534578598}
+  LeftButton: {fileID: 2890760390392340849}
+  RightButton: {fileID: 5302884965455204461}
 --- !u!1 &1380597887730685013
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +347,8 @@ RectTransform:
   m_GameObject: {fileID: 2962058633774302354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -51.141777}
-  m_LocalScale: {x: 0.40613, y: 0.40613, z: 0.40613}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7113166511043963744}
   - {fileID: 4415569855272743750}
@@ -337,8 +357,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11400001, y: 0.53048146}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 686.2193, y: 158}
-  m_SizeDelta: {x: 1920.12, y: 1080.0801}
+  m_AnchoredPosition: {x: 686.2193, y: 81.18004}
+  m_SizeDelta: {x: 1920.12, y: 926.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3242056146766283386
 CanvasRenderer:
@@ -391,7 +411,7 @@ GameObject:
   - component: {fileID: 1695452224455101221}
   - component: {fileID: 5302884965455204461}
   m_Layer: 5
-  m_Name: UnlockButton
+  m_Name: RightButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,7 +532,7 @@ GameObject:
   - component: {fileID: 8635517910313529249}
   - component: {fileID: 2890760390392340849}
   m_Layer: 5
-  m_Name: UnlockButton (1)
+  m_Name: LeftButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

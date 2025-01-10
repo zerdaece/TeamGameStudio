@@ -22,26 +22,27 @@ public class BuildingRoom : MonoBehaviour
     private void Start()
     {
         // BU KISIMDAKİ PREFABLARIN İSİMLERİNİN DOĞRU OLMASINA DİKKAT ETMEK LAZIM -bağırmama gerek yoktu ama- -göktuğ-
-      /*/  roomPrefabs = new Dictionary<string, GameObject>
-       {
-        { "Speakeasy", speakeasyPrefab },
-        { "Generator", generatorRoomPrefab },
-       // { "Distiller", distillerRoomPrefab },
-        //{ "Accommodation", accommodationPrefab },
-        {"Farm", farmPrefab }
+        /*/  roomPrefabs = new Dictionary<string, GameObject>
+         {
+          { "Speakeasy", speakeasyPrefab },
+          { "Generator", generatorRoomPrefab },
+         // { "Distiller", distillerRoomPrefab },
+          //{ "Accommodation", accommodationPrefab },
+          {"Farm", farmPrefab }
 
-       };
-        foreach (var entry in roomPrefabs)
-        {
-            Debug.Log($"Room Type: {entry.Key}, Prefab: {entry.Value}");
-        }
-        /*/
+         };
+          foreach (var entry in roomPrefabs)
+          {
+              Debug.Log($"Room Type: {entry.Key}, Prefab: {entry.Value}");
+          }
+          /*/
     }
     public void SpawnRoom(RoomTemplate roomType, Vector3 spawnPosition)
     {
 
 
         Instantiate(roomType.roomPrefab, spawnPosition, Quaternion.identity);
+        PopUp.ShowPopup("Room has been built", "OK", "Cancel", () => Debug.Log("OK"), () => Debug.Log("Cancel"));
     }
 
 }
