@@ -23,7 +23,7 @@ public class ClickHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !isOpenUI) // Left mouse button
+        if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
