@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -38,66 +40,36 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI roomName;
     bool isPaused = false;
     int gameSpeed;
+    public Button GeneralUIButton;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) )
         {
-            if (isRoomInfoUIOpen)
-            {
-                RoomInfoUIClose();
-            }
-            else
-            {
-                CloseAllPanels(); // Diğer panelleri kapatır.
-                RoomInfoUIOpen();
-            }
-            isRoomInfoUIOpen = !isRoomInfoUIOpen;
+            ToggleRoomUI();
+           // isRoomInfoUIOpen = !isRoomInfoUIOpen;
         }
 
         // General Info UI Aç/Kapa (Q Tuşu)
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) )
         {
-            if (isGeneralInfoUIOpen)
-            {
-                GeneralInfoUIClose();
-            }
-            else
-            {
-                CloseAllPanels();
-                GeneralInfoOpen();
-            }
+           
+            ToggleGeneralInfo();
             //isGeneralInfoUIOpen = !isGeneralInfoUIOpen;
         }
 
         // Research Info UI Aç/Kapa (E Tuşu)
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (isResearchInfoUIOpen)
-            {
-                ResearchInfoUIClose();
-            }
-            else
-            {
-                CloseAllPanels();
-                ResearchInfoUIOpen();
-            }
-            isResearchInfoUIOpen = !isResearchInfoUIOpen;
-        }
-
-        // Shop UI Aç/Kapa (W Tuşu)
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (isShopUIOpen)
-            {
-                ShopUIClose();
-            }
-            else
-            {
-                CloseAllPanels();
-                ShopUIOpen();
-            }
-            isShopUIOpen = !isShopUIOpen;
+            ToggleResearchUI();
+           // isResearchInfoUIOpen = !isResearchInfoUIOpen;
+        }
+
+        // Shop UI Aç/Kapa (R Tuşu)
+        if (Input.GetKeyDown(KeyCode.E) )
+        {
+            ToggleShopUI();
+           // isShopUIOpen = !isShopUIOpen;
         }
 
         // Escape tuşuna basıldığında pause menu aç/kapa
@@ -127,18 +99,7 @@ public class UIManager : MonoBehaviour
                 PauseGameplay();
             }
         }
-        /* if (Input.GetKeyDown(KeyCode.Alpha1))
-         {
-             FastForward1x();
-         }
-         if (Input.GetKeyDown(KeyCode.Alpha2))
-         {
-             FastForward4x();
-         }
-         if (Input.GetKeyDown(KeyCode.Alpha3))
-         {
-             FastForward8x();
-         }*/
+        
 
         // Resource ların UI da görünmesi
         for (int i = 0; i < MoneyText.Length; i++)
@@ -220,10 +181,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 4f;
             isPaused = false;
         }
-        /*else gerek yok bence kola bey de baksın
-        {
-            Time.timeScale =1f; 
-        }*/
+       
     }
     public void FastForward8x()
     {
@@ -242,42 +200,35 @@ public class UIManager : MonoBehaviour
         print("a");
         isGeneralInfoUIOpen = true;
         GeneralInfoUIAnimator.SetTrigger("Open");
-        /* RoomInfoUIAnimator.SetTrigger("Close");
-         ResearchInfoUIAnimator.SetTrigger("Close");
-         ShopUIAnimator.SetTrigger("Close");*/
+        
 
 
     }
     public void RoomInfoUIOpen()
     {
-        if(room != null)
-        {RoomInfoUIAnimator.SetTrigger("Open");}
-        // ResearchInfoUIAnimator.SetTrigger("Close");
-        // ShopUIAnimator.SetTrigger("Close");
+        isRoomInfoUIOpen = true;
+        //if(room != null)
+        RoomInfoUIAnimator.SetTrigger("Open");
+        Debug.Log("opening Room UI");
 
     }
     public void ResearchInfoUIOpen()
     {
-
-        //GeneralInfoUIAnimator.SetTrigger("Close");
-        //RoomInfoUIAnimator.SetTrigger("Close");
+        isResearchInfoUIOpen = true;
         ResearchInfoUIAnimator.SetTrigger("Open");
-        //ShopUIAnimator.SetTrigger("Close");
         Debug.Log("opening Research UI");
 
     }
     public void ShopUIOpen()
     {
-
-        //GeneralInfoUIAnimator.SetTrigger("Close");
-        //RoomInfoUIAnimator.SetTrigger("Close");
-        //ResearchInfoUIAnimator.SetTrigger("Close");
+        isShopUIOpen = true;
         ShopUIAnimator.SetTrigger("Open");
         Debug.Log("Opening Shop UI");
 
     }
     void RoomInfoUIClose()
     {
+        
         RoomInfoUIAnimator.SetTrigger("Close");
         Debug.Log("Room Info UI Closed");
     }
@@ -328,7 +279,56 @@ public class UIManager : MonoBehaviour
     {
         ShopUIAnimator.SetTrigger("Close");
         Debug.Log("Shop UI Closed");
-    }
+}
+    public void ToggleGeneralInfo()
+    {
+        if (isGeneralInfoUIOpen)
+            {
+                GeneralInfoUIClose();
+            }
+            else
+            {
+                CloseAllPanels();
+                GeneralInfoOpen();
+           }
+    }
+    public void ToggleShopUI()
+    {
+       if (isShopUIOpen)
+            {
+                ShopUIClose();
+            }
+            else
+            {
+                CloseAllPanels();
+                ShopUIOpen();
+            }
+    }
+    public void ToggleRoomUI()
+    {
+        if (isRoomInfoUIOpen)
+        {
+            RoomInfoUIClose();
+        }
+        else
+        {
+            CloseAllPanels();
+            RoomInfoUIOpen();
+        }
+    }
+    public void ToggleResearchUI()
+    {
+        if (isResearchInfoUIOpen)
+            {
+                ResearchInfoUIClose();
+            }
+            else
+            {
+                CloseAllPanels();
+                ResearchInfoUIOpen();
+            }
+    }
+    
 
 
 }
