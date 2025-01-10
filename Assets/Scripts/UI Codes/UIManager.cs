@@ -250,7 +250,7 @@ public class UIManager : MonoBehaviour
     }
     public void RoomInfoUIOpen()
     {
-
+        if(room.roomType)
         //GeneralInfoUIAnimator.SetTrigger("Close");
         RoomInfoUIAnimator.SetTrigger("Open");
         // ResearchInfoUIAnimator.SetTrigger("Close");
