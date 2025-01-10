@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ClickHandler : MonoBehaviour
 {
@@ -25,29 +26,34 @@ public class ClickHandler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if (EventSystem.current.IsPointerOverGameObject()) { print("UI üzerinde tıklama yapıldı"); return; }
+            else
             {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
 
-                // Check if the object hit has the ObjectClickHandler component
-                ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
-                if (clickableObject != null)
+                if (Physics.Raycast(ray, out hit))
                 {
-                    spawnPoint = hit.collider.gameObject.transform;
-                    Debug.Log(hit.collider.gameObject.name + " tıklandı");
-                    roomObject = hit.collider.gameObject;
-                    UImanager.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
-                    UImanager.ToggleRoomUI();
+
+                    // Check if the object hit has the ObjectClickHandler component
+                    ClickableObject clickableObject = hit.collider.GetComponent<ClickableObject>();
+                    if (clickableObject != null)
+                    {
+                        spawnPoint = hit.collider.gameObject.transform;
+                        Debug.Log(hit.collider.gameObject.name + " tıklandı");
+                        roomObject = hit.collider.gameObject;
+                        UImanager.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
+                        UImanager.ToggleRoomUI();
+                    }
+                    UnlockingFloors unlockingFloors = hit.collider.GetComponent<UnlockingFloors>();
+                    if (unlockingFloors != null)
+                    {
+                        Debug.Log(hit.collider.gameObject.name + " tıklandı");
+                        unlockingFloors.unlock();
+                    }
+
 
                 }
-                else
-                {
-                    Debug.Log("Tıklanan obje ClickableObject scriptine sahip degil");
-                }
-
             }
         }
     }

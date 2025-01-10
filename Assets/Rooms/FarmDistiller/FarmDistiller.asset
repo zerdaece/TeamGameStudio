@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FarmDistiller
   m_EditorClassIdentifier: 
   id: 4
-  Name: 
-  roomPrefab: {fileID: 0}
+  Name: Farm
+  roomPrefab: {fileID: 8084179616134075302, guid: a4329e7604964a74d93f5f278cc2e030, type: 3}
   icon: {fileID: 0}
   Description: 
   price: 0
