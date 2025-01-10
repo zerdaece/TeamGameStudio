@@ -40,27 +40,7 @@ public class BuildingRoom : MonoBehaviour
     public void SpawnRoom(RoomTemplate roomType, Vector3 spawnPosition)
     {
 
-        // Dinamik olarak oda sayısını kontrol et ve artır
-        string fieldName = $"{roomType.Name}RoomCount";
-        var resourceType = resources.GetType();
-        var field = resourceType.GetField(fieldName);
 
-        if (field == null)
-        {
-            // Eğer böyle bir alan yoksa, dinamik olarak eklemek için Dictionary kullan
-            if (!resources.DynamicRoomCounts.ContainsKey(fieldName))
-            {
-                resources.DynamicRoomCounts[fieldName] = 0; // Varsayılan olarak 0 başlat
-            }
-
-            resources.DynamicRoomCounts[fieldName]++;
-        }
-        else
-        {
-            // Eğer böyle bir alan varsa, değeri artır
-            int roomCount = (int)field.GetValue(resources);
-            field.SetValue(resources, roomCount + 1);
-        }
         Instantiate(roomType.roomPrefab, spawnPosition, Quaternion.identity);
     }
 

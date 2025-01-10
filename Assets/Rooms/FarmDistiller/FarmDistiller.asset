@@ -17,6 +17,7 @@ MonoBehaviour:
   roomPrefab: {fileID: 0}
   icon: {fileID: 0}
   Description: 
+  price: 0
   goins: 0
   energy: -2
   alcohol: 6

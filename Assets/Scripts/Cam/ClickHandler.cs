@@ -40,7 +40,7 @@ public class ClickHandler : MonoBehaviour
                     Debug.Log(hit.collider.gameObject.name + " tıklandı");
                     roomObject = hit.collider.gameObject;
                     UImanager.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
-                    UImanager.RoomInfoUIOpen();
+                    UImanager.ToggleRoomUI();
 
                 }
                 else

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: EmptyRoom
   m_EditorClassIdentifier: 
   id: 0
-  roomType: Empty
+  Name: Empty Room
+  roomPrefab: {fileID: 0}
+  icon: {fileID: 0}
   Description: 
+  price: 0
   goins: 0
   energy: 0
   alcohol: 0

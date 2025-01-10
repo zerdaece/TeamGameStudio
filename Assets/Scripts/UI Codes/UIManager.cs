@@ -32,7 +32,8 @@ public class UIManager : MonoBehaviour
     public bool isGeneralInfoUIOpen;
     public bool isResearchInfoUIOpen;
     public bool isShopUIOpen;
-    
+
+    public BuildingRoom buildingRoom;
     public ClickHandler clickHandler;
     public GameObject upgradelist;
     public GameObject upgradelistitem;
@@ -44,16 +45,16 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) )
+        if (Input.GetKeyDown(KeyCode.W))
         {
             ToggleRoomUI();
-           // isRoomInfoUIOpen = !isRoomInfoUIOpen;
+            // isRoomInfoUIOpen = !isRoomInfoUIOpen;
         }
 
         // General Info UI Aç/Kapa (Q Tuşu)
-        if (Input.GetKeyDown(KeyCode.Q) )
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-           
+
             ToggleGeneralInfo();
             //isGeneralInfoUIOpen = !isGeneralInfoUIOpen;
         }
@@ -62,14 +63,14 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             ToggleResearchUI();
-           // isResearchInfoUIOpen = !isResearchInfoUIOpen;
+            // isResearchInfoUIOpen = !isResearchInfoUIOpen;
         }
 
         // Shop UI Aç/Kapa (R Tuşu)
-        if (Input.GetKeyDown(KeyCode.E) )
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ToggleShopUI();
-           // isShopUIOpen = !isShopUIOpen;
+            // isShopUIOpen = !isShopUIOpen;
         }
 
         // Escape tuşuna basıldığında pause menu aç/kapa
@@ -99,7 +100,7 @@ public class UIManager : MonoBehaviour
                 PauseGameplay();
             }
         }
-        
+
 
         // Resource ların UI da görünmesi
         for (int i = 0; i < MoneyText.Length; i++)
@@ -181,7 +182,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 4f;
             isPaused = false;
         }
-       
+
     }
     public void FastForward8x()
     {
@@ -195,44 +196,81 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    public void GeneralInfoOpen()
+    private void GeneralInfoOpen()
     {
         print("a");
         isGeneralInfoUIOpen = true;
         GeneralInfoUIAnimator.SetTrigger("Open");
-        
+
 
 
     }
-    public void RoomInfoUIOpen()
+    private void RoomInfoUIOpen()
     {
-        isRoomInfoUIOpen = true;
-        //if(room != null)
-        RoomInfoUIAnimator.SetTrigger("Open");
-        Debug.Log("opening Room UI");
+
+        if (room != null)
+        {
+            foreach (Transform child in upgradelist.transform)
+            {
+                Destroy(child.gameObject);
+            }
+            RoomInfoUIAnimator.SetTrigger("Open");
+            isRoomInfoUIOpen = true;
+            print(isRoomInfoUIOpen);
+            roomName.text = room.Name;
+            foreach (RoomTemplate upgraderoom in room.RoomUpdates)
+            {
+                
+                GameObject item = Instantiate(upgradelistitem, upgradelist.transform);
+                item.transform.name = upgraderoom.Name;
+                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgraderoom.Name;
+                item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgraderoom.Description;
+                item.transform.Find("Button").transform.Find("Buy").GetComponent<TextMeshProUGUI>().text = upgraderoom.price.ToString();
+                item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
+        {
+            // Check if the player has enough resources
+            if (resources.goins >= upgraderoom.price)
+            {
+                // Deduct the price from the player's resources
+                resources.goins -= upgraderoom.price;
+
+                // Spawn the upgraderoom prefab
+                 Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
+
+                Debug.Log($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}");
+                ToggleRoomUI();
+            }
+            else
+            {
+                Debug.Log("Not enough resources to buy this upgrade!");
+            }
+        });
+            }
+        }
 
     }
-    public void ResearchInfoUIOpen()
+    private void ResearchInfoUIOpen()
     {
         isResearchInfoUIOpen = true;
         ResearchInfoUIAnimator.SetTrigger("Open");
         Debug.Log("opening Research UI");
 
     }
-    public void ShopUIOpen()
+    private void ShopUIOpen()
     {
         isShopUIOpen = true;
         ShopUIAnimator.SetTrigger("Open");
         Debug.Log("Opening Shop UI");
 
     }
-    void RoomInfoUIClose()
+    private void RoomInfoUIClose()
     {
-        
+        print(isRoomInfoUIOpen);
+        isRoomInfoUIOpen = false;
         RoomInfoUIAnimator.SetTrigger("Close");
         Debug.Log("Room Info UI Closed");
     }
-    public void CloseAllPanels()
+    private void CloseAllPanels()
     {
         if (isRoomInfoUIOpen)
         {
@@ -258,7 +296,7 @@ public class UIManager : MonoBehaviour
     }
 
 
-    void GeneralInfoUIClose()
+    private void GeneralInfoUIClose()
     {
         Debug.Log("General Info UI Closed");
         isGeneralInfoUIOpen = false;
@@ -268,41 +306,41 @@ public class UIManager : MonoBehaviour
     }
 
     // Research Info UI'yi kapatma metodu.
-    void ResearchInfoUIClose()
+    private void ResearchInfoUIClose()
     {
         ResearchInfoUIAnimator.SetTrigger("Close");
         Debug.Log("Research Info UI Closed");
     }
 
     // Shop UI'yi kapatma metodu.
-    void ShopUIClose()
+    private void ShopUIClose()
     {
         ShopUIAnimator.SetTrigger("Close");
         Debug.Log("Shop UI Closed");
-}
+    }
     public void ToggleGeneralInfo()
     {
         if (isGeneralInfoUIOpen)
-            {
-                GeneralInfoUIClose();
-            }
-            else
-            {
-                CloseAllPanels();
-                GeneralInfoOpen();
-           }
+        {
+            GeneralInfoUIClose();
+        }
+        else
+        {
+            CloseAllPanels();
+            GeneralInfoOpen();
+        }
     }
     public void ToggleShopUI()
     {
-       if (isShopUIOpen)
-            {
-                ShopUIClose();
-            }
-            else
-            {
-                CloseAllPanels();
-                ShopUIOpen();
-            }
+        if (isShopUIOpen)
+        {
+            ShopUIClose();
+        }
+        else
+        {
+            CloseAllPanels();
+            ShopUIOpen();
+        }
     }
     public void ToggleRoomUI()
     {
@@ -319,16 +357,16 @@ public class UIManager : MonoBehaviour
     public void ToggleResearchUI()
     {
         if (isResearchInfoUIOpen)
-            {
-                ResearchInfoUIClose();
-            }
-            else
-            {
-                CloseAllPanels();
-                ResearchInfoUIOpen();
-            }
+        {
+            ResearchInfoUIClose();
+        }
+        else
+        {
+            CloseAllPanels();
+            ResearchInfoUIOpen();
+        }
     }
-    
+
 
 
 }

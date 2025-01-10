@@ -421,7 +421,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939315674}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ResearchInfoUIOpen
+        m_MethodName: ToggleResearchUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -430,54 +430,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Open
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: ResearchUIOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResearchUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &72836389
 MonoBehaviour:
@@ -1772,56 +1724,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939315674}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: RoomInfoUIOpen
+        m_MethodName: ToggleRoomUI
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResearchUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResearchAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5691,7 +5595,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939315674}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ShopUIOpen
+        m_MethodName: ToggleShopUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5699,54 +5603,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: ShopInfoUIOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResearchUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResearchAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &688281035
@@ -6437,7 +6293,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939315674}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: GeneralInfoOpen
+        m_MethodName: ToggleGeneralInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6445,54 +6301,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957807594}
-        m_TargetAssemblyTypeName: UIAnim, Assembly-CSharp
-        m_MethodName: GeneralInfoUIOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoomInfoUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopUIAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ResearchAnotherOpen, Assembly-CSharp
-        m_MethodName: AnotherOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &754968351
@@ -7304,9 +7112,13 @@ MonoBehaviour:
   isGeneralInfoUIOpen: 0
   isResearchInfoUIOpen: 0
   isShopUIOpen: 0
+  buildingRoom: {fileID: 0}
   clickHandler: {fileID: 963194230}
+  upgradelist: {fileID: 2000080171}
+  upgradelistitem: {fileID: 1781957170}
   room: {fileID: 0}
   roomName: {fileID: 445687334}
+  GeneralUIButton: {fileID: 0}
 --- !u!4 &939315675
 Transform:
   m_ObjectHideFlags: 0
@@ -7682,7 +7494,7 @@ MonoBehaviour:
   distillerRoomPrefab: {fileID: 7417060356322453937, guid: 8d549f231ce1b6e4a995b034b5e4763f, type: 3}
   accommodationPrefab: {fileID: 919132149155446097, guid: 975c9b8e34fe1664da0bb0dee90d0e87, type: 3}
   farmPrefab: {fileID: 91496187463815350, guid: 8e4a40b4d8a601b4787d172da7f4dc43, type: 3}
-  resources: {fileID: 0}
+  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
 --- !u!1 &965122031
 GameObject:
   m_ObjectHideFlags: 0
@@ -10387,6 +10199,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3275bcda839bb14e98fa6f82c692a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GeneralInfoButton: {fileID: 0}
+  RoomInfobutton: {fileID: 0}
+  ShopButton: {fileID: 0}
+  ResearchButton: {fileID: 0}
+  GeneralInfo: {fileID: 0}
+  RoomInfo: {fileID: 0}
+  ShopInfo: {fileID: 0}
+  Research: {fileID: 0}
 --- !u!1 &1411301972
 GameObject:
   m_ObjectHideFlags: 0
@@ -12879,6 +12699,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6705646232244786793, guid: bb7dc20212d4dc2449a13c9404448e62, type: 3}
   m_PrefabInstance: {fileID: 747652628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1781957170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5437914091965303983, guid: 9abd52079db035340833e497b264cf76, type: 3}
+  m_PrefabInstance: {fileID: 776956128017515441}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1782279067 stripped
 Transform:
