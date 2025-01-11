@@ -36,6 +36,5 @@ public class PopUp : MonoBehaviour
         // Activate the popup GameObject
         popup.SetActive(true);
     }
-
 }
 

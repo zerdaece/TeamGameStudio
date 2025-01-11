@@ -44,6 +44,10 @@ public class UnlockingFloors : MonoBehaviour
             Debug.Log("Yeni Odalar Acildi");
 
         }
+        else
+        {
+            PopUp.ShowPopup("Not enough Goins", "ok","ok",() => Destroy(GameObject.Find("PopUp(Clone)")),() => Destroy(GameObject.Find("PopUp(Clone)")));
+        }
 
     }
 

@@ -7,6 +7,7 @@ public class QuestChecker : MonoBehaviour
     public List<Quest> quests;
     public float checkInterval = 1f; // Time in seconds between checks
     private float timer = 0f;
+    
     void LateUpdate()
     {
         timer += Time.deltaTime; // Increment timer by the time passed since the last frame

@@ -57,7 +57,7 @@ public class NPC_UI : MonoBehaviour
                GameObject item = Instantiate(QuestPrefab, QuestList.transform);
                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = quest.name;
                 item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = quest.description;
-                item.transform.Find("Buy").GetComponent<Button>().onClick.AddListener(() => { questChecker.AddQuest(quest); });
+                item.transform.Find("Buy").GetComponent<Button>().onClick.AddListener(() => { questChecker.AddQuest(quest); item.transform.Find("Buy").GetComponentInChildren<TextMeshProUGUI>().text = "Accepted";item.transform.Find("Buy").GetComponent<Button>().interactable = false; });
             }
             NpcDetailsPanel.SetActive(true);
             isNpcDetailsPanel = true;
