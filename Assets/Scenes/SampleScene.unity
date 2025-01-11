@@ -7888,7 +7888,13 @@ MonoBehaviour:
   room: {fileID: 0}
   roomName: {fileID: 659498463}
   relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}
-  researches: []
+  researches:
+  - {fileID: 11400000, guid: a39e8271956c0054898abe7f4abac978, type: 2}
+  - {fileID: 11400000, guid: 1b94a4055bf06464b8384ea997800976, type: 2}
+  - {fileID: 11400000, guid: 8b45961a969433d4eb892fd281695c82, type: 2}
+  - {fileID: 11400000, guid: b6c016967be721c48b03a68a9279eec3, type: 2}
+  - {fileID: 11400000, guid: 283cea5ec1f047c4aa45e07fc0c15324, type: 2}
+  - {fileID: 11400000, guid: 0e9209765f1e0d448ace3b3f2f254a83, type: 2}
   roomprefab: {fileID: 0}
 --- !u!4 &939315675
 Transform:
