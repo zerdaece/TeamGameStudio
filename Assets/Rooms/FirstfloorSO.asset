@@ -22,7 +22,7 @@ MonoBehaviour:
   energy: -2
   alcohol: -3
   coal: 0
-  dopamin: 0
+  dopamin: 1
   RoomUpdates: []
   Researches: []
   npcrelationchange: []
