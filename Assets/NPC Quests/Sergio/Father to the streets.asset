@@ -10,25 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd86dbe256dc20847bce4580a2c51072, type: 3}
-  m_Name: VictorunYolu1
+  m_Name: Father to the streets
   m_EditorClassIdentifier: 
-  questName: 
-  description: 
+  questName: Father to the streets
+  description: Your place seems to have potencial. if you can prove it to me, we
+    can have a partnership. collect 300 goins
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0
   rewardCoal: 0
   rewardDopamin: 0
-  questType: 
+  questType: collectxamountofy
   resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
   wantedRoomCount: 0
+  wantedresourcename: goins
+  wantedresourcevalue: 300
   wantedRoomtype: {fileID: 0}
   changeinnpcrelations:
   - npc: {fileID: 11400000, guid: f526a37bac5ecac4b9a5963bded8e849, type: 2}
-    relationChange: 0
+    relationChange: 5
+  - npc: {fileID: 11400000, guid: 3eaff2812aea0194c863085129214c40, type: 2}
+    relationChange: -5
   roomsthatgetsupgraded:
   - roomType: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
-    upgradedRoomType: {fileID: 11400000, guid: 96d1acabe0c4e894498b07f43ec0872b, type: 2}
-  - roomType: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
-    upgradedRoomType: {fileID: 11400000, guid: 96d1acabe0c4e894498b07f43ec0872b, type: 2}
+    upgradedRoomType: {fileID: 11400000, guid: 8ba7e7d78c5fcbd449d8e12f317fb6e8, type: 2}
   relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}
+  isCompleted: 0

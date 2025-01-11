@@ -15,3 +15,6 @@ MonoBehaviour:
   npcName: Bartender
   npcSprite: {fileID: 0}
   description: 
+  Quests:
+  - {fileID: 11400000, guid: 2b0828085f105324dad3d8451660fb03, type: 2}
+  - {fileID: 11400000, guid: d20291999e5b28b44b234eb86cef0124, type: 2}
