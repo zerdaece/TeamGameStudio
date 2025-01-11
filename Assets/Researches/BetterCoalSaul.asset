@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BetterCoalSaul
   m_EditorClassIdentifier: 
   goins: 0
-  energy: 5
+  energy: 6
   alcohol: 0
   coal: -1
   dopamin: 36
