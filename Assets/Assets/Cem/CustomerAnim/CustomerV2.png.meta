@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: 55fbcc94b4b1aaa44a126f226bd33a90
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CustomerV2_Head
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1581
+        width: 137
+        height: 142
+      alignment: 9
+      pivot: {x: 0.46446505, y: 0.14839815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75c86ca022cd0549b2d02e6d9807bbd
+      internalID: -1691319125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_ArmFrontUp
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1223
+        width: 103
+        height: 199
+      alignment: 9
+      pivot: {x: 0.52168643, y: 0.8602724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b010a987c92871f4ca8264b01beb8d69
+      internalID: -1575553362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_Body
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1169
+        width: 159
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a8fbbc33b55ca4f90a8bf4f68f961c
+      internalID: -731375561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_ArmBackUp
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1226
+        width: 103
+        height: 197
+      alignment: 9
+      pivot: {x: 0.513375, y: 0.86176807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316ca35047f0bb448bfea68bf0bc84cd
+      internalID: 67678236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_ArmFrontDown
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 879
+        width: 134
+        height: 301
+      alignment: 9
+      pivot: {x: 0.31098846, y: 0.934518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1648408f73e7940908429b01014664
+      internalID: 174633106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_LegFrontUp
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 817
+        width: 160
+        height: 326
+      alignment: 9
+      pivot: {x: 0.63906556, y: 0.8554826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d9d56b36f2fed49a939fbaef825bf6
+      internalID: -1616056401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_LegBackUp
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 815
+        width: 160
+        height: 326
+      alignment: 9
+      pivot: {x: 0.61009634, y: 0.8441095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc20a922cc0816428653b659f8c18dc
+      internalID: -660529532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_ArmBackDown
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 883
+        width: 138
+        height: 296
+      alignment: 9
+      pivot: {x: 0.31312627, y: 0.9294116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ce5b875d139cf488a5fd6cbbafabaa
+      internalID: 768895312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_LegFrontDown
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 461
+        width: 123
+        height: 324
+      alignment: 9
+      pivot: {x: 0.8793414, y: 0.9480361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86076f61d7a1d04399951297c8c4340
+      internalID: 126305558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_LegBackDown
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 449
+        width: 123
+        height: 327
+      alignment: 9
+      pivot: {x: 0.86509496, y: 0.9454467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6184ec18d6e8cb54cb5ab8ec13aedcb7
+      internalID: -1532135074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_FeetFront
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 330
+        width: 164
+        height: 79
+      alignment: 9
+      pivot: {x: 0.2808045, y: 0.8805785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d5e9e1fdc2e554d876e6baf1d8ca87
+      internalID: 1505732341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CustomerV2_FeetBack
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 330
+        width: 164
+        height: 79
+      alignment: 9
+      pivot: {x: 0.26087767, y: 0.8888523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b489aa4857ade429e3ad75c89a11d3
+      internalID: -428474173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CustomerV2_5: -1915365917
+      CustomerV2_9: 302597254
+      CustomerV2_ArmBackDown: 768895312
+      CustomerV2_ArmBackUp: 67678236
+      CustomerV2_ArmFrontDown: 174633106
+      CustomerV2_ArmFrontUp: -1575553362
+      CustomerV2_Body: -731375561
+      CustomerV2_FeetBack: -428474173
+      CustomerV2_FeetFront: 1505732341
+      CustomerV2_Head: -1691319125
+      CustomerV2_LegBackDown: -1532135074
+      CustomerV2_LegBackUp: -660529532
+      CustomerV2_LegFrontDown: 126305558
+      CustomerV2_LegFrontUp: -1616056401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
