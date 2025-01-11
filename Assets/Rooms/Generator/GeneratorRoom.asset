@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: GeneratorRoom
   m_EditorClassIdentifier: 
   id: 2
-  Name: 
-  roomPrefab: {fileID: 0}
+  Name: Generator Room
+  roomPrefab: {fileID: 8156335617945635934, guid: 63cc42aebc720eb4b94c95c15a93793a, type: 3}
   icon: {fileID: 0}
-  Description: 
+  Description: Burns Coal to provide energy
+  price: 120
   goins: 0
   energy: 6
   alcohol: 0
@@ -26,3 +27,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25094b118e2927248aab821d68bd4b45, type: 2}
   - {fileID: 11400000, guid: 66e37ea197c00d84d8735aeff2960c6e, type: 2}
   - {fileID: 11400000, guid: 2d9c57e2a0a439b43a4d181364c68140, type: 2}
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   Name: Farm
-  roomPrefab: {fileID: 8084179616134075302, guid: a4329e7604964a74d93f5f278cc2e030, type: 3}
+  roomPrefab: {fileID: 8462259953563096047, guid: 0bb1fb32c5cab9549bb77f21427b614d, type: 3}
   icon: {fileID: 0}
-  Description: 
-  price: 0
+  Description: A room that both farms and brews alcohol
+  price: 350
   goins: 0
   energy: -2
   alcohol: 6
   coal: 0
   dopamin: 0
   RoomUpdates:
-  - {fileID: 11400000, guid: 3513812e577f4a24287b5379ac5a4362, type: 2}
   - {fileID: 11400000, guid: eedc830d05f1cfd4b9d056ed945f56eb, type: 2}
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

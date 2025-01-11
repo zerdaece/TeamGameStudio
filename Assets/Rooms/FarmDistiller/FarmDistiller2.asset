@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: FarmDistiller2
   m_EditorClassIdentifier: 
   id: 0
-  Name: 
-  roomPrefab: {fileID: 0}
+  Name: Farm Distiller lvl2
+  roomPrefab: {fileID: 2335303954462625226, guid: 71a3b9a081f5186428895a594c23bdc9, type: 3}
   icon: {fileID: 0}
-  Description: 
+  Description: Grows Extremely fast patatos with the help of dopamine
+  price: 600
   goins: 0
   energy: -4
   alcohol: 15
   coal: 0
   dopamin: 0
   RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

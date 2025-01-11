@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Security1
   Name: Security Room
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 1510433825843302676, guid: e30fe97e68754854f96e0a638bc3db39, type: 3}
   icon: {fileID: 0}
-  Description: 
+  Description: lorem ipsum
   price: 250
   goins: 0
   energy: -2
   alcohol: 0
   coal: 0
-  dopamin: 2
+  dopamin: 1
   RoomUpdates: []
-  satisfaction: 0
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 2

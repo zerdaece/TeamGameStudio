@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Casino2
   Name: Casino Room lvl2
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 1766039294828821615, guid: 4f6eff632c579a64b9a09548c9318398, type: 3}
   icon: {fileID: 0}
   Description: The house always wins
   price: 0
@@ -24,4 +24,6 @@ MonoBehaviour:
   coal: 0
   dopamin: 0
   RoomUpdates: []
-  satisfaction: 0
+  Researches: []
+  npcrelationchange: []
+  satisfaction: -1

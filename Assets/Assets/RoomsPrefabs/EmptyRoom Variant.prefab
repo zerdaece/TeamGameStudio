@@ -101,5 +101,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4b2aed0549efc48bc1d905e3cede95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomType: Generator
   spawnOffset: {x: 0, y: -0.89, z: -1.73}

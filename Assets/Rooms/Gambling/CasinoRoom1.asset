@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Casino1
   Name: Casino Room
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 2767382080724290187, guid: 877f97c00e757074585cf0ab5e93b506, type: 3}
   icon: {fileID: 0}
   Description: A Casino that generates a lot of money. The noise will make the other
     customers unhappy tho
@@ -26,4 +26,6 @@ MonoBehaviour:
   dopamin: 0
   RoomUpdates:
   - {fileID: 11400000, guid: cc352ef32d646e1479435cbfe78b0c20, type: 2}
-  satisfaction: 0
+  Researches: []
+  npcrelationchange: []
+  satisfaction: -0.5
