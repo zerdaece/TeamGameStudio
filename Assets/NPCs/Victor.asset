@@ -15,3 +15,5 @@ MonoBehaviour:
   npcName: Victor
   npcSprite: {fileID: 0}
   description: 
+  Quests:
+  - {fileID: 11400000, guid: 52b90cafd9ab65044a2043ef8e05c74a, type: 2}

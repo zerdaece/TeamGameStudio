@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI roomName;
     public Relations relations;
     public List<Research> researches;
+    public GameObject roomprefab;
     bool isPaused = false;
     int gameSpeed;
     private bool isQuestsUIOpen;
@@ -244,6 +245,7 @@ public class UIManager : MonoBehaviour
                 resources.satisfaction += upgraderoom.satisfaction;
                 // Spawn the upgraderoom prefab
                 Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
+                Destroy(roomprefab);
                 PopUp.ShowPopup($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
                 Debug.Log($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}");
                 ToggleRoomUI();

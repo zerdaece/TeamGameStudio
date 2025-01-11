@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,8 +55,8 @@ public class NPC_UI : MonoBehaviour
             foreach(var quest in npc.Quests)
             {
                GameObject item = Instantiate(QuestPrefab, QuestList.transform);
-               item.transform.Find("Name").GetComponent<Text>().text = quest.name;
-                item.transform.Find("Description").GetComponent<Text>().text = quest.description;
+               item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = quest.name;
+                item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = quest.description;
                 item.transform.Find("Buy").GetComponent<Button>().onClick.AddListener(() => { questChecker.AddQuest(quest); });
             }
             NpcDetailsPanel.SetActive(true);

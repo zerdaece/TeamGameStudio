@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -471.31442, y: 0.000011444092}
+  m_AnchoredPosition: {x: -488, y: 0.000011444092}
   m_SizeDelta: {x: 188.8, y: 422.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18739500
@@ -2590,11 +2590,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316795586}
   m_CullTransparentMesh: 1
---- !u!1 &323371202 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8854359006238238551, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
-  m_PrefabInstance: {fileID: 4914841728700191204}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326680011
 GameObject:
   m_ObjectHideFlags: 0
@@ -6313,7 +6308,7 @@ MonoBehaviour:
   NpcDetailsPanelGrid: {fileID: 865186234}
   NpcDetailsPanelAnimator: {fileID: 18739502}
   QuestList: {fileID: 1212361196}
-  QuestPrefab: {fileID: 323371202}
+  QuestPrefab: {fileID: 8854359006238238551, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
   questChecker: {fileID: 1212361200}
   isNpcDetailsPanel: 0
 --- !u!4 &578726763
@@ -15317,7 +15312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1955557972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17735,7 +17730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchorMin.x
@@ -17743,7 +17738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_SizeDelta.x
@@ -17783,11 +17778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 397.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

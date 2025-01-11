@@ -43,6 +43,7 @@ public class ClickHandler : MonoBehaviour
                         Debug.Log(hit.collider.gameObject.name + " tıklandı");
                         roomObject = hit.collider.gameObject;
                         UImanager.room = clickableObject.gameObject.GetComponent<Room>().roomTemplate;
+                        UImanager.roomprefab = clickableObject.gameObject.GetComponent<Room>().gameObject;
                         UImanager.ToggleRoomUI();
                     }
                     UnlockingFloors unlockingFloors = hit.collider.GetComponent<UnlockingFloors>();
