@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using JetBrains.Annotations;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -37,11 +39,14 @@ public class UIManager : MonoBehaviour
     public ClickHandler clickHandler;
     public GameObject upgradelist;
     public GameObject upgradelistitem;
+    public GameObject researchlist;
+    public GameObject researchlistitem;
     public RoomTemplate room;
     public TextMeshProUGUI roomName;
+    public Relations relations;
     bool isPaused = false;
     int gameSpeed;
-    public Button GeneralUIButton;
+    private bool isQuestsUIOpen;
 
     void Update()
     {
@@ -218,9 +223,27 @@ public class UIManager : MonoBehaviour
             isRoomInfoUIOpen = true;
             print(isRoomInfoUIOpen);
             roomName.text = room.Name;
+            foreach (Research research in room.Researches)
+            {
+                /*
+                    GameObject item = Instantiate(researchlistitem, researchlist.transform);
+                    item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
+                    {if (resources.dopamin >= research.dopamin) { resources.dopamin -= research.dopamin; 
+                    room.Researches.Remove(research); 
+                    room.goins += research.goins;
+                    room.energy += research.energy;
+                    room.alcohol += research.alcohol;
+                    room.coal += research.coal;
+                    room.satisfaction += research.satisfaction;
+                    if (research.roomTemplate != null)
+                    {room.Roomupdates.Add(research.roomTemplate);}
+                */
+
+
+            }
             foreach (RoomTemplate upgraderoom in room.RoomUpdates)
             {
-                
+
                 GameObject item = Instantiate(upgradelistitem, upgradelist.transform);
                 item.transform.name = upgraderoom.Name;
                 item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgraderoom.Name;
@@ -233,12 +256,18 @@ public class UIManager : MonoBehaviour
             {
                 // Deduct the price from the player's resources
                 resources.goins -= upgraderoom.price;
+                resources.satisfaction -= room.satisfaction;
                 resources.satisfaction += upgraderoom.satisfaction;
                 // Spawn the upgraderoom prefab
-                 Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
+                Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
                 PopUp.ShowPopup($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
                 Debug.Log($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}");
                 ToggleRoomUI();
+
+                foreach (var npcRelation in room.npcrelationchange)
+                {
+                    relations.ModifyRelation(npcRelation.npc.name, npcRelation.relationChange);
+                }
             }
             else
             {
@@ -262,6 +291,10 @@ public class UIManager : MonoBehaviour
         ShopUIAnimator.SetTrigger("Open");
         Debug.Log("Opening Shop UI");
 
+    }
+    private void QuestsUIOpen()
+    {
+        isQuestsUIOpen = true;
     }
     private void RoomInfoUIClose()
     {
@@ -318,6 +351,10 @@ public class UIManager : MonoBehaviour
         ShopUIAnimator.SetTrigger("Close");
         Debug.Log("Shop UI Closed");
     }
+    private void QuestsUIClose()
+    {
+        isQuestsUIOpen = true;
+    }
     public void ToggleGeneralInfo()
     {
         if (isGeneralInfoUIOpen)
@@ -366,7 +403,21 @@ public class UIManager : MonoBehaviour
             ResearchInfoUIOpen();
         }
     }
+    public void ToggleQuestsUI()
+    {
+        if (isQuestsUIOpen)
+        {
+            QuestsUIClose();
+        }
+        else
+        {
+            CloseAllPanels();
+            QuestsUIOpen();
+        }
 
+
+
+    }
 
 
 }
