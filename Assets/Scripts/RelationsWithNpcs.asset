@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c657331a74c942d40aa5b1b7066f71fc, type: 3}
   m_Name: RelationsWithNpcs
   m_EditorClassIdentifier: 
-  relationwithVictor: 0
-  relationwithAshley: 0
-  relationwithSergio: 0
-  relationwithMarcel: 0
-  relationwithGary: 0
-  relationwithHank: 0
-  relationwithOutsider: 0
+  relationWithVictor: 0
+  relationWithAshley: 0
+  relationWithSergio: 0
+  relationWithMarcel: 0
+  relationWithGary: 0
+  relationWithHank: 0
+  relationWithOutsider: 0

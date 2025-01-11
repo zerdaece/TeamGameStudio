@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour
     public RoomTemplate room;
     public TextMeshProUGUI roomName;
     public Relations relations;
+    public List<Research> researches;
     bool isPaused = false;
     int gameSpeed;
     private bool isQuestsUIOpen;
@@ -223,24 +224,7 @@ public class UIManager : MonoBehaviour
             isRoomInfoUIOpen = true;
             print(isRoomInfoUIOpen);
             roomName.text = room.Name;
-            foreach (Research research in room.Researches)
-            {
-                /*
-                    GameObject item = Instantiate(researchlistitem, researchlist.transform);
-                    item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
-                    {if (resources.dopamin >= research.dopamin) { resources.dopamin -= research.dopamin; 
-                    room.Researches.Remove(research); 
-                    room.goins += research.goins;
-                    room.energy += research.energy;
-                    room.alcohol += research.alcohol;
-                    room.coal += research.coal;
-                    room.satisfaction += research.satisfaction;
-                    if (research.roomTemplate != null)
-                    {room.Roomupdates.Add(research.roomTemplate);}
-                */
 
-
-            }
             foreach (RoomTemplate upgraderoom in room.RoomUpdates)
             {
 
@@ -282,8 +266,31 @@ public class UIManager : MonoBehaviour
     {
         isResearchInfoUIOpen = true;
         ResearchInfoUIAnimator.SetTrigger("Open");
-        Debug.Log("opening Research UI");
+        foreach (Research research in researches)
+        {
 
+            GameObject item = Instantiate(researchlistitem, researchlist.transform);
+            item.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = string.Format("Price: " + research.dopamin);
+            item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
+            {
+                if (resources.dopamin >= research.dopamin)
+                {
+                    resources.dopamin -= research.dopamin;
+                    research.roomTemplate.goins += research.goins;
+                    research.roomTemplate.energy += research.energy;
+                    research.roomTemplate.alcohol += research.alcohol;
+                    research.roomTemplate.coal += research.coal;
+                    research.roomTemplate.satisfaction += research.satisfaction;
+                    if (research.roomTemplate != null)
+                    { room.RoomUpdates.Add(research.roomTemplate); }
+                    PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
+
+
+                }
+                Debug.Log("opening Research UI");
+
+            });
+        }
     }
     private void ShopUIOpen()
     {

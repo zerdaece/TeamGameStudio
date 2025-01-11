@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07575e4848551248a73822b284a3e48, type: 3}
   m_Name: The Outsider
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: Outsider
   npcSprite: {fileID: 0}
   description: 

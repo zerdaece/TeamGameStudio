@@ -7452,11 +7452,16 @@ MonoBehaviour:
   clickHandler: {fileID: 963194230}
   upgradelist: {fileID: 2000080171}
   upgradelistitem: {fileID: 1781957170}
-  researchlist: {fileID: 0}
-  researchlistitem: {fileID: 0}
+  researchlist: {fileID: 1661175837}
+  researchlistitem: {fileID: 983055141}
   room: {fileID: 0}
   roomName: {fileID: 445687334}
   relations: {fileID: 0}
+  researches:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &939315675
 Transform:
   m_ObjectHideFlags: 0
@@ -8115,6 +8120,11 @@ PrefabInstance:
 --- !u!4 &983055140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 140092782627575297, guid: 0de4579bceadf1647a56235e77a6f1b9, type: 3}
+  m_PrefabInstance: {fileID: 983055139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &983055141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5928293206808899210, guid: 0de4579bceadf1647a56235e77a6f1b9, type: 3}
   m_PrefabInstance: {fileID: 983055139}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &986636970 stripped
@@ -15816,7 +15826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7117375251290585462, guid: 9abd52079db035340833e497b264cf76, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -501.83105
+      value: -644.1
       objectReference: {fileID: 0}
     - target: {fileID: 7117375251290585462, guid: 9abd52079db035340833e497b264cf76, type: 3}
       propertyPath: m_AnchoredPosition.y

@@ -9,5 +9,6 @@ using System.Collections.Generic;
     public string npcName;
     public Sprite npcSprite;
     public string description;
+    public List<Quest> Quests;
 
 }
