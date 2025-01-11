@@ -281,8 +281,10 @@ public class UIManager : MonoBehaviour
                     research.roomTemplate.alcohol += research.alcohol;
                     research.roomTemplate.coal += research.coal;
                     research.roomTemplate.satisfaction += research.satisfaction;
-                    if (research.roomTemplate != null)
-                    { room.RoomUpdates.Add(research.roomTemplate); }
+                    if (research.AddRoomTemplate != null)
+                    {
+                        research.AddTo.RoomUpdates.Add(research.AddRoomTemplate);
+                    }
                     PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
 
 

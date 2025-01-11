@@ -11,5 +11,7 @@ public int coal;
 public int dopamin;
 public float satisfaction;
 public RoomTemplate roomTemplate;
+public RoomTemplate AddRoomTemplate;
+public RoomTemplate AddTo;
 
 }
