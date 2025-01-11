@@ -3242,8 +3242,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 70d07c94ff6cc834fad19144c4fea22e, type: 2}
+  m_sharedMaterial: {fileID: 8092793185236779314, guid: 70d07c94ff6cc834fad19144c4fea22e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3661,8 +3661,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 70d07c94ff6cc834fad19144c4fea22e, type: 2}
+  m_sharedMaterial: {fileID: 8092793185236779314, guid: 70d07c94ff6cc834fad19144c4fea22e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7167,6 +7167,8 @@ MonoBehaviour:
   room: {fileID: 0}
   roomName: {fileID: 445687334}
   relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}
+  researches: []
+  roomprefab: {fileID: 0}
 --- !u!4 &939315675
 Transform:
   m_ObjectHideFlags: 0
