@@ -490,6 +490,28 @@ MonoBehaviour:
   CoalText: []
   AlcoholText: []
   EnergyText: []
+  RoomInfoUIAnimator: {fileID: 0}
+  GeneralInfoUIAnimator: {fileID: 0}
+  ResearchInfoUIAnimator: {fileID: 0}
+  ShopUIAnimator: {fileID: 0}
+  isRoomInfoUIOpen: 0
+  isGeneralInfoUIOpen: 0
+  isResearchInfoUIOpen: 0
+  isShopUIOpen: 0
+  buildingRoom: {fileID: 0}
+  clickHandler: {fileID: 0}
+  upgradelist: {fileID: 0}
+  upgradelistitem: {fileID: 0}
+  researchlist: {fileID: 0}
+  researchlistitem: {fileID: 0}
+  room: {fileID: 0}
+  roomName: {fileID: 0}
+  relations: {fileID: 0}
+  researches: []
+  roomprefab: {fileID: 0}
+  timer: 0
+  updateInterval: 5
+  resourceText: {fileID: 0}
 --- !u!4 &861121201
 Transform:
   m_ObjectHideFlags: 0
@@ -1434,7 +1456,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3afea1bb74e33cc4d89bb13d85a6f57c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4cf25ddd0848bbb4f96720784ede0c8a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
