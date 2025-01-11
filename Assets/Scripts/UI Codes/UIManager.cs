@@ -292,10 +292,7 @@ public class UIManager : MonoBehaviour
         Debug.Log("Opening Shop UI");
 
     }
-    private void QuestsUIOpen()
-    {
-        isQuestsUIOpen = true;
-    }
+
     private void RoomInfoUIClose()
     {
         print(isRoomInfoUIOpen);
@@ -351,10 +348,7 @@ public class UIManager : MonoBehaviour
         ShopUIAnimator.SetTrigger("Close");
         Debug.Log("Shop UI Closed");
     }
-    private void QuestsUIClose()
-    {
-        isQuestsUIOpen = true;
-    }
+
     public void ToggleGeneralInfo()
     {
         if (isGeneralInfoUIOpen)
@@ -403,21 +397,7 @@ public class UIManager : MonoBehaviour
             ResearchInfoUIOpen();
         }
     }
-    public void ToggleQuestsUI()
-    {
-        if (isQuestsUIOpen)
-        {
-            QuestsUIClose();
-        }
-        else
-        {
-            CloseAllPanels();
-            QuestsUIOpen();
-        }
 
-
-
-    }
 
 
 }

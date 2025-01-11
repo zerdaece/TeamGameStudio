@@ -26,7 +26,7 @@ public class ClickHandler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
-            if (EventSystem.current.IsPointerOverGameObject()) { print("UI üzerinde tıklama yapıldı"); return; }
+            if (EventSystem.current.IsPointerOverGameObject()) {return; }
             else
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

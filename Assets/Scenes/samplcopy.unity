@@ -3997,12 +3997,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463647180}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1333319, y: 1.9409779, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -399.52774, y: -224.19124, z: 0}
+  m_LocalScale: {x: 0.41666663, y: 0.41666663, z: 0.41666663}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 934315748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &465848868
 GameObject:
@@ -7038,6 +7038,7 @@ RectTransform:
   - {fileID: 1632162115}
   - {fileID: 776956128017515442}
   - {fileID: 1171569943}
+  - {fileID: 463647182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7161,9 +7162,11 @@ MonoBehaviour:
   clickHandler: {fileID: 963194230}
   upgradelist: {fileID: 2000080171}
   upgradelistitem: {fileID: 1781957170}
+  researchlist: {fileID: 0}
+  researchlistitem: {fileID: 0}
   room: {fileID: 0}
   roomName: {fileID: 445687334}
-  GeneralUIButton: {fileID: 0}
+  relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}
 --- !u!4 &939315675
 Transform:
   m_ObjectHideFlags: 0
@@ -11810,11 +11813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 917644362721147574, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -267
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 917644362721147574, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 917644362721147574, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12013,8 +12016,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
---- !u!4 &1632162115 stripped
-Transform:
+--- !u!224 &1632162115 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 917644362721147574, guid: 1bf738fec50cfcd4bb46b32e3364132b, type: 3}
   m_PrefabInstance: {fileID: 1632162114}
   m_PrefabAsset: {fileID: 0}
@@ -16334,4 +16337,3 @@ SceneRoots:
   - {fileID: 1592942676}
   - {fileID: 410435204}
   - {fileID: 1746067994}
-  - {fileID: 463647182}

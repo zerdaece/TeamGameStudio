@@ -8,6 +8,8 @@ public class NPC_UI : MonoBehaviour
     public GameObject PanelforNpc;
     public bool isOpenPanelforNpc ;
     public GameObject NpcDetailsPanel;
+    public GridLayoutGroup NpcDetailsPanelGrid;
+    public Animator NpcDetailsPanelAnimator;
     public bool isNpcDetailsPanel;
     // Start is called before the first frame update
     void Start()
@@ -25,12 +27,16 @@ public class NPC_UI : MonoBehaviour
      if ( !isOpenPanelforNpc )
         {
             PanelforNpc.SetActive( true );
+            NpcDetailsPanelAnimator.SetTrigger("Open");
             isOpenPanelforNpc = true;
         }
         else if ( isOpenPanelforNpc )
         {
-            PanelforNpc.SetActive( false );
            isOpenPanelforNpc = false;
+            NpcDetailsPanelAnimator.SetTrigger("Close");
+            PanelforNpc.SetActive( false );
+
+
         }
     }
      public void ToggleNpcDetails()
