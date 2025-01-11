@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37766eb8b125e6d4298f58a5406eb9d0, type: 3}
-  m_Name: SecurityRoom1
+  m_Name: Accomodation2
   m_EditorClassIdentifier: 
-  id: Security1
-  Name: Security Room
-  roomPrefab: {fileID: 7939490359507452929, guid: 0049fe5b2f696674e99e209f3708699a, type: 3}
+  id: Accomodation2
+  Name: Accomodation Room Level 2
+  roomPrefab: {fileID: 0}
   icon: {fileID: 0}
-  Description: high security makes residents feel safe
-  price: 250
-  goins: 0
+  Description: A luxorious staying experience for our customers
+  price: 350
+  goins: 6
   energy: -2
   alcohol: 0
   coal: 0
-  dopamin: 1
+  dopamin: 6
   RoomUpdates: []
-  Researches: []
-  npcrelationchange: []
-  satisfaction: 2
