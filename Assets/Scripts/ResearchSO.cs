@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Research")]
 public class Research : ScriptableObject
 {
+public string Name;
+public string Description;
 public int goins;
 public int energy;
 public int alcohol;

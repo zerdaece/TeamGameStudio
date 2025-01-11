@@ -47,94 +47,117 @@ public class UIManager : MonoBehaviour
     public List<Research> researches;
     public GameObject roomprefab;
     bool isPaused = false;
+    public float timer;
+    public float updateInterval = 5f;
     int gameSpeed;
     private bool isQuestsUIOpen;
 
+
+    private int lastGoins = 0;
+    private int lastEnergy = 0;
+    private int lastAlcohol = 0;
+    private int lastCoal = 0;
+    private int lastDopamin = 0;
+    private int differenceGoins;
+    private int differenceEnergy;
+    private int differenceAlcohol;
+    private int differenceCoal;
+    private int differenceDopamin;
+    [SerializeField] private GameObject resourceText;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+
+        timer += Time.fixedDeltaTime * Time.timeScale;
+
+        if (timer >= updateInterval)
         {
-            ToggleRoomUI();
-            // isRoomInfoUIOpen = !isRoomInfoUIOpen;
+            UpdateResources();
+            timer = 0f;
+
         }
-
-        // General Info UI Aç/Kapa (Q Tuşu)
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-
-            ToggleGeneralInfo();
-            //isGeneralInfoUIOpen = !isGeneralInfoUIOpen;
-        }
-
-        // Research Info UI Aç/Kapa (E Tuşu)
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ToggleResearchUI();
-            // isResearchInfoUIOpen = !isResearchInfoUIOpen;
-        }
-
-        // Shop UI Aç/Kapa (R Tuşu)
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ToggleShopUI();
-            // isShopUIOpen = !isShopUIOpen;
-        }
-
-        // Escape tuşuna basıldığında pause menu aç/kapa
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused == true)
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                OnResumePress();
+                ToggleRoomUI();
+                // isRoomInfoUIOpen = !isRoomInfoUIOpen;
             }
-            else
+
+            // General Info UI Aç/Kapa (Q Tuşu)
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                pauseMenu.SetActive(true);
-                PauseGameplay();
-            }
-        }
 
-        // 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
-        {
-            if (isPaused == true)
+                ToggleGeneralInfo();
+                //isGeneralInfoUIOpen = !isGeneralInfoUIOpen;
+            }
+
+            // Research Info UI Aç/Kapa (E Tuşu)
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                Time.timeScale = 1f;
-                isPaused = false;
+                ToggleResearchUI();
+                // isResearchInfoUIOpen = !isResearchInfoUIOpen;
             }
-            else
+
+            // Shop UI Aç/Kapa (R Tuşu)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                PauseGameplay();
+                ToggleShopUI();
+                // isShopUIOpen = !isShopUIOpen;
             }
-        }
+
+            // Escape tuşuna basıldığında pause menu aç/kapa
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (isPaused == true)
+                {
+                    OnResumePress();
+                }
+                else
+                {
+                    pauseMenu.SetActive(true);
+                    PauseGameplay();
+                }
+            }
+
+            // 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
+            {
+                if (isPaused == true)
+                {
+                    Time.timeScale = 1f;
+                    isPaused = false;
+                }
+                else
+                {
+                    PauseGameplay();
+                }
+            }
 
 
-        // Resource ların UI da görünmesi
-        for (int i = 0; i < MoneyText.Length; i++)
-        {
-            MoneyText[i].text = _money;
-        }
-        for (int i = 0; i < DopamineText.Length; i++)
-        {
-            DopamineText[i].text = _dopamine;
-        }
-        for (int i = 0; i < CoalText.Length; i++)
-        {
-            CoalText[i].text = _coal;
-        }
-        for (int i = 0; i < AlcoholText.Length; i++)
-        {
-            AlcoholText[i].text = _alcohol;
-        }
-        for (int i = 0; i < EnergyText.Length; i++)
-        {
-            EnergyText[i].text = _energy;
-        }
+            // Resource ların UI da görünmesi
+            for (int i = 0; i < MoneyText.Length; i++)
+            {
+                MoneyText[i].text = _money;
+            }
+            for (int i = 0; i < DopamineText.Length; i++)
+            {
+                DopamineText[i].text = _dopamine;
+            }
+            for (int i = 0; i < CoalText.Length; i++)
+            {
+                CoalText[i].text = _coal;
+            }
+            for (int i = 0; i < AlcoholText.Length; i++)
+            {
+                AlcoholText[i].text = _alcohol;
+            }
+            for (int i = 0; i < EnergyText.Length; i++)
+            {
+                EnergyText[i].text = _energy;
+            }
 
-    }
+        }
     //-------------------------------------------------------------------------------------------------
 
-    // Start Menu Tuşları
+        // Start Menu Tuşları
     public void OnStartPress()
     {
         SceneManager.LoadScene("SampleScene");
@@ -202,6 +225,24 @@ public class UIManager : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+    private void UpdateResources()
+    {
+        differenceGoins = resources.goins - lastGoins;
+        differenceEnergy = resources.energy - lastEnergy;
+        differenceAlcohol = resources.alcohol - lastAlcohol;
+        differenceCoal = resources.coal - lastCoal;
+        differenceDopamin = resources.dopamin - lastDopamin;
+        resourceText.GetComponent<TextMeshProUGUI>().text = "Goins: " + resources.goins + " (+" + differenceGoins + ")" + "\n" +
+            "Energy: " + resources.energy + " (" + differenceEnergy + ")" + "\n" +
+            "Alcohol: " + resources.alcohol + " (" + differenceAlcohol + ")" + "\n" +
+            "Coal: " + resources.coal + " (" + differenceCoal + ")" + "\n" +
+            "Dopamin: " + resources.dopamin + " (+" + differenceDopamin + ")";
+        lastGoins = resources.goins;
+        lastEnergy = resources.energy;
+        lastAlcohol = resources.alcohol;
+        lastCoal = resources.coal;
+        lastDopamin = resources.dopamin;
     }
     private void GeneralInfoOpen()
     {
@@ -272,6 +313,8 @@ public class UIManager : MonoBehaviour
         {
 
             GameObject item = Instantiate(researchlistitem, researchlist.transform);
+            item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = research.Name;
+            item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = research.Description;
             item.transform.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = string.Format("Price: " + research.dopamin);
             item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
             {

@@ -7912,6 +7912,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 283cea5ec1f047c4aa45e07fc0c15324, type: 2}
   - {fileID: 11400000, guid: 0e9209765f1e0d448ace3b3f2f254a83, type: 2}
   roomprefab: {fileID: 0}
+  timer: 0
+  updateInterval: 5
+  resourceText: {fileID: 417932895}
 --- !u!4 &939315675
 Transform:
   m_ObjectHideFlags: 0
@@ -8122,7 +8125,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -10777,7 +10780,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 71601015}
   m_HandleRect: {fileID: 71601014}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

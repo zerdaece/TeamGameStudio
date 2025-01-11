@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad1ef8207ba32347ac4ece02f0e1057, type: 3}
   m_Name: CoalSaul
   m_EditorClassIdentifier: 
+  Name: CoalSaul
+  Description: 
   goins: 0
   energy: 3
   alcohol: 0
