@@ -15,5 +15,3 @@ MonoBehaviour:
   npcName: Ashley
   npcSprite: {fileID: 0}
   description: 
-  Quests:
-  - {fileID: 11400000, guid: 1ebc6bd0113e00641bbb0bfcbe4f4858, type: 2}
