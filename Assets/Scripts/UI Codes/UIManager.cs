@@ -309,6 +309,10 @@ public class UIManager : MonoBehaviour
     {
         isResearchInfoUIOpen = true;
         ResearchInfoUIAnimator.SetTrigger("Open");
+        foreach (Transform child in researchlist.transform)
+        {
+            Destroy(child.gameObject);
+        }
         foreach (Research research in researches)
         {
 
@@ -331,8 +335,8 @@ public class UIManager : MonoBehaviour
                         research.AddTo.RoomUpdates.Add(research.AddRoomTemplate);
                     }
                     PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
-
-
+                    
+                    researches.Remove(research);
                 }
                 Debug.Log("opening Research UI");
 
