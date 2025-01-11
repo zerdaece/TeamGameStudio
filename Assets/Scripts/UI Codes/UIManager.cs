@@ -274,7 +274,6 @@ public class UIManager : MonoBehaviour
                 item.transform.name = upgraderoom.Name;
                 item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgraderoom.Name;
                 item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgraderoom.Description;
-                item.transform.Find("Button").transform.Find("Buy").GetComponent<TextMeshProUGUI>().text = upgraderoom.price.ToString();
                 item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
         {
             // Check if the player has enough resources

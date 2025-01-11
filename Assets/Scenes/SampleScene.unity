@@ -11365,7 +11365,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 155
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -15638,7 +15638,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 71601015}
   m_HandleRect: {fileID: 71601014}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -20079,7 +20079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1955557972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22532,7 +22532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchorMin.x
@@ -22540,7 +22540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_SizeDelta.x
@@ -22580,11 +22580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 397.7
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 9003094611717110418, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
