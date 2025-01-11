@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad1ef8207ba32347ac4ece02f0e1057, type: 3}
-  m_Name: Research
+  m_Name: FarmDistillerLvL2
   m_EditorClassIdentifier: 
   goins: 0
   energy: 0
   alcohol: 0
   coal: 0
-  dopamin: 0
+  dopamin: 39
   satisfaction: 0
   roomTemplate: {fileID: 0}
-  AddRoomTemplate: {fileID: 0}
-  AddTo: {fileID: 0}
+  AddRoomTemplate: {fileID: 11400000, guid: eedc830d05f1cfd4b9d056ed945f56eb, type: 2}
+  AddTo: {fileID: 11400000, guid: 96d1acabe0c4e894498b07f43ec0872b, type: 2}

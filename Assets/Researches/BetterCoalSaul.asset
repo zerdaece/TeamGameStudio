@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad1ef8207ba32347ac4ece02f0e1057, type: 3}
-  m_Name: Research
+  m_Name: BetterCoalSaul
   m_EditorClassIdentifier: 
   goins: 0
-  energy: 0
+  energy: 6
   alcohol: 0
-  coal: 0
-  dopamin: 0
+  coal: -1
+  dopamin: 36
   satisfaction: 0
-  roomTemplate: {fileID: 0}
+  roomTemplate: {fileID: 11400000, guid: 2d9c57e2a0a439b43a4d181364c68140, type: 2}
   AddRoomTemplate: {fileID: 0}
   AddTo: {fileID: 0}
