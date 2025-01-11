@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   Name: 
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 6933876505446463545, guid: ac0d3018280e0ec44acdc0e5521c5a30, type: 3}
   icon: {fileID: 0}
   Description: 
+  price: 0
   goins: 14
   energy: -2
   alcohol: -3
   coal: 0
   dopamin: 0
   RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0
