@@ -345,6 +345,7 @@ public class UIManager : MonoBehaviour
                     PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "close", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
 
                     researches.Remove(research);
+                    Destroy(item);
                 }
                 Debug.Log("opening Research UI");
 
