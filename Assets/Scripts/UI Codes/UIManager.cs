@@ -75,89 +75,89 @@ public class UIManager : MonoBehaviour
             timer = 0f;
 
         }
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                ToggleRoomUI();
-                // isRoomInfoUIOpen = !isRoomInfoUIOpen;
-            }
-
-            // General Info UI Aç/Kapa (Q Tuşu)
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-
-                ToggleGeneralInfo();
-                //isGeneralInfoUIOpen = !isGeneralInfoUIOpen;
-            }
-
-            // Research Info UI Aç/Kapa (E Tuşu)
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                ToggleResearchUI();
-                // isResearchInfoUIOpen = !isResearchInfoUIOpen;
-            }
-
-            // Shop UI Aç/Kapa (R Tuşu)
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                ToggleShopUI();
-                // isShopUIOpen = !isShopUIOpen;
-            }
-
-            // Escape tuşuna basıldığında pause menu aç/kapa
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (isPaused == true)
-                {
-                    OnResumePress();
-                }
-                else
-                {
-                    pauseMenu.SetActive(true);
-                    PauseGameplay();
-                }
-            }
-
-            // 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
-            {
-                if (isPaused == true)
-                {
-                    Time.timeScale = 1f;
-                    isPaused = false;
-                }
-                else
-                {
-                    PauseGameplay();
-                }
-            }
-
-
-            // Resource ların UI da görünmesi
-            for (int i = 0; i < MoneyText.Length; i++)
-            {
-                MoneyText[i].text = _money;
-            }
-            for (int i = 0; i < DopamineText.Length; i++)
-            {
-                DopamineText[i].text = _dopamine;
-            }
-            for (int i = 0; i < CoalText.Length; i++)
-            {
-                CoalText[i].text = _coal;
-            }
-            for (int i = 0; i < AlcoholText.Length; i++)
-            {
-                AlcoholText[i].text = _alcohol;
-            }
-            for (int i = 0; i < EnergyText.Length; i++)
-            {
-                EnergyText[i].text = _energy;
-            }
-
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            ToggleRoomUI();
+            // isRoomInfoUIOpen = !isRoomInfoUIOpen;
         }
+
+        // General Info UI Aç/Kapa (Q Tuşu)
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+
+            ToggleGeneralInfo();
+            //isGeneralInfoUIOpen = !isGeneralInfoUIOpen;
+        }
+
+        // Research Info UI Aç/Kapa (E Tuşu)
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ToggleResearchUI();
+            // isResearchInfoUIOpen = !isResearchInfoUIOpen;
+        }
+
+        // Shop UI Aç/Kapa (R Tuşu)
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ToggleShopUI();
+            // isShopUIOpen = !isShopUIOpen;
+        }
+
+        // Escape tuşuna basıldığında pause menu aç/kapa
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused == true)
+            {
+                OnResumePress();
+            }
+            else
+            {
+                pauseMenu.SetActive(true);
+                PauseGameplay();
+            }
+        }
+
+        // 1, 2, 3,tuşlarına basıldığında oyun hızını değiştirme, space tuşuna basınca zamanı durdur/başlat
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.P))
+        {
+            if (isPaused == true)
+            {
+                Time.timeScale = 1f;
+                isPaused = false;
+            }
+            else
+            {
+                PauseGameplay();
+            }
+        }
+
+
+        // Resource ların UI da görünmesi
+        for (int i = 0; i < MoneyText.Length; i++)
+        {
+            MoneyText[i].text = _money;
+        }
+        for (int i = 0; i < DopamineText.Length; i++)
+        {
+            DopamineText[i].text = _dopamine;
+        }
+        for (int i = 0; i < CoalText.Length; i++)
+        {
+            CoalText[i].text = _coal;
+        }
+        for (int i = 0; i < AlcoholText.Length; i++)
+        {
+            AlcoholText[i].text = _alcohol;
+        }
+        for (int i = 0; i < EnergyText.Length; i++)
+        {
+            EnergyText[i].text = _energy;
+        }
+
+    }
     //-------------------------------------------------------------------------------------------------
 
-        // Start Menu Tuşları
+    // Start Menu Tuşları
     public void OnStartPress()
     {
         SceneManager.LoadScene("SampleScene");
@@ -246,7 +246,7 @@ public class UIManager : MonoBehaviour
     }
     private void GeneralInfoOpen()
     {
-        print("a");
+
         isGeneralInfoUIOpen = true;
         GeneralInfoUIAnimator.SetTrigger("Open");
 
@@ -269,37 +269,44 @@ public class UIManager : MonoBehaviour
 
             foreach (RoomTemplate upgraderoom in room.RoomUpdates)
             {
-
                 GameObject item = Instantiate(upgradelistitem, upgradelist.transform);
-                item.transform.name = upgraderoom.Name;
-                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = upgraderoom.Name;
-                item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = upgraderoom.Description;
-                item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
-        {
-            // Check if the player has enough resources
-            if (resources.goins >= upgraderoom.price)
-            {
-                // Deduct the price from the player's resources
-                resources.goins -= upgraderoom.price;
-                resources.satisfaction -= room.satisfaction;
-                resources.satisfaction += upgraderoom.satisfaction;
-                // Spawn the upgraderoom prefab
-                Instantiate(upgraderoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
-                Destroy(roomprefab);
-                PopUp.ShowPopup($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
-                Debug.Log($"{upgraderoom.Name} purchased! Remaining goins: {resources.goins}");
-                ToggleRoomUI();
 
-                foreach (var npcRelation in room.npcrelationchange)
+                // Create a local copy of upgraderoom
+                RoomTemplate currentRoom = upgraderoom;
+
+                item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
                 {
-                    relations.ModifyRelation(npcRelation.npc.name, npcRelation.relationChange);
-                }
-            }
-            else
-            {
-                Debug.Log("Not enough resources to buy this upgrade!");
-            }
-        });
+                    // Check if the player has enough resources
+                    if (resources.goins >= currentRoom.price)
+                    {
+                        // Deduct the price from the player's resources
+                        resources.goins -= currentRoom.price;
+
+                        // Logic for upgrading the room
+                        resources.satisfaction -= room.satisfaction;
+                        resources.satisfaction += currentRoom.satisfaction;
+
+                        // Spawn the upgraded room prefab
+                        Instantiate(currentRoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
+                        Destroy(roomprefab);
+
+                        PopUp.ShowPopup($"{currentRoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "Cancel",
+                            () => Destroy(GameObject.Find("PopUp(Clone)")),
+                            () => Destroy(GameObject.Find("PopUp(Clone)")));
+
+                        Debug.Log($"{currentRoom.Name} purchased! Remaining goins: {resources.goins}");
+                        ToggleRoomUI();
+
+                        foreach (var npcRelation in room.npcrelationchange)
+                        {
+                            relations.ModifyRelation(npcRelation.npc.name, npcRelation.relationChange);
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough resources to buy this upgrade!");
+                    }
+                });
             }
         }
 
@@ -334,7 +341,7 @@ public class UIManager : MonoBehaviour
                         research.AddTo.RoomUpdates.Add(research.AddRoomTemplate);
                     }
                     PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
-                    
+
                     researches.Remove(research);
                 }
                 Debug.Log("opening Research UI");
@@ -397,6 +404,7 @@ public class UIManager : MonoBehaviour
     {
         ResearchInfoUIAnimator.SetTrigger("Close");
         Debug.Log("Research Info UI Closed");
+        isResearchInfoUIOpen = false;
     }
 
     // Shop UI'yi kapatma metodu.
@@ -404,6 +412,7 @@ public class UIManager : MonoBehaviour
     {
         ShopUIAnimator.SetTrigger("Close");
         Debug.Log("Shop UI Closed");
+        isShopUIOpen = false;
     }
 
     public void ToggleGeneralInfo()
