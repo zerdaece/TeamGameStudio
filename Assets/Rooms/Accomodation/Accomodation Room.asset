@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Accomodation1
   Name: Accomodation Room
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 6762570662556519410, guid: 633da57a1b373a042ad4447304ef7692, type: 3}
   icon: {fileID: 0}
-  Description: A place for residents to stay the night. gets us some Goins and makes
-    people a little happier. buy for 100 goins
+  Description: A place for residents to stay the night. makes people happy and gives
+    goin
   price: 100
   goins: 2
   energy: -2

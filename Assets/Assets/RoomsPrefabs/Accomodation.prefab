@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 411518849452847027}
   - component: {fileID: 3329032996367741503}
   - component: {fileID: 1199704817456350919}
+  - component: {fileID: 474357855227556617}
   m_Layer: 0
   m_Name: Accomodation
   m_TagString: Untagged
@@ -71,6 +72,19 @@ MonoBehaviour:
   resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
   Customer: {fileID: 0}
   updateInterval: 5
+--- !u!114 &474357855227556617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762570662556519410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4b2aed0549efc48bc1d905e3cede95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &1017055376047239955
 PrefabInstance:
   m_ObjectHideFlags: 0
