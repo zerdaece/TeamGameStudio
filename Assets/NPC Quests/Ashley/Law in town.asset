@@ -20,7 +20,7 @@ MonoBehaviour:
   rewardAlcohol: 0
   rewardCoal: 0
   rewardDopamin: 0
-  questType: havexamountofrooms
+  questType: havexamountofroom
   resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
   wantedRoomCount: 3
   wantedresourcename: 

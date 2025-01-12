@@ -30,8 +30,8 @@ MonoBehaviour:
     relationChange: 5
   - npc: {fileID: 11400000, guid: 3337b4584d2c1d144869105bc6b05b50, type: 2}
     relationChange: -5
-  - npc: {fileID: 0}
-    relationChange: 0
+  - npc: {fileID: 11400000, guid: e0205a533d2021d4eb3bf46c10024057, type: 2}
+    relationChange: 5
   - npc: {fileID: 0}
     relationChange: 0
   - npc: {fileID: 0}
