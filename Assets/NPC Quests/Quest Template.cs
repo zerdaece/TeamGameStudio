@@ -34,11 +34,14 @@ public class Quest : ScriptableObject
         switch (questType.ToLower())
         {
             case "roomcount":
-                string propertyName = wantedRoomtype.Name + "RoomCount";
+                string propertyName =  "TotalRoomCount";
+                Debug.Log($"Kontrol ediliyor: {propertyName}");
+
                 if (!resources.DynamicRoomCounts.ContainsKey(propertyName))
                 {
                     {
                         resources.DynamicRoomCounts.Add(propertyName, 0);
+                        resources.DynamicRoomCounts[propertyName] = 0;
                     }
                 }
                 int currentRoomCount = resources.DynamicRoomCounts[propertyName]; ;
@@ -48,24 +51,33 @@ public class Quest : ScriptableObject
                 }
 
                 break;
-            case "havexamountofroom":
+            case "havexamountofyroom":
 
-                string WantedRoomType = wantedRoomtype.Name + "RoomCount";
+                string WantedRoomType = wantedRoomtype.id + "RoomCount";
+                Debug.Log($"Kontrol ediliyor: {wantedRoomtype.id}");
+
+
                 if (!resources.DynamicRoomCounts.ContainsKey(WantedRoomType))
                 {
                     {
                         resources.DynamicRoomCounts.Add(WantedRoomType, 0);
                     }
                 }
-                if ((int)resources.GetType().GetProperty(WantedRoomType).GetValue(resources) > wantedRoomCount)
+                Debug.Log($"Kontrol ediliyor: {resources.DynamicRoomCounts[WantedRoomType]}");
+                
+                if (resources.DynamicRoomCounts[WantedRoomType] >= wantedRoomCount)
                     QuestComplete();
                 break;
+
+
             case "collectxamountofy":
                 if (wantedresourcevalue >= (int)resources.GetType().GetField(wantedresourcename).GetValue(resources))
                     QuestComplete();
                 break;
 
-
+            default:
+            Debug.Log("Quest Type not found");
+                break;
 
         }
 
@@ -76,14 +88,12 @@ public class Quest : ScriptableObject
             {
                 relations.ModifyRelation(npc.npc.npcName, npc.relationChange);
             }
-
             Debug.Log("Quest Completed");
             resources.goins += rewardGoins;
             resources.energy += rewardEnergy;
             resources.alcohol += rewardAlcohol;
             resources.coal += rewardCoal;
             resources.dopamin += rewardDopamin;
-            OnQuestCompleted?.Invoke();
             foreach (var room in roomsthatgetsupgraded)
             {
                 room.roomType.RoomUpdates.Add(room.upgradedRoomType);

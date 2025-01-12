@@ -290,6 +290,14 @@ public class UIManager : MonoBehaviour
 
                         // Spawn the upgraded room prefab
                         Instantiate(currentRoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
+                        if (!resources.DynamicRoomCounts.ContainsKey(currentRoom.id + "RoomCount"))
+                        {
+                            {
+                                resources.DynamicRoomCounts.Add(currentRoom.id + "RoomCount", 0);
+                                resources.DynamicRoomCounts[currentRoom.id + "RoomCount"] = 0;
+                            }
+                        }
+                        resources.DynamicRoomCounts[currentRoom.id + "RoomCount"]++;
                         Destroy(roomprefab);
 
                         PopUp.ShowPopup($"{currentRoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "close",

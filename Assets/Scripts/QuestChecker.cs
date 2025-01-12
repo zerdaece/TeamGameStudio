@@ -5,9 +5,15 @@ using UnityEngine;
 public class QuestChecker : MonoBehaviour
 {
     public List<Quest> quests;
+
     public float checkInterval = 1f; // Time in seconds between checks
     private float timer = 0f;
-    
+    public Resources resources;
+
+    void Start()
+    {
+        resources.DynamicRoomCounts.Clear();
+    }
     void LateUpdate()
     {
         timer += Time.deltaTime; // Increment timer by the time passed since the last frame
@@ -15,14 +21,17 @@ public class QuestChecker : MonoBehaviour
         // Check if the interval has passed
         if (timer >= checkInterval)
         {
-            foreach (var quest in quests)
+
+            for (int i = 0; i < quests.Count; i++)
             {
+                var quest = quests[i];
                 quest.CheckQuest();
                 if (quest.isCompleted)
                 {
                     // Show a popup with the quest description and reward
-                    PopUp.ShowPopup(quest.description, "Claim", "Close",null,null);
-                    quests.Remove(quest);
+                    PopUp.ShowPopup(quest.description, "Claim", "Close", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
+                    quests.RemoveAt(i);
+                    i--; // Decrease the index to account for the removed quest
                 }
             }
 

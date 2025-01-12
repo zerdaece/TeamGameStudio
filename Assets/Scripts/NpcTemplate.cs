@@ -10,5 +10,6 @@ using System.Collections.Generic;
     public Sprite npcSprite;
     public string description;
     public List<Quest> Quests;
+    public List<Quest> OnGoingQuests;
 
 }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class NPC_UI : MonoBehaviour
 {
     public GameObject PanelforNpc;
-    public bool isOpenPanelforNpc ;
+    public bool isOpenPanelforNpc;
     public GameObject NpcDetailsPanel;
     public GridLayoutGroup NpcDetailsPanelGrid;
     public Animator NpcDetailsPanelAnimator;
@@ -19,32 +19,32 @@ public class NPC_UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void ToggleOpen_Npc_Panels()
     {
-     if ( !isOpenPanelforNpc )
+        if (!isOpenPanelforNpc)
         {
-            PanelforNpc.SetActive( true );
+            PanelforNpc.SetActive(true);
             NpcDetailsPanelAnimator.SetTrigger("Open");
             isOpenPanelforNpc = true;
         }
-        else if ( isOpenPanelforNpc )
+        else if (isOpenPanelforNpc)
         {
-           isOpenPanelforNpc = false;
+            isOpenPanelforNpc = false;
             NpcDetailsPanelAnimator.SetTrigger("Close");
-            PanelforNpc.SetActive( false );
+            PanelforNpc.SetActive(false);
 
 
         }
     }
-     public void ToggleNpcDetails(NPC npc)
+    public void ToggleNpcDetails(NPC npc)
     {
         if (!isNpcDetailsPanel)
         {
@@ -52,22 +52,30 @@ public class NPC_UI : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-            foreach(var quest in npc.Quests)
+            foreach (var OnGoingQuest in npc.OnGoingQuests)
             {
-               GameObject item = Instantiate(QuestPrefab, QuestList.transform);
-               item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = quest.name;
+                GameObject item = Instantiate(QuestPrefab, QuestList.transform);
+                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = OnGoingQuest.name;
+                item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = OnGoingQuest.description;
+                item.transform.Find("Buy").GetComponent<Button>().interactable = false;
+                item.transform.Find("Buy").GetComponent<Button>().GetComponent<TextMeshProUGUI>().text = "Accepted";
+            }
+            foreach (var quest in npc.Quests)
+            {
+                GameObject item = Instantiate(QuestPrefab, QuestList.transform);
+                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = quest.name;
                 item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = quest.description;
-                item.transform.Find("Buy").GetComponent<Button>().onClick.AddListener(() => { questChecker.AddQuest(quest); item.transform.Find("Buy").GetComponentInChildren<TextMeshProUGUI>().text = "Accepted";item.transform.Find("Buy").GetComponent<Button>().interactable = false; });
+                item.transform.Find("Buy").GetComponent<Button>().onClick.AddListener(() => { quest.isCompleted =false; questChecker.AddQuest(quest); item.transform.Find("Buy").GetComponentInChildren<TextMeshProUGUI>().text = "Accepted"; item.transform.Find("Buy").GetComponent<Button>().interactable = false; npc.OnGoingQuests.Add(quest); npc.Quests.Remove(quest); });
             }
             NpcDetailsPanel.SetActive(true);
             isNpcDetailsPanel = true;
-            
-            
+
+
         }
         else if (isNpcDetailsPanel)
         {
             NpcDetailsPanel.SetActive(false);
-           isNpcDetailsPanel= false;
+            isNpcDetailsPanel = false;
         }
     }
 }

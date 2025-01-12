@@ -10747,6 +10747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578726763}
   - component: {fileID: 578726762}
+  - component: {fileID: 578726764}
   m_Layer: 0
   m_Name: NPC_script
   m_TagString: Untagged
@@ -10773,7 +10774,7 @@ MonoBehaviour:
   NpcDetailsPanelAnimator: {fileID: 18739502}
   QuestList: {fileID: 1212361196}
   QuestPrefab: {fileID: 8854359006238238551, guid: be995aebbba234840873f0508e0bf6ef, type: 3}
-  questChecker: {fileID: 1212361200}
+  questChecker: {fileID: 578726764}
   isNpcDetailsPanel: 0
 --- !u!4 &578726763
 Transform:
@@ -10790,6 +10791,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578726764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578726761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4bf5c88bbff664a98f7c7908b0d55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+  checkInterval: 1
+  resources: {fileID: 11400000, guid: 216836f42431b114381987edf950c668, type: 2}
 --- !u!4 &592274725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 190278863240210942, guid: 1a3611061c04de54ba1820cfa9965a7c, type: 3}
@@ -14848,7 +14864,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1212361197}
   - component: {fileID: 1212361198}
-  - component: {fileID: 1212361200}
   - component: {fileID: 1212361201}
   m_Layer: 5
   m_Name: QuestChecker
@@ -14889,20 +14904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcafb6b26188c1e46a3859922157b641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1212361200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212361196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e4bf5c88bbff664a98f7c7908b0d55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quests: []
-  checkInterval: 1
 --- !u!114 &1212361201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19379,7 +19380,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1533939998}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
