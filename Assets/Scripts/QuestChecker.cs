@@ -12,6 +12,7 @@ public class QuestChecker : MonoBehaviour
 
     void Start()
     {
+        resources.TotalRoomCount =1;
         resources.DynamicRoomCounts.Clear();
     }
     void LateUpdate()

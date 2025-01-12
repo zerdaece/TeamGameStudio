@@ -60,12 +60,23 @@ public class NPC_UI : MonoBehaviour
                 item.transform.Find("Buy").GetComponent<Button>().interactable = false;
                 item.transform.Find("Buy").GetComponent<Button>().GetComponent<TextMeshProUGUI>().text = "Accepted";
             }
-            foreach (var quest in npc.Quests)
+            for (int i = 0; i < npc.Quests.Count; i++)
             {
+                Quest quest = npc.Quests[i];
                 GameObject item = Instantiate(QuestPrefab, QuestList.transform);
                 item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = quest.name;
                 item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = quest.description;
-                item.transform.Find("Buy").GetComponent<Button>().onClick.AddListener(() => { quest.isCompleted =false; questChecker.AddQuest(quest); item.transform.Find("Buy").GetComponentInChildren<TextMeshProUGUI>().text = "Accepted"; item.transform.Find("Buy").GetComponent<Button>().interactable = false; npc.OnGoingQuests.Add(quest); npc.Quests.Remove(quest); });
+
+                Button buyButton = item.transform.Find("Buy").GetComponent<Button>();
+                buyButton.onClick.AddListener(() =>
+                {
+                    quest.isCompleted = false;
+                    questChecker.AddQuest(quest);
+                    item.transform.Find("Buy").GetComponentInChildren<TextMeshProUGUI>().text = "Accepted";
+                    buyButton.interactable = false;
+                    npc.OnGoingQuests.Add(quest);
+                    npc.Quests.Remove(quest);
+                });
             }
             NpcDetailsPanel.SetActive(true);
             isNpcDetailsPanel = true;
