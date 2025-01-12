@@ -273,7 +273,9 @@ public class UIManager : MonoBehaviour
 
                 // Create a local copy of upgraderoom
                 RoomTemplate currentRoom = upgraderoom;
-
+                item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = currentRoom.Name;
+                item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = currentRoom.Description;
+                item.transform.Find("Price").GetComponent<TextMeshProUGUI>().text = currentRoom.price.ToString();
                 item.transform.Find("Button").GetComponent<Button>().onClick.AddListener(() =>
                 {
                     // Check if the player has enough resources
@@ -290,7 +292,7 @@ public class UIManager : MonoBehaviour
                         Instantiate(currentRoom.roomPrefab, clickHandler.spawnPoint.position, Quaternion.identity);
                         Destroy(roomprefab);
 
-                        PopUp.ShowPopup($"{currentRoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "Cancel",
+                        PopUp.ShowPopup($"{currentRoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "close",
                             () => Destroy(GameObject.Find("PopUp(Clone)")),
                             () => Destroy(GameObject.Find("PopUp(Clone)")));
 
@@ -340,7 +342,7 @@ public class UIManager : MonoBehaviour
                     {
                         research.AddTo.RoomUpdates.Add(research.AddRoomTemplate);
                     }
-                    PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "Cancel", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
+                    PopUp.ShowPopup($"researched! Remaining Dopamine: {resources.dopamin}", "OK", "close", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
 
                     researches.Remove(research);
                 }
