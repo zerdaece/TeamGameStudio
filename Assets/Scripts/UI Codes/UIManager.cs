@@ -358,6 +358,22 @@ public class UIManager : MonoBehaviour
         Debug.Log("Opening Shop UI");
 
     }
+    public void BuyCoal()
+    {
+        if (resources.goins >= 80)
+        {
+            resources.goins -= 80;
+            resources.coal += 250;
+        }
+    }
+    public void BuyAlcohol()
+    {
+        if (resources.goins >= 80)
+        {
+            resources.goins -= 80;
+            resources.alcohol += 100;
+        }
+    }
 
     private void RoomInfoUIClose()
     {
