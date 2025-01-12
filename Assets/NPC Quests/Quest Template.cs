@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -37,10 +38,10 @@ public class Quest : ScriptableObject
                 if (!resources.DynamicRoomCounts.ContainsKey(propertyName))
                 {
                     {
-                        resources.DynamicRoomCounts[propertyName] = 0; // Varsayılan olarak 0 başlat
+                        resources.DynamicRoomCounts.Add(propertyName, 0);
                     }
                 }
-                int currentRoomCount = (int)resources.GetType().GetProperty(propertyName).GetValue(resources);
+                int currentRoomCount = resources.DynamicRoomCounts[propertyName]; ;
                 if (currentRoomCount >= wantedRoomCount)
                 {
                     QuestComplete();
@@ -48,14 +49,21 @@ public class Quest : ScriptableObject
 
                 break;
             case "havexamountofroom":
+
                 string WantedRoomType = wantedRoomtype.Name + "RoomCount";
-                if((int)resources.GetType().GetProperty(WantedRoomType).GetValue(resources) > wantedRoomCount)
-                QuestComplete();
-            break;
+                if (!resources.DynamicRoomCounts.ContainsKey(WantedRoomType))
+                {
+                    {
+                        resources.DynamicRoomCounts.Add(WantedRoomType, 0);
+                    }
+                }
+                if ((int)resources.GetType().GetProperty(WantedRoomType).GetValue(resources) > wantedRoomCount)
+                    QuestComplete();
+                break;
             case "collectxamountofy":
-                if(wantedresourcevalue >= (int)resources.GetType().GetField(wantedresourcename).GetValue(resources))
-                QuestComplete();
-            break;
+                if (wantedresourcevalue >= (int)resources.GetType().GetField(wantedresourcename).GetValue(resources))
+                    QuestComplete();
+                break;
 
 
 

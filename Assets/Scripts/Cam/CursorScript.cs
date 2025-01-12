@@ -10,7 +10,6 @@ public class CursorScript : MonoBehaviour
         Vector3 CursorPos = (Vector3)Input.mousePosition;
         CursorPos.z = 10.0f;
         cursorParticle.transform.position = Camera.main.ScreenToWorldPoint(CursorPos);
-        print(CursorPos);
         if (Input.GetMouseButtonDown(0))
         {
             cursorParticle.Play();
