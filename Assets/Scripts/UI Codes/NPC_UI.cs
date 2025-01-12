@@ -52,14 +52,18 @@ public class NPC_UI : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-            foreach (var OnGoingQuest in npc.OnGoingQuests)
+            for (int i = 0; i < npc.OnGoingQuests.Count; i++)
             {
+                Quest OnGoingQuest = npc.OnGoingQuests[i];
                 GameObject item = Instantiate(QuestPrefab, QuestList.transform);
                 item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = OnGoingQuest.name;
                 item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = OnGoingQuest.description;
-                item.transform.Find("Buy").GetComponent<Button>().interactable = false;
-                item.transform.Find("Buy").GetComponent<Button>().GetComponent<TextMeshProUGUI>().text = "Accepted";
+
+                Button buyButton = item.transform.Find("Buy").GetComponent<Button>();
+                buyButton.interactable = false;
+                buyButton.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Accepted";
             }
+
             for (int i = 0; i < npc.Quests.Count; i++)
             {
                 Quest quest = npc.Quests[i];
