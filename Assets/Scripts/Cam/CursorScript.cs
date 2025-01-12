@@ -8,7 +8,7 @@ public class CursorScript : MonoBehaviour
     void Update()
     {
         Vector3 CursorPos = (Vector3)Input.mousePosition;
-        CursorPos.z = 10.0f;
+        CursorPos.z = 4.0f;
         cursorParticle.transform.position = Camera.main.ScreenToWorldPoint(CursorPos);
         print(CursorPos);
         if (Input.GetMouseButtonDown(0))
