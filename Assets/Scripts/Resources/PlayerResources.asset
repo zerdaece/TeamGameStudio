@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ae16a58e6bb424ea8e2e2091fc4d69, type: 3}
   m_Name: PlayerResources
   m_EditorClassIdentifier: 
-  goins: 126
-  energy: 482
-  alcohol: 473
-  coal: 0
-  dopamin: 9
+  goins: 100
+  energy: 500
+  alcohol: 250
+  coal: 100
+  dopamin: 0
   satisfaction: 1
   TotalBorch: 5000
   GeneratorRoomCount: 0

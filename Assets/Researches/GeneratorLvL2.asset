@@ -20,6 +20,6 @@ MonoBehaviour:
   coal: 0
   dopamin: 39
   satisfaction: 0
-  roomTemplate: {fileID: 11400000, guid: 2d9c57e2a0a439b43a4d181364c68140, type: 2}
-  AddRoomTemplate: {fileID: 0}
+  roomTemplate: {fileID: 0}
+  AddRoomTemplate: {fileID: 11400000, guid: 2d9c57e2a0a439b43a4d181364c68140, type: 2}
   AddTo: {fileID: 11400000, guid: cbcc1c14170c0d04fa50cc1ecf38c8f0, type: 2}

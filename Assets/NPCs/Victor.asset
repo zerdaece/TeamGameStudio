@@ -16,5 +16,6 @@ MonoBehaviour:
   npcSprite: {fileID: 0}
   description: 
   Quests:
-  - {fileID: 11400000, guid: 52b90cafd9ab65044a2043ef8e05c74a, type: 2}
   - {fileID: 11400000, guid: a65957441cef4fd4683781e3a8ae939c, type: 2}
+  - {fileID: 11400000, guid: 52b90cafd9ab65044a2043ef8e05c74a, type: 2}
+  OnGoingQuests: []
