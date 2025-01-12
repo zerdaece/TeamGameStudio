@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tutorial
   m_EditorClassIdentifier: 
   questName: First steps
-  description: Build a generator
+  description: Build a generator and I will unlock you the speakeasy room
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0
@@ -25,37 +25,7 @@ MonoBehaviour:
   wantedresourcename: 
   wantedresourcevalue: 0
   wantedRoomtype: {fileID: 11400000, guid: cbcc1c14170c0d04fa50cc1ecf38c8f0, type: 2}
-  changeinnpcrelations:
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
-  - npc: {fileID: 0}
-    relationChange: 0
+  changeinnpcrelations: []
   roomsthatgetsupgraded:
   - roomType: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
     upgradedRoomType: {fileID: 11400000, guid: c1585df6f92c8ad44a8e7b8a49244b20, type: 2}

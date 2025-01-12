@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tutorial2
   m_EditorClassIdentifier: 
   questName: Getting warmed up
-  description: Build a Speakeasy
+  description: Build a Speakeasy to unlock accomodation
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0
@@ -26,6 +26,8 @@ MonoBehaviour:
   wantedresourcevalue: 0
   wantedRoomtype: {fileID: 11400000, guid: c1585df6f92c8ad44a8e7b8a49244b20, type: 2}
   changeinnpcrelations: []
-  roomsthatgetsupgraded: []
+  roomsthatgetsupgraded:
+  - roomType: {fileID: 11400000, guid: 86558aff0e36d614bb4d431cd9557f61, type: 2}
+    upgradedRoomType: {fileID: 11400000, guid: 6037f5bc6b98d65429e8fd73943621d8, type: 2}
   relations: {fileID: 11400000, guid: 74d5991c0ff88ef478a2dff1797a4cfd, type: 2}
   isCompleted: 0

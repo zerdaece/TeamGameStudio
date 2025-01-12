@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Accomodation2
   Name: Accomodation Room Level 2
-  roomPrefab: {fileID: 0}
+  roomPrefab: {fileID: 7391068838318261416, guid: f250fbf2ab7a10945b7c8be64c13dac1, type: 3}
   icon: {fileID: 0}
-  Description: A luxorious staying experience for our customers
+  Description: A luxorious staying experience for our customers. buy for 350 goins
   price: 350
   goins: 6
   energy: -2
@@ -24,3 +24,6 @@ MonoBehaviour:
   coal: 0
   dopamin: 6
   RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

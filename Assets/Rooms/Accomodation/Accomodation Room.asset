@@ -17,7 +17,7 @@ MonoBehaviour:
   roomPrefab: {fileID: 0}
   icon: {fileID: 0}
   Description: A place for residents to stay the night. gets us some Goins and makes
-    people a little happier.
+    people a little happier. buy for 100 goins
   price: 100
   goins: 2
   energy: -2
@@ -25,3 +25,6 @@ MonoBehaviour:
   coal: 0
   dopamin: 2
   RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: Generator2
   m_EditorClassIdentifier: 
   id: 0
-  Name: 
-  roomPrefab: {fileID: 0}
+  Name: Generator room level 2
+  roomPrefab: {fileID: 4729210433238569899, guid: 9426767ad1f9d974dad89584655f0f46, type: 3}
   icon: {fileID: 0}
-  Description: 
+  Description: significantly better generator room. order for 300 goins
+  price: 300
   goins: 0
   energy: 14
   alcohol: 0
   coal: -4
   dopamin: 0
-  RoomUpdates:
-  - {fileID: 11400000, guid: 60c2e0bca1803794181aa2dd85937776, type: 2}
-  - {fileID: 11400000, guid: 17cf8a6a2d492ac40914d9676be8169e, type: 2}
-  - {fileID: 11400000, guid: 2bfce86272b8bb0468f121c6a81953c5, type: 2}
+  RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

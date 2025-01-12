@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: maximum security
   m_EditorClassIdentifier: 
   questName: Maximum security
-  description: Let's built that new security room
+  description: Let's built that new security room then I can give you an upgrade
+    for it.
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0

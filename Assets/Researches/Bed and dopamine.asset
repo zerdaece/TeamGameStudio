@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad1ef8207ba32347ac4ece02f0e1057, type: 3}
-  m_Name: GeneratorLvL2
+  m_Name: Bed and dopamine
   m_EditorClassIdentifier: 
-  Name: level 2 Generator
-  Description: Unlock level two generator
+  Name: Bed and dopamine
+  Description: Unlock accomodation level 2
   goins: 0
   energy: 0
   alcohol: 0
   coal: 0
-  dopamin: 39
+  dopamin: 0
   satisfaction: 0
-  roomTemplate: {fileID: 11400000, guid: 2d9c57e2a0a439b43a4d181364c68140, type: 2}
-  AddRoomTemplate: {fileID: 0}
-  AddTo: {fileID: 11400000, guid: cbcc1c14170c0d04fa50cc1ecf38c8f0, type: 2}
+  roomTemplate: {fileID: 0}
+  AddRoomTemplate: {fileID: 11400000, guid: df2ada8dec6eb2548ab253c52520f97b, type: 2}
+  AddTo: {fileID: 11400000, guid: 6037f5bc6b98d65429e8fd73943621d8, type: 2}

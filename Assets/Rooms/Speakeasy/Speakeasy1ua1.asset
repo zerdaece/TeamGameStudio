@@ -17,10 +17,13 @@ MonoBehaviour:
   roomPrefab: {fileID: 0}
   icon: {fileID: 0}
   Description: 
+  price: 0
   goins: 7
   energy: -2
   alcohol: -2
   coal: 0
   dopamin: 0
-  RoomUpdates:
-  - {fileID: 11400000, guid: 980ebbf07f1487944896faf128505468, type: 2}
+  RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

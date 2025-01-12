@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CoalSaul
   m_EditorClassIdentifier: 
   Name: CoalSaul
-  Description: 
+  Description: level one generator rooms give more energy
   goins: 0
   energy: 3
   alcohol: 0

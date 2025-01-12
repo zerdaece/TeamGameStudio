@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Law in town
   description: if your pub gets any bigger, you will need some serious security.
-    I can provide you that, if you build some generators
+    I can provide you that, if you get 3 generators.
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0

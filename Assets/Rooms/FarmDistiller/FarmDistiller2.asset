@@ -16,7 +16,8 @@ MonoBehaviour:
   Name: Farm Distiller lvl2
   roomPrefab: {fileID: 2335303954462625226, guid: 71a3b9a081f5186428895a594c23bdc9, type: 3}
   icon: {fileID: 0}
-  Description: Grows Extremely fast patatos with the help of dopamine
+  Description: Grows Extremely fast patatos with the help of dopamine. buy for 600
+    goins
   price: 600
   goins: 0
   energy: -4

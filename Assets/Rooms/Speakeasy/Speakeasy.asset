@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Speakeasy
   m_EditorClassIdentifier: 
   id: 3
-  Name: 
-  roomPrefab: {fileID: 0}
+  Name: Speakeasy
+  roomPrefab: {fileID: 8994608648505236936, guid: b46747ad36e24544e9977be66ad40bb9, type: 3}
   icon: {fileID: 0}
-  Description: 
+  Description: visitors buy alcohol and give money. buy for 100 goins
+  price: 100
   goins: 7
   energy: -2
   alcohol: -3
   coal: 0
   dopamin: 0
-  RoomUpdates:
-  - {fileID: 11400000, guid: b8bd2946ff512354bbf8abc9e5a4508a, type: 2}
-  - {fileID: 11400000, guid: 2befcb1ff7715b047bad2361a25409b0, type: 2}
+  RoomUpdates: []
+  Researches: []
+  npcrelationchange: []
+  satisfaction: 0

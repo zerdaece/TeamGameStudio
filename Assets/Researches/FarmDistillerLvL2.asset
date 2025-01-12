@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad1ef8207ba32347ac4ece02f0e1057, type: 3}
   m_Name: FarmDistillerLvL2
   m_EditorClassIdentifier: 
+  Name: level2 farm
+  Description: Unlock level 2 farms
   goins: 0
   energy: 0
   alcohol: 0

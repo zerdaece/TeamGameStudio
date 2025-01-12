@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Father to the streets
   description: Your place seems to have potencial. if you can prove it to me, we
-    can have a partnership. collect 300 goins
+    can have a partnership. collect 300 goins and I will give you a casino room
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0

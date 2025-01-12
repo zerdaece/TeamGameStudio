@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: A big house is a nice house
   m_EditorClassIdentifier: 
   questName: A big house is a nice house
-  description: It is nice to have a lot of bars. Good for a big family
+  description: It is nice to have a lot of bars. Good for a big family. if you get
+    3 speakeasy rooms I will unlock you a room that produces alcohol
   rewardGoins: 0
   rewardEnergy: 0
   rewardAlcohol: 0

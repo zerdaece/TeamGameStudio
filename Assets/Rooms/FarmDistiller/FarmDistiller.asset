@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Farm
   roomPrefab: {fileID: 8462259953563096047, guid: 0bb1fb32c5cab9549bb77f21427b614d, type: 3}
   icon: {fileID: 0}
-  Description: A room that both farms and brews alcohol
+  Description: A room that both farms and brews alcohol. buy for 350
   price: 350
   goins: 0
   energy: -2

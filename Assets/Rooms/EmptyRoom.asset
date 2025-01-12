@@ -24,10 +24,8 @@ MonoBehaviour:
   coal: 0
   dopamin: 0
   RoomUpdates:
-  - {fileID: 11400000, guid: 96d1acabe0c4e894498b07f43ec0872b, type: 2}
   - {fileID: 11400000, guid: cbcc1c14170c0d04fa50cc1ecf38c8f0, type: 2}
   - {fileID: 11400000, guid: c1585df6f92c8ad44a8e7b8a49244b20, type: 2}
-  - {fileID: 11400000, guid: 0b03367def9c57642b95f99db9058763, type: 2}
   Researches: []
   npcrelationchange: []
   satisfaction: 0

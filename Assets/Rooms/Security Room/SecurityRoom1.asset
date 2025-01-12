@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Security Room
   roomPrefab: {fileID: 7939490359507452929, guid: 0049fe5b2f696674e99e209f3708699a, type: 3}
   icon: {fileID: 0}
-  Description: high security makes residents feel safe
+  Description: high security makes residents feel safe. buy for 250
   price: 250
   goins: 0
   energy: -2
