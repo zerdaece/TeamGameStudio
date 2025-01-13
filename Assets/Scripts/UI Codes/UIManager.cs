@@ -269,12 +269,12 @@ public class UIManager : MonoBehaviour
             print(isRoomInfoUIOpen);
             roomName.text = room.Name;
             roomresources.text = "Goins: " + room.goins + "\n" + "Energy: " + room.energy + "\n" + "Alcohol: " + room.alcohol + "\n" + "Coal: " + room.coal + "\n" + "Satisfaction: " + room.satisfaction;
-            foreach (RoomTemplate upgraderoom in room.RoomUpdates)
+            for (int i = 0; i < room.RoomUpdates.Count; i++)
             {
                 GameObject item = Instantiate(upgradelistitem, upgradelist.transform);
 
                 // Create a local copy of upgraderoom
-                RoomTemplate currentRoom = upgraderoom;
+                RoomTemplate currentRoom = room.RoomUpdates[i];
                 item.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = currentRoom.Name;
                 item.transform.Find("Description").GetComponent<TextMeshProUGUI>().text = currentRoom.Description;
                 item.transform.Find("Price").GetComponent<TextMeshProUGUI>().text = currentRoom.price.ToString();
@@ -367,6 +367,15 @@ public class UIManager : MonoBehaviour
         isShopUIOpen = true;
         ShopUIAnimator.SetTrigger("Open");
         Debug.Log("Opening Shop UI");
+
+    }
+    public void PayBorch()
+    {
+        if (resources.goins >= 1000) { resources.goins -= 1000; gameObject.SetActive(false); Time.timeScale = 1; }
+        else
+        {
+            gameObject.SetActive(false); PopUp.ShowPopup("Not enough Goins \n You Lose", "Quit", "Quit", () => Application.Quit(), () => Application.Quit());
+        }
 
     }
     public void BuyCoal()

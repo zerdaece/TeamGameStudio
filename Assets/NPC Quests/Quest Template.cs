@@ -19,7 +19,6 @@ public class Quest : ScriptableObject
     public int wantedRoomCount;
     public string wantedresourcename;
     public int wantedresourcevalue;
-    public static event System.Action OnQuestCompleted;
     public RoomTemplate wantedRoomtype;
     //public Dictionary<NPC, int> changeinnpcrelations; dictionarye inspectorda değer giremiyoruz.
     public List<NPCRelationChange> changeinnpcrelations;
