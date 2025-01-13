@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerResources
   m_EditorClassIdentifier: 
   goins: 100
-  energy: 500
-  alcohol: 250
-  coal: 100
+  energy: 300
+  alcohol: 300
+  coal: 200
   dopamin: 0
   satisfaction: 1
   TotalBorch: 5000
@@ -24,4 +24,4 @@ MonoBehaviour:
   SpeakeasyRoomCount: 0
   AccommodationRoomCount: 0
   DistillerRoomCount: 0
-  TotalRoomCount: 1
+  TotalRoomCount: 0
