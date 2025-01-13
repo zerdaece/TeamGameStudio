@@ -17,3 +17,4 @@ MonoBehaviour:
   description: 
   Quests:
   - {fileID: 11400000, guid: 2f66f6f58abbccf4aad812c8f268c78e, type: 2}
+  OnGoingQuests: []
