@@ -64,6 +64,8 @@ public class UIManager : MonoBehaviour
     private int differenceCoal;
     private int differenceDopamin;
     [SerializeField] private GameObject resourceText;
+    [SerializeField] TextMeshProUGUI roomresources;
+
     void Update()
     {
 
@@ -266,7 +268,7 @@ public class UIManager : MonoBehaviour
             isRoomInfoUIOpen = true;
             print(isRoomInfoUIOpen);
             roomName.text = room.Name;
-
+            roomresources.text = "Goins: " + room.goins + "\n" + "Energy: " + room.energy + "\n" + "Alcohol: " + room.alcohol + "\n" + "Coal: " + room.coal + "\n" + "Satisfaction: " + room.satisfaction;
             foreach (RoomTemplate upgraderoom in room.RoomUpdates)
             {
                 GameObject item = Instantiate(upgradelistitem, upgradelist.transform);

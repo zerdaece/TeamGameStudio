@@ -42,11 +42,11 @@ public class UnlockingFloors : MonoBehaviour
             resources.goins -= need;
             Destroy(gameObject);
             Debug.Log("Yeni Odalar Acildi");
-
+            PopUp.ShowPopup("Floor Unlocked", "ok","close",() => Destroy(GameObject.Find("PopUp(Clone)")),() => Destroy(GameObject.Find("PopUp(Clone)")));
         }
         else
         {
-            PopUp.ShowPopup("Not enough Goins", "ok","ok",() => Destroy(GameObject.Find("PopUp(Clone)")),() => Destroy(GameObject.Find("PopUp(Clone)")));
+            PopUp.ShowPopup("Not enough Goins \n Price: " + need, "ok","close",() => Destroy(GameObject.Find("PopUp(Clone)")),() => Destroy(GameObject.Find("PopUp(Clone)")));
         }
 
     }

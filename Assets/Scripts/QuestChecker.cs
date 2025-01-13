@@ -30,7 +30,7 @@ public class QuestChecker : MonoBehaviour
                 if (quest.isCompleted)
                 {
                     // Show a popup with the quest description and reward
-                    PopUp.ShowPopup(quest.description, "Claim", "Close", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
+                    PopUp.ShowPopup(quest.name + ": \n Quest Completed", "Claim", "Close", () => Destroy(GameObject.Find("PopUp(Clone)")), () => Destroy(GameObject.Find("PopUp(Clone)")));
                     quests.RemoveAt(i);
                     i--; // Decrease the index to account for the removed quest
                 }
