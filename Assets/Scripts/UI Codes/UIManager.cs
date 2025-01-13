@@ -300,6 +300,7 @@ public class UIManager : MonoBehaviour
                             }
                         }
                         resources.DynamicRoomCounts[currentRoom.id + "RoomCount"]++;
+                        resources.TotalRoomCount++;
                         Destroy(roomprefab);
 
                         PopUp.ShowPopup($"{currentRoom.Name} purchased! Remaining goins: {resources.goins}", "OK", "close",
