@@ -125,7 +125,7 @@ public class InGameTime : MonoBehaviour
                 daysUntilBorch = newBorchDay;
                 _borch = daysUntilBorch + "";
                 popUpUI.SetActive(false);
-                
+                BorchAmount *=2;                
                 if(resources.TotalBorch <= BorchAmount)
                 {
                     Debug.Log("Kazandın Canım");
