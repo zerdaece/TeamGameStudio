@@ -33,17 +33,7 @@ public class Quest : ScriptableObject
         switch (questType.ToLower())
         {
             case "roomcount":
-                string propertyName =  "TotalRoomCount";
-                Debug.Log($"Kontrol ediliyor: {propertyName}");
-
-                if (!resources.DynamicRoomCounts.ContainsKey(propertyName))
-                {
-                    {
-                        resources.DynamicRoomCounts.Add(propertyName, 0);
-                        resources.DynamicRoomCounts[propertyName] = 0;
-                    }
-                }
-                int currentRoomCount = resources.propertyName; ;
+                int currentRoomCount = resources.TotalRoomCount;
                 if (currentRoomCount >= wantedRoomCount)
                 {
                     QuestComplete();
