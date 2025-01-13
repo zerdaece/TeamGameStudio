@@ -43,7 +43,7 @@ public class Quest : ScriptableObject
                         resources.DynamicRoomCounts[propertyName] = 0;
                     }
                 }
-                int currentRoomCount = resources.DynamicRoomCounts[propertyName]; ;
+                int currentRoomCount = resources.propertyName; ;
                 if (currentRoomCount >= wantedRoomCount)
                 {
                     QuestComplete();
