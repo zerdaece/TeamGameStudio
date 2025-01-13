@@ -18,3 +18,4 @@ MonoBehaviour:
   Quests:
   - {fileID: 11400000, guid: f94b55b83b3490f42b1895dc1881788b, type: 2}
   - {fileID: 11400000, guid: 7782275d990d4c647bc56942c41693fb, type: 2}
+  OnGoingQuests: []
